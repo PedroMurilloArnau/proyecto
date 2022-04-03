@@ -1,0 +1,48 @@
+Tecnologías a utilizar:
+
+- Comunicación:
+
+- Organigrama:
+
+-Otras:
+
+    + ESlint: Find and fix problems in your JavaScript code
+        npm install -g eslint@5.6.1
+    + TypeScript:
+        npm install -g typescript@3.9.7
+    + Angular Cli
+        npm install -g @angular/cli@12.2.0
+
+Plugins de Visual Studio Code:
+
+    streetsidesoftware.code-spell-checker
+    tombonnike.vscode-status-bar-format-toggle
+    possan.nbsp-vscode
+    p-de-jong.vscode-html-scss
+    hex-ci.stylelint-Plus
+    wayou.vscode-todo-highlight
+    ms-vscode-typescript-tslint-plugin
+    pflannery.vscode-eslint
+    dbaeumer.vscode-eslint
+
+
+
+
+- Frontend:
+
+- Backend:
+
+- BDD:
+
+Conexión con la base de datos para más info:
+https://www.mongodb.com/docs/compass/current/connect/
+   
+   *mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false
+
+- Despliegue:
+
+- Pruebas:
+
+- Stilos:
+
+- Img ayuda:
