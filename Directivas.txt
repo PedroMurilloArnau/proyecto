@@ -30,8 +30,25 @@ Plugins de Visual Studio Code:
 
 - Frontend:
 
-- Backend:
+- Backend: Problemas cor el CORS:
+*El error es un mecanismo de defensa de los navegadores. Se puede resolver de la siguiente forma.
 
+En el proyecto de la api instala cors con:
+
+npm i cors
+
+A continuación en el archivo app.js también de la API añade en las importaciones del principio:
+
+const cors = require('cors');
+
+Y luego debajo de la declaración de app añade las cors, es decir:
+
+const app = express();
+
+app.use(cors());
+
+Con esto reinicias tanto API como el proyecto angular y ya no tendrás el error CORS.
+Para instalar 
 - BDD:
 
 Conexión con la base de datos para más info:
