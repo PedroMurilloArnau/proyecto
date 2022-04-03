@@ -1,2 +1,2 @@
 Carpeta de proyecto común:
- Partes del proyecto comunçdasdasdasd
+ Partes del proyecto comun
