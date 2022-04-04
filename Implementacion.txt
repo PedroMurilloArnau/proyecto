@@ -1,0 +1,13 @@
+Propiedades virtuales:
+
+*podemos tener propiedades virtuales.
+
+*tb podemos tener métodos estáticos:
+
+productSchema.statics.actives = function () {
+        return this.model('product').find({ available: true });
+    }
+
+-
++Creamo la express sesion:
+
