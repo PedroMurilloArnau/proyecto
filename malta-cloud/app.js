@@ -1,4 +1,5 @@
 const express = require('express');
+require('./src/bbdd/dbConfig.js');
 
 const app = express();
 const port = 3000;
