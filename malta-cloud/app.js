@@ -1,9 +1,16 @@
 const express = require('express');
 require('./src/bbdd/dbConfig.js');
-
+require('dotenv').config();
+require('./src/bbdd/dbConfig')
+const Usuarios = require('./src/bbdd/users')
 const app = express();
-const port = 3000;
+const cors = require('cors')
 
-app.listen(()=>{
-    console.log(`Servidor escuchando en htt://localhost:${port}`)
+app.use(cors())
+app.use(express.json());
+
+app.use('/beer/users',require('./src/microservices/auth/auth.routing'))
+
+app.listen(process.env.PORT, ()=>{
+    console.log(`Servidor escuchando en htt://localhost:${process.env.PORT}`)
 })
