@@ -11,3 +11,6 @@ productSchema.statics.actives = function () {
 -
 +Creamo la express sesion:
 
+
++Creamos el acceso a las cookie-parser
+

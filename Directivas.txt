@@ -48,7 +48,16 @@ const app = express();
 app.use(cors());
 
 Con esto reinicias tanto API como el proyecto angular y ya no tendrás el error CORS.
-Para instalar 
+Para instalar
+
+***Más info para utilizar CORS*****************************
+"https://www.npmjs.com/package/cors"
+
+-- Login:
+	*Para la obtención del token y el manejo de tokens!
+
+https://asfo.medium.com/autenticando-un-api-rest-con-nodejs-y-jwt-json-web-tokens-5f3674aba50e
+
 - BDD:
 
 Conexión con la base de datos para más info:
