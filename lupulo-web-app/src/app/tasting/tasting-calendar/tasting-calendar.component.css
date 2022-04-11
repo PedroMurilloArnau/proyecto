@@ -1,0 +1,9 @@
+.demo-inline-calendar-card {
+    width: 400px;
+  }
+
+  
+.example-header-image {
+    background-image: url('../../../content/img/cervea.jpg');
+    background-size: cover;
+  }
