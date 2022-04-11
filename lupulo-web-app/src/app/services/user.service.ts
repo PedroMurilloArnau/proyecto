@@ -2,11 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
+import { Subject } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+  authChange = new Subject<boolean>();
+  upa: [];
 
   endpointUser: string = 'http://localhost:3000/beer/users/new';
   endpointLogin: string = 'http://localhost:3000/beer/users/login';
@@ -35,8 +38,20 @@ login(user){
     map((data: any) => {
       return data;
     })
-  )
-
+  )}
+  logout(){
+    this.authChange.next(false);
+    this.router.navigate(['/login']);
+  }
+  isAuth(upa){
+    if(upa != null){
+      this.authChange.next(true);
+      this.upa = upa
+      return upa;
+      
+    }
 }
-
+    getUser(){
+      return this.upa;
+    }
 }

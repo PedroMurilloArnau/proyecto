@@ -18,6 +18,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { UserService } from './services/user.service'
 import { HttpClientModule } from '@angular/common/http';
 import { TastingCalendarComponent } from './tasting/tasting-calendar/tasting-calendar.component';
+import { MenuComponent } from './navegation/menu/menu.component';
+import { SidenavComponent } from './navegation/sidenav/sidenav.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { TastingCalendarComponent } from './tasting/tasting-calendar/tasting-cal
     AddBeerComponent,
     NewsComponent,
     WelcomeComponent,
-    TastingCalendarComponent
+    TastingCalendarComponent,
+    MenuComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,8 @@ import { TastingCalendarComponent } from './tasting/tasting-calendar/tasting-cal
     MaterialModule,
     FlexLayoutModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

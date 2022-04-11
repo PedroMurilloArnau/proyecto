@@ -4,10 +4,16 @@ require('dotenv').config();
 require('./src/bbdd/dbConfig')
 const Usuarios = require('./src/bbdd/users')
 const app = express();
-const cors = require('cors')
+const cors = require('cors');
+const session = require('express-session');
 
 app.use(cors())
 app.use(express.json());
+app.use(session({
+    secret: 'frase secreta',
+    resave: true,
+    saveUninitialized: true
+}));
 
 app.use('/beer/users',require('./src/microservices/auth/auth.routing'))
 

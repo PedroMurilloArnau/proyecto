@@ -24,10 +24,16 @@ export class LoginComponent implements OnInit {
       password: this.loginForm.value.password
     }).subscribe((res: any) =>{
     if(res.ok = true){
+      this.userService.isAuth({
+        type: res.type,
+        email: res.email
+
+      });
+      console.log(res)
       this.router.navigate(['/']);
     }
     else{
-      this.router.navigate(['/login'])
+      this.router.navigate(['/login']);
     }  
     });
   }

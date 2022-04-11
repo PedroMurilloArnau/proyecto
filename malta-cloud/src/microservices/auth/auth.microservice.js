@@ -3,7 +3,6 @@ const { respones } = require('express');
 const { validationResult } = require('express-validator');
 const { generateJWT } = require('../../helpers/jwt.mudule');
 const  Users  = require('../../bbdd/users');
-
 const crearUsuario = async(req, res)=>{
   const { name,email, password} = req.body;
 
@@ -81,7 +80,7 @@ const loginUsuario = async (req, res) => {
     
     return res.status(201).json({
       ok:true,
-      name: user.name,
+      type: user.type,
       email: user.email,
       token,
     });
