@@ -78,13 +78,14 @@ const loginUsuario = async (req, res) => {
       });
     }
     const token = await generateJWT(user.name, user.email);
-
+    
     return res.status(201).json({
       ok:true,
       name: user.name,
       email: user.email,
       token,
     });
+    
   } catch(error){
     return res.status(500).json({
       ok: false,

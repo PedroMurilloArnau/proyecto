@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UserService } from 'src/app/services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -10,7 +11,7 @@ import { UserService } from 'src/app/services/user.service';
 export class SignupComponent implements OnInit {
   maxDate;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService,private router: Router) { }
 
   ngOnInit(){
     this.maxDate = new Date();
@@ -27,6 +28,7 @@ export class SignupComponent implements OnInit {
       password: form.value.password
     })
     .subscribe((res: any) =>{
-      console.log(res)})
+      console.log(res)});
+      this.router.navigate(['/login']);
   }
 }

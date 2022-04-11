@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -8,8 +9,8 @@ import { map } from 'rxjs/operators';
 export class UserService {
 
   endpointUser: string = 'http://localhost:3000/beer/users/new';
-
-  constructor(private http: HttpClient) { }
+  endpointLogin: string = 'http://localhost:3000/beer/users/login';
+  constructor(private http: HttpClient,private router: Router) { }
   
   getClientes() {
     return this.http.get(this.endpointUser)
@@ -28,4 +29,14 @@ postUsuarios(users){
     })
   )
 }
+login(user){
+  return this.http.post(this.endpointLogin, user)
+  .pipe(
+    map((data: any) => {
+      return data;
+    })
+  )
+
+}
+
 }

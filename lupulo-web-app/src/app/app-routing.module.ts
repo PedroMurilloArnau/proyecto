@@ -6,6 +6,7 @@ import { CatalogueComponent } from './catalogue/catalogue.component';
 import { GaneComponent } from './gane/gane.component';
 import { PurchaseComponent } from './purchase/purchase.component';
 import { TastingComponent } from './tasting/tasting.component';
+import { TastingCalendarComponent } from './tasting/tasting-calendar/tasting-calendar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'catalogue', component: CatalogueComponent},
   { path: 'tasting', component: TastingComponent},
   { path: 'game', component: GaneComponent},
-  { path: 'purchase', component: PurchaseComponent}
+  { path: 'purchase', component: PurchaseComponent},
+  { path: 'calendar', component: TastingCalendarComponent}
 ];
 
 @NgModule({

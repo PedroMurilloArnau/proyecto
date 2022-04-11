@@ -17,6 +17,7 @@ import { NewsComponent } from './catalogue/news/news.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { UserService } from './services/user.service'
 import { HttpClientModule } from '@angular/common/http';
+import { TastingCalendarComponent } from './tasting/tasting-calendar/tasting-calendar.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     PurchaseComponent,
     AddBeerComponent,
     NewsComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    TastingCalendarComponent
   ],
   imports: [
     BrowserModule,

@@ -14,3 +14,8 @@ productSchema.statics.actives = function () {
 
 +Creamos el acceso a las cookie-parser
 
++Creamos el acceso al calendario
+
+npm install date-fns --save
+
+

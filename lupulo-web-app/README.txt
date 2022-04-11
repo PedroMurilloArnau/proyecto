@@ -34,3 +34,10 @@ En nuestro archivo app.module.ts
     FormsModule,
     ...
 ]
+-> Instalamos para el calendario los siguientes compoenntes:
+
+    npm i angular-calendario
+    npm i @ng-bootstrap/ng-bootstrap
+    npm i date-fns
+    mpm i angularx-flatpickr
+    
