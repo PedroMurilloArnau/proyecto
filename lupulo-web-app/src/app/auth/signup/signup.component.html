@@ -6,11 +6,10 @@
            <mat-error *ngIf="nameInput.hasError('required')">Field must not empty</mat-error>
        </mat-form-field> 
        <mat-form-field>
-            <input type="text" matInput ngModel name="surmane" placeholder="Your surname" required
+            <input type="text" matInput ngModel name="surname" placeholder="Your surname" required
             #surnameInput="ngModel">
             <mat-error *ngIf="surnameInput.hasError('required')">Field must not empty</mat-error>
         </mat-form-field>
-        
        <mat-form-field>
             <input type="email" matInput ngModel name="email" placeholder="Your email" email required
             #emailInput="ngModel">
@@ -42,5 +41,5 @@
                     <a href="https://boga.eus/es/condiciones-de-venta/">Agree to Terms and Conditions</a>
                 </mat-checkbox>
         <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Submit</button>
-   </form> 
+   </form>
 </section>
