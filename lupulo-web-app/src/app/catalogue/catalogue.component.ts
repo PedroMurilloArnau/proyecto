@@ -9,7 +9,7 @@ import { UserService } from '../services/user.service'
 export class CatalogueComponent implements OnInit {
   onAddBeer = false;
   user: any;
-  type: string;
+  type: any;
   constructor(private authService: UserService) { }
 
   ngOnInit(){
@@ -17,5 +17,5 @@ export class CatalogueComponent implements OnInit {
     this.type = this.user.type
     
   }
-
+  
 }

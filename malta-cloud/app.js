@@ -16,6 +16,7 @@ app.use(session({
 }));
 
 app.use('/beer/users',require('./src/microservices/auth/auth.routing'))
+app.use('/beer/cataloge',require('./src/microservices/cataloge/cataloge.routing'))
 
 app.listen(process.env.PORT, ()=>{
     console.log(`Servidor escuchando en htt://localhost:${process.env.PORT}`)

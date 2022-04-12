@@ -13,6 +13,7 @@ export class UserService {
 
   endpointUser: string = 'http://localhost:3000/beer/users/new';
   endpointLogin: string = 'http://localhost:3000/beer/users/login';
+  nedpointBeers: string = 'http://localhost:3000/beer/cataloge/all'
   constructor(private http: HttpClient,private router: Router) { }
   
   getClientes() {
@@ -22,6 +23,14 @@ export class UserService {
           return data;
         })
       )
+  }
+  getBeer() {
+    return this.http.get(this.nedpointBeers)
+    .pipe(
+      map((data: any) =>{
+        return data;
+      })
+    )
   }
 
 postUsuarios(users){
