@@ -1,1 +1,42 @@
-<p>add-beer works!</p>
+<section class="add-beer"  fxLayout fxLayoutAlign="center">
+    <form (ngSubmit)="onAddBeer(f)" #f="ngForm">
+        <mat-card fxFlex.xs="100%" fxFlex="400px" >
+            <mat-card-title fxLayoutAlign="center">Add a new Beer!!!
+                <mat-icon>sports_bar</mat-icon> 
+            </mat-card-title>
+            <img mat-card-image src="https://m.media-amazon.com/images/I/71UciFRS6TL._AC_SL1500_.jpg" alt="1906 reserva">
+            <mat-card-content fxLayoutAlign="center">
+                Remember add the new beer and select all properties of this fantastic
+                beer.
+            </mat-card-content>
+            <mat-form-field class="field-name" appearance="fill" >
+                <input type="text" matInput  ngModel name="name" placeholder="Name Beer" required
+                #nameInput="ngModel">
+                <mat-error *ngIf="nameInput.hasError('required')">Field must not empty</mat-error>
+            </mat-form-field>
+            <mat-form-field class="field-stock" >
+                <input type="number" matInput  ngModel name="stock" placeholder="Stock" required
+                #nameInput="ngModel">
+                <mat-error *ngIf="nameInput.hasError('required')">Field must not empty</mat-error>
+            </mat-form-field>
+            <mat-form-field class="field-name" appearance="fill">
+                <mat-label>Image</mat-label>
+                <input type="text" matInput  ngModel name="image" placeholder="Url Img" required
+                #nameInput="ngModel">
+                <mat-error *ngIf="nameInput.hasError('required')">Field must not empty</mat-error>
+            </mat-form-field>
+            <mat-form-field class="field-stock" >
+                <mat-label>Select type:</mat-label>
+                <mat-select ngModel name="beertype" required>
+                    <mat-option value="rubia">Rubia</mat-option>
+                    <mat-option value="staut">Staut</mat-option>
+                    <mat-option value="pillsnerbia">Pillsner</mat-option>
+                    <mat-option value="ipa">Ipa</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-card-actions fxLayoutAlign="center">
+                <button type="submit" mat-raised-button [disabled]="f.invalid" color="primary">AddBeer</button>
+            </mat-card-actions>
+        </mat-card>
+
+    </form>

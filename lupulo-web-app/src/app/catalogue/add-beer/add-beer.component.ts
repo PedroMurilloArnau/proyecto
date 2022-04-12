@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add-beer',
@@ -11,5 +12,7 @@ export class AddBeerComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  onAddBeer(form: NgForm){
+    
+  }
 }
