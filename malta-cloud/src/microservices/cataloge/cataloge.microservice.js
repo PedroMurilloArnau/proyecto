@@ -14,6 +14,35 @@ const allBeer = async(req, res) => {
     };
 };
 
+const addBeer = async(req,res) => {
+  const { name } = req.body;
+
+  try{
+    const beer = await Beers.findOne({name: name});
+
+    if(beer){
+      return res.status(400).json({
+        ok: false,
+        msg: 'Beer exist you mast implement the stock.'
+      });
+    }
+    const beeradd = new Beers(req.body)
+
+    await beeradd.save();
+
+    return res.status(201).json({
+      ok:true,
+      name: name,
+    })
+  }
+  catch (error){
+    return res.status(500).json({
+      ok:false,
+      msg: 'Ask for tecnical asistance.'
+    });
+}};
+
 module.exports = {
     allBeer,
-};
+    addBeer,
+}

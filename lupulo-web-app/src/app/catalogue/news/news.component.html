@@ -23,6 +23,7 @@
                     #nameInput="ngModel">
                     <mat-error *ngIf="nameInput.hasError('required')">Field must not empty</mat-error>
                 </mat-form-field>
+                <!--Ojo no envia el campo hidden-->
                 <input type="hidden" ngModel name="name" value="{{beer.name}}">
                 <button type="submit" mat-raised-button [disabled]="f.invalid" color="primary">AddBeer</button>
             </form> 

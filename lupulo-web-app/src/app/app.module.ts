@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
-import { SignupComponent } from './auth/signup/signup.component';
+import { SignupComponent, DialogOverviewExampleDialog } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { TastingComponent } from './tasting/tasting.component';
@@ -19,7 +19,8 @@ import { UserService } from './services/user.service'
 import { HttpClientModule } from '@angular/common/http';
 import { TastingCalendarComponent } from './tasting/tasting-calendar/tasting-calendar.component';
 import { MenuComponent } from './navegation/menu/menu.component';
-import { SidenavComponent } from './navegation/sidenav/sidenav.component'
+import { SidenavComponent } from './navegation/sidenav/sidenav.component';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SidenavComponent } from './navegation/sidenav/sidenav.component'
     WelcomeComponent,
     TastingCalendarComponent,
     MenuComponent,
-    SidenavComponent
+    SidenavComponent,
+    DialogOverviewExampleDialog,
   ],
   imports: [
     BrowserModule,

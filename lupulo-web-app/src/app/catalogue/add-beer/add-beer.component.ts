@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-add-beer',
@@ -8,11 +10,21 @@ import { NgForm } from '@angular/forms';
 })
 export class AddBeerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: UserService,private router: Router) { }
 
   ngOnInit(): void {
   }
   onAddBeer(form: NgForm){
-    
+    console.log(form)
+    this.authService.postBeer({
+      name: form.value.name,
+      stock: form.value.stock,
+      image: form.value.image,
+      biertype: form.value.biertype,
+      priceUni: form.value.priceUni,
+    })
+    .subscribe((res: any) =>{
+      console.log(res)});
+      this.router.navigate(['/catalogue']);
   }
 }
