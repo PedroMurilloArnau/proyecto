@@ -14,6 +14,7 @@ import { MatCardModule } from "@angular/material/card";
 import { MatSelectModule } from "@angular/material/select";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner"
 import { MatDialogModule } from "@angular/material/dialog";
+import { MatRadioModule } from '@angular/material/radio';
 
 
 
@@ -35,6 +36,7 @@ import { MatDialogModule } from "@angular/material/dialog";
         MatFormFieldModule,
         MatIconModule,
         MatButtonModule,
+        MatRadioModule,
         
      ],
  exports: [MatDialogModule,
@@ -53,6 +55,7 @@ import { MatDialogModule } from "@angular/material/dialog";
     MatFormFieldModule,
     MatIconModule,
     MatButtonModule,
+    MatRadioModule,
  ],
 
 })

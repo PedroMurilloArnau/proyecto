@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,10 +13,11 @@ export class NewsComponent implements OnInit {
   beers: any;
   user: any;
   type: any;
+  
 
 
 
-  constructor(private authService: UserService) { }
+  constructor(private authService: UserService,private router: Router,) { }
 
   ngOnInit(){
     this.user = this.authService.getUser()
@@ -26,6 +28,8 @@ export class NewsComponent implements OnInit {
     })
 }
 onAddBeer(form: NgForm){
-    console.log(form)
+    console.log(form);
+    this.router.navigate(['/purchase']);
+
 }
 }

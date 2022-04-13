@@ -1,5 +1,5 @@
 <section class="add-beer"  fxLayout fxLayoutAlign="center">
-    <table>
+    <table border="2">
         <tr>
             <th>Nombre</th>
             <th *ngIf="type === 'Prog'||type ==='Shop'" >Stock</th>
@@ -24,7 +24,9 @@
                     <mat-error *ngIf="nameInput.hasError('required')">Field must not empty</mat-error>
                 </mat-form-field>
                 <!--Ojo no envia el campo hidden-->
-                <input type="hidden" ngModel name="name" value="{{beer.name}}">
+                <mat-radio-group ngModel name="name" aria-label="Select an option" required>
+                    <mat-radio-button value="{{beer.name}}">Add</mat-radio-button>
+                </mat-radio-group>
                 <button type="submit" mat-raised-button [disabled]="f.invalid" color="primary">AddBeer</button>
             </form> 
             </td>

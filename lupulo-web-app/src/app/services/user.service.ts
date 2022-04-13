@@ -36,7 +36,7 @@ export class UserService {
   postBeer(beer){
     return this.http.post(this.endpointAddBeer, beer)
     .pipe(
-      map((data: any) =>{
+      map((data: []) =>{
         return data;
       })
     )
