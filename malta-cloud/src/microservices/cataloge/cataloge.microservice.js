@@ -1,8 +1,9 @@
 const bcrypt = require('bcryptjs');
-const { respones } = require('express');
+const { respones, request } = require('express');
 const { validationResult } = require('express-validator');
 const { generateJWT } = require('../../helpers/jwt.mudule');
 const  Beers  = require('../../bbdd/beer');
+
 
 const allBeer = async(req, res) => {
     try{
@@ -29,10 +30,22 @@ const addBeer = async(req,res) => {
     const beeradd = new Beers(req.body)
 
     await beeradd.save();
+    //console.log(req.session.list.length);
+    if(req.session.list === undefined){
+    const final = [];
+    final.push(beeradd)
+    req.session.list = final;
+    }
+    else{
+    this.final = req.session.list;
+    this.final.push(beeradd);
+    }
+    console.log(req.session.list);
 
     return res.status(201).json({
       ok:true,
       name: name,
+      lista: req.session.list,
     })
   }
   catch (error){

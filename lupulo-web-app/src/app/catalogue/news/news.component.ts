@@ -28,8 +28,12 @@ export class NewsComponent implements OnInit {
     })
 }
 onAddBeer(form: NgForm){
-    console.log(form);
+    this.authService.postAddPurchase({
+      name: form.value.name,
+      cantidad: form.value.number,
+    })
+    .subscribe((res: any) =>{
+      console.log(res)});
     this.router.navigate(['/purchase']);
-
 }
 }

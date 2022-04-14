@@ -1,8 +1,12 @@
 const bcrypt = require('bcryptjs');
 const { respones } = require('express');
+const session = require('express-session')
 const { validationResult } = require('express-validator');
 const { generateJWT } = require('../../helpers/jwt.mudule');
 const  Users  = require('../../bbdd/users');
+
+
+
 const crearUsuario = async(req, res)=>{
   const { name,email, password} = req.body;
 
@@ -39,7 +43,6 @@ const crearUsuario = async(req, res)=>{
     const token = await generateJWT(useradd.name, useradd.email);
 
     await useradd.save();
-    
  
   return res.status(201).json({
     ok:true,
@@ -78,6 +81,18 @@ const loginUsuario = async (req, res) => {
     }
     const token = await generateJWT(user.name, user.email);
     
+    //Create a session parameter y las características.
+    req.session.regenerate
+    // 1 Día ya que esta en milisegundos
+      
+      req.session.user = user.email;
+      req.session.date = new Date();
+      req.session.token = token;
+      req.session.cookie.expires = new Date(Date.now() + 86400000);
+    
+    /**else{
+    req.session.destroy
+    }*/
     return res.status(201).json({
       ok:true,
       type: user.type,
