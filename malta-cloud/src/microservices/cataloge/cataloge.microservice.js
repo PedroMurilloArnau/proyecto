@@ -40,11 +40,12 @@ const addBeer = async(req,res) => {
     this.final = req.session.list;
     this.final.push(beeradd);
     }
-    console.log(req.session.list);
+    console.log(req.session);
 
     return res.status(201).json({
       ok:true,
       name: name,
+      user: req.session.user,
       lista: req.session.list,
     })
   }
