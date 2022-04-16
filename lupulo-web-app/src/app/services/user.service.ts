@@ -16,8 +16,19 @@ export class UserService {
   nedpointBeers: string = 'http://localhost:3000/beer/cataloge/all';
   endpointAddBeer: string = 'http://localhost:3000/beer/cataloge/new';
   endpointaddPurchase: string = 'http://localhost:3000/beer/purchase/add';
+  endpointTaste: string = 'http://localhost:3000/beer/cataloge/taste';
+
   constructor(private http: HttpClient,private router: Router) { }
   
+  postTaster(name){
+    return this.http.post(this.endpointTaste, name)
+    .pipe(
+      map((data: any) => {
+        return data;
+      })
+    )
+  }
+
   getClientes() {
     return this.http.get(this.endpointUser)
       .pipe(
@@ -30,7 +41,7 @@ export class UserService {
   postAddPurchase(bier){
     return this.http.post(this.endpointaddPurchase, bier)
     .pipe(
-      map((data: []) =>{
+      map((data: any) =>{
         return data;
       })
     )
@@ -47,7 +58,7 @@ export class UserService {
   postBeer(beer){
     return this.http.post(this.endpointAddBeer, beer)
     .pipe(
-      map((data: []) =>{
+      map((data: any) =>{
         return data;
       })
     )

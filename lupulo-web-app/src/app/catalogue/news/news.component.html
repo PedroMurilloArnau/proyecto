@@ -1,4 +1,5 @@
 <section class="add-beer"  fxLayout fxLayoutAlign="center">
+    
     <table border="2">
         <tr>
             <th>Nombre</th>
@@ -6,6 +7,7 @@
             <th>priceUni</th>
             <th>image</th>
             <th>Biertype</th>
+            
         </tr>
         <tr *ngFor="let beer of beers">
             <td >{{beer.name}}</td>
@@ -15,6 +17,7 @@
                 <img mat-card-image src="{{beer.image}}" alt="cerveza_generica">
             </td>
             <td>{{beer.biertype}}</td>
+        
             
             <td *ngIf="type === 'Client'">
                 <form (ngSubmit)="onAddBeer(f)" #f="ngForm">
@@ -30,10 +33,13 @@
                 <button type="submit" mat-raised-button [disabled]="f.invalid" color="primary">AddBeer</button>
             </form> 
             </td>
-            <td *ngIf="type === 'Client'">
-                
-            
-            </td>
+            <td><a (click)="openDialog(beer.name)">Taste note</a></td>
         </tr>
+        <mat-paginator [length]="beers.length"
+        [pageSize]="10"
+        [pageSizeOptions]="[5, 10, 25, 100]"
+        aria-label="Select page">
+</mat-paginator>
     </table>
+
 </section>

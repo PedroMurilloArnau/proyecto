@@ -2,7 +2,8 @@ const { Router } = require('express');
 const { check } = require('express-validator');
 const{
 allBeer,
-addBeer
+addBeer,
+findTaste
 
 } = require('./cataloge.microservice');
 const { validarCampos } = require('../../middlewares/validadr-campos');
@@ -21,5 +22,7 @@ router.post('/new',
     addBeer
 );
 router.get('/all',allBeer);
+
+router.post('/taste',findTaste);
 
 module.exports = router;

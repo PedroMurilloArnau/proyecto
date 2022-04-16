@@ -15,6 +15,9 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner"
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatRadioModule } from '@angular/material/radio';
+import { MatSortModule } from "@angular/material/sort";
+import { MatTableModule } from "@angular/material/table";
+import { MatPaginatorModule } from "@angular/material/paginator";
 
 
 
@@ -37,6 +40,9 @@ import { MatRadioModule } from '@angular/material/radio';
         MatIconModule,
         MatButtonModule,
         MatRadioModule,
+        MatSortModule,
+        MatTableModule,
+        MatPaginatorModule
         
      ],
  exports: [MatDialogModule,
@@ -56,6 +62,9 @@ import { MatRadioModule } from '@angular/material/radio';
     MatIconModule,
     MatButtonModule,
     MatRadioModule,
+    MatSortModule,
+    MatTableModule,
+    MatPaginatorModule,
  ],
 
 })

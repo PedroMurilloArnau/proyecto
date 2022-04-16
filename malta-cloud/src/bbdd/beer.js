@@ -7,14 +7,5 @@ const beerSchema = new Schema({
     priceUni: Number,
     image: String,
     biertype: String,
-    tasteNote: [
-        {
-            color: String,
-            smell: String,
-            tasteMoth: String,
-            bitterness: String,
-            aftertaste: String
-        }
-    ]
 });
 module.exports = mongoose.model('beers',beerSchema);

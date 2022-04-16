@@ -3,6 +3,7 @@ const { respones, request } = require('express');
 const { validationResult } = require('express-validator');
 const { generateJWT } = require('../../helpers/jwt.mudule');
 const  Beers  = require('../../bbdd/beer');
+const tasteNote = require('../../bbdd/tasteNote');
 
 
 const allBeer = async(req, res) => {
@@ -14,6 +15,27 @@ const allBeer = async(req, res) => {
       return  res.json({ error: err.message})
     };
 };
+const findTaste = async(req, res) =>{
+  const { name } = req.body
+
+  try{
+    const taste = await tasteNote.findOne({name: name})
+
+    if(!taste){
+      return res.status(400).json({
+        ok: false,
+        msg: `We don't have a taste note for that beer.`,
+      });
+      
+    }
+    return res.json(taste);
+  }
+    catch (err){
+      return res.json({ error: err.message})
+    
+    }
+  };
+
 
 const addBeer = async(req,res) => {
   const { name } = req.body;
@@ -59,4 +81,5 @@ const addBeer = async(req,res) => {
 module.exports = {
     allBeer,
     addBeer,
+    findTaste,
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
+import Swal  from 'sweetalert2';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -24,6 +25,13 @@ export class LoginComponent implements OnInit {
       password: this.loginForm.value.password
     }).subscribe((res: any) =>{
     if(res.ok = true){
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'You are login',
+        showConfirmButton: false,
+        timer: 1500
+      })
       this.userService.isAuth({
         type: res.type,
         email: res.email

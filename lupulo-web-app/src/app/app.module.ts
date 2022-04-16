@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TastingCalendarComponent } from './tasting/tasting-calendar/tasting-calendar.component';
 import { MenuComponent } from './navegation/menu/menu.component';
 import { SidenavComponent } from './navegation/sidenav/sidenav.component';
+import { TasteComponent } from './catalogue/news/taste/taste.component'
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { SidenavComponent } from './navegation/sidenav/sidenav.component';
     MenuComponent,
     SidenavComponent,
     DialogOverviewExampleDialog,
+    TasteComponent
   ],
   imports: [
     BrowserModule,
