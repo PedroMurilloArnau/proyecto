@@ -20,7 +20,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { TastingCalendarComponent } from './tasting/tasting-calendar/tasting-calendar.component';
 import { MenuComponent } from './navegation/menu/menu.component';
 import { SidenavComponent } from './navegation/sidenav/sidenav.component';
-import { TasteComponent } from './catalogue/news/taste/taste.component'
+import { TasteComponent } from './catalogue/news/taste/taste.component';
+import { NewTastingComponent } from './tasting/new-tasting/new-tasting.component';
+import { AllTastingComponent } from './tasting/all-tasting/all-tasting.component';
+import { YourTastingComponent } from './tasting/your-tasting/your-tasting.component'
 
 
 @NgModule({
@@ -39,7 +42,10 @@ import { TasteComponent } from './catalogue/news/taste/taste.component'
     MenuComponent,
     SidenavComponent,
     DialogOverviewExampleDialog,
-    TasteComponent
+    TasteComponent,
+    NewTastingComponent,
+    AllTastingComponent,
+    YourTastingComponent,
   ],
   imports: [
     BrowserModule,
