@@ -5,6 +5,7 @@ const {
     intasting,
     showtasting,
     addClient,
+    findYourtasting,
 } = require('./tasting.microservice');
 const { validarCampos } = require('../../middlewares/validadr-campos');
 
@@ -18,6 +19,8 @@ router.post('/add',
     validarCampos
 ],
 addtasting);
+
+router.post('/yourTasting',findYourtasting);
 
 router.get('/all',showtasting);
 

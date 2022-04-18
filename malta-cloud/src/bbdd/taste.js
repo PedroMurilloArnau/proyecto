@@ -6,7 +6,7 @@ const tasteSchema = new Schema({
     type: String,
     taster: String,
     students: Number,
-    studient:({ name: String}),
+    studient:[{name: String}],
     placesAvailable: Number,
     bier1Name: String,
     bier2Name: String,
