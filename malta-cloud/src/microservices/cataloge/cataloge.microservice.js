@@ -16,7 +16,7 @@ const allBeer = async(req, res) => {
     };
 };
 const findTaste = async(req, res) =>{
-  const { name } = req.body
+  const  name  = req.body
 
   try{
     const taste = await tasteNote.findOne({name: name})

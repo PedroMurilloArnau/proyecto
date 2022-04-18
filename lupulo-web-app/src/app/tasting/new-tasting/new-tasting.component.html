@@ -1,7 +1,9 @@
 <section class="presnetation">
 <h1>Tasting </h1>
+<button mat-raised-button color="primary" class="cabecera" (click)="onForm()">Create a Tasting</button>
+<button mat-raised-button color="primary" class="cabecera" (click)="onTable()">Show your Tasting</button>
 </section>
-<section class="add-tasting"  fxLayout fxLayoutAlign="center">
+<section *ngIf="formul === true" class="add-tasting"  fxLayout fxLayoutAlign="center">
     <form (ngSubmit)="onAddBeer(f)" #f="ngForm">
         <mat-card fxFlex.xs="100%" fxFlex="400px" >
             <mat-card-title fxLayoutAlign="center">Add a new Beer!!!
@@ -48,4 +50,18 @@
             </mat-card-actions>
         </mat-card>
     </form>
+</section>
+<section *ngIf="tablel === true">
+      
+    <table border="2">
+        <tr>
+            <th>Nombre</th>
+            <th>priceUni</th>
+            <th>image</th>
+            <th>Biertype</th>
+        </tr>
+
+ 
+    </table>
+
 </section>
