@@ -23,7 +23,9 @@ import { SidenavComponent } from './navegation/sidenav/sidenav.component';
 import { TasteComponent } from './catalogue/news/taste/taste.component';
 import { NewTastingComponent } from './tasting/new-tasting/new-tasting.component';
 import { AllTastingComponent } from './tasting/all-tasting/all-tasting.component';
-import { YourTastingComponent } from './tasting/your-tasting/your-tasting.component'
+import { YourTastingComponent } from './tasting/your-tasting/your-tasting.component';
+import { IgxCarouselModule,IgxListModule } from "igniteui-angular";
+
 
 
 @NgModule({
@@ -56,6 +58,9 @@ import { YourTastingComponent } from './tasting/your-tasting/your-tasting.compon
     FlexLayoutModule,
     ReactiveFormsModule,
     FormsModule,
+    IgxCarouselModule,
+    IgxListModule
+
     
   ],
   providers: [],

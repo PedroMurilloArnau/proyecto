@@ -23,6 +23,7 @@ import { MatPaginatorModule } from "@angular/material/paginator";
 
 
 
+
 @NgModule({
  imports: [MatDialogModule,
         MatProgressSpinnerModule,
@@ -43,7 +44,8 @@ import { MatPaginatorModule } from "@angular/material/paginator";
         MatRadioModule,
         MatSortModule,
         MatTableModule,
-        MatPaginatorModule
+        MatPaginatorModule,
+        
         
      ],
  exports: [MatDialogModule,

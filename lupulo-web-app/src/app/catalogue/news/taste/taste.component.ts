@@ -10,12 +10,13 @@ import { UserService } from '../../../services/user.service';
 export class TasteComponent implements OnInit {
   taste: any;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: {name: string},private authService: UserService,) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: {namer: string},private authService: UserService,) {}
 
   ngOnInit(): void {
+    console.log(this.data.namer)
 
     this.taste = this.authService.postTaster({
-      beername: this.data.name
+      beername: this.data.namer
     }).subscribe((res: any) => {
       this.taste = res;
     });

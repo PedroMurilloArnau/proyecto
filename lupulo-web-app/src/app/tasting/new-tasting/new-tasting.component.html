@@ -14,8 +14,14 @@
                 Remember add the new beer and select all properties of this fantastic
                 beer.
             </mat-card-content>
+            <mat-form-field appearance="fill">
+                <mat-label>Tasting type</mat-label>
+                <mat-select ngModel name="biertype" required onselect="">
+                    <mat-option *ngFor="let type of types" [value]="type.type">initiation tasting of {{type.type}}</mat-option>
+                </mat-select>
+              </mat-form-field>
             <mat-form-field class="field-name" appearance="fill" >
-                <input type="text" matInput  ngModel name="name" placeholder="Name Beer" required
+                <input type="text" matInput  ngModel name="name" placeholder="Name of tasting" required
                 #nameInput="ngModel">
                 <mat-error *ngIf="nameInput.hasError('required')">Field must not empty</mat-error>
             </mat-form-field>

@@ -1,0 +1,11 @@
+@use '../../variables' as *;
+
+.carousel-wrapper {
+    width: 60%;
+}
+
+.carousel-animation-wrapper {
+    margin: 20px auto;
+    display: flex;
+}
+

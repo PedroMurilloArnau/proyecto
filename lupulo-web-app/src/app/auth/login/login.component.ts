@@ -1,8 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../services/user.service';
+import { DOCUMENT } from '@angular/common';
 import { Router } from '@angular/router';
 import Swal  from 'sweetalert2';
+import { HttpParams } from '@angular/common/http';
+import { enviroment } from '../../../../enviroment/enviroment';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,7 +14,9 @@ import Swal  from 'sweetalert2';
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
-  constructor(private userService: UserService,private router: Router) { }
+  GOOGLE_REDIRECT: string = '/signin-with-google';
+
+  constructor(private userService: UserService,private router: Router,@Inject(DOCUMENT) private document: any) { }
 
 
   ngOnInit(): void {
@@ -45,4 +51,17 @@ export class LoginComponent implements OnInit {
     }  
     });
   }
+  onSignWithGoogle(): void{
+    const queryParams = new HttpParams()
+    .set('scope', 'email https://www.googleapis.com/auth/admin.directory.user.readonly')
+    .set('access_type', 'online')
+    .set('state', `${this.document.location.origin}${this.GOOGLE_REDIRECT}`)
+    .set('include_granted_scopes', 'true')
+    .set('redirect_uri', `${this.document.location.origin}${this.GOOGLE_REDIRECT}`)
+    .set('response_type', 'code')
+    .set('prompt', 'select_account')
+    .set('client_id', enviroment.GOOGLE_CLIENT_ID);
+
+  this.document.location.href = `https://accounts.google.com/o/oauth2/v2/auth?${queryParams.toString()}`;
+}
 }

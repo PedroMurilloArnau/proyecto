@@ -46,4 +46,8 @@ de sweetalert:
     mpm i angularx-flatpickr
     npm i sweetalert2
 
+-> Instalamos el siguiente material para realizar el carrusel:
+
+    npm i igniteui-angular
+
 

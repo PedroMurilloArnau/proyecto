@@ -3,7 +3,8 @@ const { check } = require('express-validator');
 const{
 allBeer,
 addBeer,
-findTaste
+findTaste,
+allTypeBier
 
 } = require('./cataloge.microservice');
 const { validarCampos } = require('../../middlewares/validadr-campos');
@@ -22,6 +23,8 @@ router.post('/new',
     addBeer
 );
 router.get('/all',allBeer);
+
+router.get('/type',allTypeBier);
 
 router.post('/taste',findTaste);
 

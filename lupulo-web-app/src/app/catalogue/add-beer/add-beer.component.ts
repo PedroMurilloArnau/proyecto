@@ -10,12 +10,19 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class AddBeerComponent implements OnInit {
 
+  types: any;
+
   constructor(private authService: UserService,private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+
+    this.types = this.authService.getTypeBeer().subscribe((res: any) => {
+      this.types = res;
+      console.log(this.types);
+    });
+   
   }
   onAddBeer(form: NgForm){
-    console.log(form)
     this.authService.postBeer({
       name: form.value.name,
       stock: form.value.stock,

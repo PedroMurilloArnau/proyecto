@@ -27,11 +27,8 @@
             </mat-form-field>
             <mat-form-field class="field-stock" >
                 <mat-label>Select type:</mat-label>
-                <mat-select ngModel name="biertype" required>
-                    <mat-option value="rubia">Rubia</mat-option>
-                    <mat-option value="staut">Staut</mat-option>
-                    <mat-option value="pillsnerbia">Pillsner</mat-option>
-                    <mat-option value="ipa">Ipa</mat-option>
+                <mat-select ngModel name="biertype" required >
+                    <mat-option *ngFor="let type of types" [value]="type.type">{{type.type}}</mat-option>
                 </mat-select>
             </mat-form-field>
             <mat-form-field class="field-name" appearance="fill">
@@ -46,3 +43,5 @@
         </mat-card>
 
     </form>
+
+
