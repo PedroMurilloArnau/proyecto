@@ -2,7 +2,8 @@ const { $where } = require('../../bbdd/taste');
 const Taste = require('../../bbdd/taste');
 
 const findYourtasting = async(req,res)=>{
-    const email = req.body.email;
+    const email = req.params.tip;
+    console.log(req.params.tip);
 
 
     try{
@@ -14,7 +15,7 @@ const findYourtasting = async(req,res)=>{
             });
         }
         return res.status(201).json({
-            tastes
+            tastes: tastes
         });
     }
     catch (error){

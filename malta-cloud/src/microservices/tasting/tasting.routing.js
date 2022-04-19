@@ -20,7 +20,7 @@ router.post('/add',
 ],
 addtasting);
 
-router.post('/yourTasting',findYourtasting);
+router.get('/yourTasting/:tip',findYourtasting);
 
 router.get('/all',showtasting);
 

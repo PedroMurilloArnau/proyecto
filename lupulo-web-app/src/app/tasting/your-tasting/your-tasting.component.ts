@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-your-tasting',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./your-tasting.component.css']
 })
 export class YourTastingComponent implements OnInit {
+ 
+  tates: any;
+  
 
-  constructor() { }
+  constructor(private authService: UserService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.tates = this.authService.getYourTaste().subscribe((res: any) => {
+      this.tates = res.tastes;
+    });
   }
 
 }
