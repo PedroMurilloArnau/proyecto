@@ -10,6 +10,9 @@ import { Subject } from "rxjs";
 export class UserService {
   authChange = new Subject<boolean>();
   upa: [];
+  user: any;
+  person = "juanchPadilla@filo.com";
+  
 
   endpointUser: string = 'http://localhost:3000/beer/users/new';
   endpointLogin: string = 'http://localhost:3000/beer/users/login';
@@ -19,9 +22,19 @@ export class UserService {
   endpointTaste: string = 'http://localhost:3000/beer/cataloge/taste';
   endpointTasteAll: string = 'http://localhost:3000/beer/tasting/all';
   endpointTasteAdd: string = 'http://localhost:3000/beer/tasting/addClient';
-
+  endpointTasteyour: string = `http://localhost:3000/beer/tasting/yourTasting/${this.person}`;
+  
   constructor(private http: HttpClient,private router: Router) { }
   
+  getYourTaste() {
+    return this.http.get(this.endpointTasteyour)
+      .pipe(
+        map((data: any) => {
+          return data;
+        })
+      )
+  };
+
   getTaste(){
     return this.http.get(this.endpointTasteAll)
     .pipe(
@@ -114,3 +127,4 @@ login(user){
       return this.upa;
     }
 }
+

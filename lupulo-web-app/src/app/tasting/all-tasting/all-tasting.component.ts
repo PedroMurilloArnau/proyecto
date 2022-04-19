@@ -27,8 +27,7 @@ export class AllTastingComponent implements OnInit {
     onAddtastesd(form: NgForm){
       this.authService.postAddTaster({
         name: form.name,
-        email: this.user.email,
-        
+        email: this.user.email,        
       })
 
     }
