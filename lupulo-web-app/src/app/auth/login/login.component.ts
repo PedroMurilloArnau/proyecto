@@ -4,7 +4,7 @@ import { UserService } from '../../services/user.service';
 import { DOCUMENT } from '@angular/common';
 import { Router } from '@angular/router';
 import Swal  from 'sweetalert2';
-import { HttpParams } from '@angular/common/http';
+import { HttpParams,HttpClient,HttpHeaders } from '@angular/common/http';
 import { enviroment } from '../../../../enviroment/enviroment';
 
 @Component({
@@ -41,10 +41,11 @@ export class LoginComponent implements OnInit {
       this.userService.isAuth({
         type: res.type,
         email: res.email
-
       });
+      localStorage.setItem('token',res.token);
       console.log(res)
       this.router.navigate(['/']);
+      localStorage.clear
     }
     else{
       this.router.navigate(['/login']);

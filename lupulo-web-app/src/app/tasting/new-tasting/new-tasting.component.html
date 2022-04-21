@@ -16,9 +16,10 @@
             </mat-card-content>
             <mat-form-field appearance="fill">
                 <mat-label>Tasting type</mat-label>
-                <mat-select ngModel name="biertype" required onselect="">
+                <mat-select ngModel name="biertype" #pwInput="ngModel">
                     <mat-option *ngFor="let type of types" [value]="type.type">initiation tasting of {{type.type}}</mat-option>
                 </mat-select>
+                <mat-hint *ngIf="(pwInput.value === 'dunkel')">dunkel</mat-hint>
               </mat-form-field>
             <mat-form-field class="field-name" appearance="fill" >
                 <input type="text" matInput  ngModel name="name" placeholder="Name of tasting" required
@@ -36,13 +37,10 @@
                 #nameInput="ngModel">
                 <mat-error *ngIf="nameInput.hasError('required')">Field must not empty</mat-error>
             </mat-form-field>
-            <mat-form-field class="field-stock" >
+            <mat-form-field class="field-stock" *ngIf="(pwInput.value === 'dunkel')">
                 <mat-label>Select type:</mat-label>
-                <mat-select ngModel name="biertype" required>
-                    <mat-option value="rubia">Rubia</mat-option>
-                    <mat-option value="staut">Staut</mat-option>
-                    <mat-option value="pillsnerbia">Pillsner</mat-option>
-                    <mat-option value="ipa">Ipa</mat-option>
+                <mat-select ngModel name="biertype" required *ngIf="(pwInput.value === '')">
+                    <mat-option *ngFor="let bier of biers" [value]="bier.name" >{{bier.name}}</mat-option>
                 </mat-select>
             </mat-form-field>
             <mat-form-field class="field-name" appearance="fill">
@@ -55,19 +53,9 @@
                 <button type="submit" mat-raised-button [disabled]="f.invalid" color="primary">AddBeer</button>
             </mat-card-actions>
         </mat-card>
+        
     </form>
 </section>
-<section *ngIf="tablel === true">
-      
-    <table border="2">
-        <tr>
-            <th>Nombre</th>
-            <th>priceUni</th>
-            <th>image</th>
-            <th>Biertype</th>
-        </tr>
-
- 
-    </table>
+<section>
 
 </section>

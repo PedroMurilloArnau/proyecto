@@ -22,8 +22,9 @@
             <td *ngIf="type === 'Client'">
                 <form (ngSubmit)="onAddBeer(f)" #f="ngForm">
                 <mat-form-field class="field-stock">
-                    <input type="number" matInput  ngModel name="number" placeholder="Stock" required
-                    #nameInput="ngModel">
+                    <input type="number" matInput  ngModel name="number" placeholder="amount" required
+                    #nameInput="ngModel" [max]="beer.stock">
+                    <mat-error  *ngIf="( beer.stock.value - nameInput.value ) < 0  ">Yo mast select less than {{beer.stock}}.</mat-error>
                     <mat-error *ngIf="nameInput.hasError('required')">Field must not empty</mat-error>
                 </mat-form-field>
                 <!--Ojo no envia el campo hidden-->

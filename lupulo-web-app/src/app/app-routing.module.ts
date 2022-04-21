@@ -8,20 +8,23 @@ import { PurchaseComponent } from './purchase/purchase.component';
 import { TastingComponent } from './tasting/tasting.component';
 import { TastingCalendarComponent } from './tasting/tasting-calendar/tasting-calendar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent},
-  { path: 'catalogue', component: CatalogueComponent},
-  { path: 'tasting', component: TastingComponent},
-  { path: 'game', component: GaneComponent},
-  { path: 'purchase', component: PurchaseComponent},
-  { path: 'calendar', component: TastingCalendarComponent}
+  { path: 'catalogue', component: CatalogueComponent, canActivate: [AuthGuard]},
+  { path: 'tasting', component: TastingComponent, canActivate: [AuthGuard]},
+  { path: 'game', component: GaneComponent, canActivate: [AuthGuard]},
+  { path: 'purchase', component: PurchaseComponent, canActivate: [AuthGuard]},
+  { path: 'calendar', component: TastingCalendarComponent, canActivate: [AuthGuard]},
+  { path: '**', redirectTo : 'login'}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGuard]
 })
 export class AppRoutingModule { }

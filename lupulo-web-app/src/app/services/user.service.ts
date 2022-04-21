@@ -1,8 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { Subject } from "rxjs";
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,9 @@ import { Subject } from "rxjs";
 export class UserService {
   authChange = new Subject<boolean>();
   upa: [];
+  list: [{}];
   user: any;
+  bier: any;
   person = "juanchPadilla@filo.com";
   
 
@@ -80,12 +83,23 @@ export class UserService {
   }
 
   postAddPurchase(bier){
+    if(this.list === undefined){
+    this.list = [bier];
+  }
+  else{
+    this.list.push(bier)
+  }
+
+    console.log(this.list);
     return this.http.post(this.endpointaddPurchase, bier)
     .pipe(
       map((data: any) =>{
         return data;
       })
     )
+  }
+  getPurchase(){
+    return this.list;
   }
 
   getBeer() {
@@ -126,11 +140,16 @@ login(user){
   isAuth(upa){
     if(upa != null){
       this.authChange.next(true);
-      this.upa = upa
+      this.upa = upa;
+      
       return upa;
       
     }
-}
+  }
+  Auth(){
+    return this.authChange;
+  }
+
     getUser(){
       return this.upa;
     }

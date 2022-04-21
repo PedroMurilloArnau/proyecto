@@ -1,2 +1,22 @@
-<p>{{user.type}}</p>
-<p>{{user.email}}</p>
+
+
+<h1>Purchase for the fantastic user {{user.email}}</h1>
+<section>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Amount</th>
+            <th>Price</th>
+            <th>IVA</th>
+        </tr>
+        <tr *ngFor="let bier of purchase">
+            <td>{{bier.name}}</td>
+            <td>{{bier.cantidad}}</td>
+            <td>{{bier.price}}</td>
+            <td>{{bier.iva}}</td>
+            <td><button>Remove Beer</button></td>
+        </tr> 
+    </table>
+    <p>Precio total del pedido = {{sumpe}} €</p>
+    <p>Cantidad de cervezas pedidas = {{sum}}</p>
+</section>

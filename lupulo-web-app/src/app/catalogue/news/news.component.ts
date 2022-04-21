@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { TasteComponent } from './taste/taste.component'
+import { ɵparseCookieValue } from '@angular/common';
 
 
 
@@ -18,6 +19,8 @@ export class NewsComponent implements OnInit {
   type: any;
   tasteNote: any;
   beers: any;
+  numero: number;
+
   
 
 
@@ -39,7 +42,8 @@ onAddBeer(form: NgForm){
       cantidad: form.value.number,
     })
     .subscribe((res: any) =>{
-      console.log(res)});
+      console.log()});
+
     this.router.navigate(['/purchase']);
 }
 openDialog(name){
@@ -47,6 +51,10 @@ openDialog(name){
     data:{ namer: name},
     width: '400px',
   })
-
+  
+}
+number(algo){
+  console.log(Number(algo));
+  return Number(algo);
 }
 }

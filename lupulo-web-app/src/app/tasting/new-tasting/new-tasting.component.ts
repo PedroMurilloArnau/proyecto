@@ -16,11 +16,13 @@ export class NewTastingComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit(){
-    this.biers = this.userService.getBeer();
+    this.biers = this.userService.getBeer().subscribe((res: any) => {
+      this.biers = res;
+    
+    });
     console.log(this.biers);
     this.types = this.userService.getTypeBeer().subscribe((res: any) => {
       this.types = res;
-      console.log(this.types);
     });
   }
 

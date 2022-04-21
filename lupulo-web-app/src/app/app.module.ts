@@ -63,7 +63,7 @@ import { IgxCarouselModule,IgxListModule } from "igniteui-angular";
 
     
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

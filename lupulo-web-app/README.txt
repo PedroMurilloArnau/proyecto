@@ -50,4 +50,7 @@ de sweetalert:
 
     npm i igniteui-angular
 
+-> Guardar información de la sesion eh el HttpHeaders
+
+
 
