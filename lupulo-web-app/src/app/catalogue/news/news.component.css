@@ -13,18 +13,9 @@ img{
 }
 
 table{
-    background-color: antiquewhite;
-    display: flex;
-    flex-flow: column;
-    align-content: center center;
+    width: 400px;
     border-radius: 10px;
 }
-th{
-    padding: 10px;
-}
-td{
-    padding: 10px;
-}
-.th_table{
-    background-color: aquamarine;
-}
+td {
+    text-align: center;
+  }

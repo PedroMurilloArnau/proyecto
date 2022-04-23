@@ -1,22 +1,47 @@
+<section class="purchase" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+<mat-card class="purchase-card" fxLayout="column" fxLayoutAlign="center center">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Purchase for the fantastic user {{user.email}}</mat-card-title>
+        <mat-card-subtitle>Remeber, you must complete the purchase</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
+            <ng-container matColumnDef="name" >
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
 
-<h1>Purchase for the fantastic user {{user.email}}</h1>
-<section>
-    <table>
-        <tr>
-            <th>Nombre</th>
-            <th>Amount</th>
-            <th>Price</th>
-            <th>IVA</th>
-        </tr>
-        <tr *ngFor="let bier of purchase">
-            <td>{{bier.name}}</td>
-            <td>{{bier.cantidad}}</td>
-            <td>{{bier.price}}</td>
-            <td>{{bier.iva}}</td>
-            <td><button>Remove Beer</button></td>
-        </tr> 
-    </table>
-    <p>Precio total del pedido = {{sumpe}} €</p>
-    <p>Cantidad de cervezas pedidas = {{sum}}</p>
+            <ng-container matColumnDef="cantidad">
+              <th mat-header-cell *matHeaderCellDef> Amount </th>
+              <td mat-cell *matCellDef="let element"> {{element.cantidad}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="price">
+              <th mat-header-cell *matHeaderCellDef> Price </th>
+              <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="iva">
+              <th mat-header-cell *matHeaderCellDef> Iva </th>
+              <td mat-cell *matCellDef="let element"> {{element.iva}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="button">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let element"><button mat-raised-button color="accent" (click)="delPurchase(element.name)">Remove Beer</button></td>
+              </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            <tr mat-row *matCellDef="let element"> </tr>
+        </table>
+        <p>Precio total del pedido = {{sumpe}} €</p>
+        <p>Cantidad de cervezas pedidas = {{sum}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="completePurchase(user.email)">Complete Purchase</button>
+    </mat-card-actions>
+</mat-card>
 </section>

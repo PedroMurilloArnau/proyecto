@@ -5,6 +5,7 @@ import { map } from 'rxjs/operators';
 import { Subject } from "rxjs";
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -28,7 +29,7 @@ export class UserService {
   endpointTasteyour: string = `http://localhost:3000/beer/tasting/yourTasting/${this.person}`;
   endpointTypeBeers: string = 'http://localhost:3000/beer/cataloge/type';
 
-  constructor(private http: HttpClient,private router: Router) { }
+  constructor(private http: HttpClient,private router: Router,) { }
   
   getYourTaste() {
     return this.http.get(`http://localhost:3000/beer/tasting/yourTasting/${this.person}`)
@@ -81,35 +82,6 @@ export class UserService {
         })
       )
   }
-
-  postAddPurchase(bier){
-    if(this.list === undefined){
-    this.list = [bier];
-  }
-  else{
-    this.list.push(bier)
-  }
-
-    console.log(this.list);
-    return this.http.post(this.endpointaddPurchase, bier)
-    .pipe(
-      map((data: any) =>{
-        return data;
-      })
-    )
-  }
-  getPurchase(){
-    return this.list;
-  }
-
-  getBeer() {
-    return this.http.get(this.nedpointBeers)
-    .pipe(
-      map((data: any) =>{
-        return data;
-      })
-    )
-  }
   postBeer(beer){
     return this.http.post(this.endpointAddBeer, beer)
     .pipe(
@@ -118,15 +90,15 @@ export class UserService {
       })
     )
   }
-postUsuarios(users){
+  postUsuarios(users){
   return this.http.post(this.endpointUser, users)
   .pipe(
     map((data: any) =>{
       return data;
     })
   )
-}
-login(user){
+  }
+  login(user){
   return this.http.post(this.endpointLogin, user)
   .pipe(
     map((data: any) => {

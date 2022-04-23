@@ -1,9 +1,9 @@
 <section class="add-beer"  fxLayout fxLayoutAlign="center">
     
-    <table border="2">
+    <table border="1">
         <tr>
             <th>Nombre</th>
-            <th *ngIf="type === 'Prog'||type ==='Shop'" >Stock</th>
+            <th *ngIf="user.type !== 'Client'">Stock</th>
             <th>priceUni</th>
             <th>image</th>
             <th>Biertype</th>
@@ -11,7 +11,7 @@
         </tr>
         <tr *ngFor="let beer of beers">
             <td >{{beer.name}}</td>
-            <td *ngIf="type === 'Prog'||type ==='Shop'">{{beer.stock}}</td>
+            <td *ngIf="user.type !== 'Client'">{{beer.stock}}</td>
             <td>{{beer.priceUni}}</td>
             <td class="img-td">
                 <img mat-card-image src="{{beer.image}}" alt="cerveza_generica">
@@ -23,7 +23,7 @@
                 <form (ngSubmit)="onAddBeer(f)" #f="ngForm">
                 <mat-form-field class="field-stock">
                     <input type="number" matInput  ngModel name="number" placeholder="amount" required
-                    #nameInput="ngModel" [max]="beer.stock">
+                    #nameInput="ngModel" [max]="beer.stock" [min]="0">
                     <mat-error  *ngIf="( beer.stock.value - nameInput.value ) < 0  ">Yo mast select less than {{beer.stock}}.</mat-error>
                     <mat-error *ngIf="nameInput.hasError('required')">Field must not empty</mat-error>
                 </mat-form-field>
@@ -36,11 +36,6 @@
             </td>
             <td><a (click)="openDialog(beer.name)">Taste note</a></td>
         </tr>
-        <mat-paginator [length]="beers.length"
-        [pageSize]="10"
-        [pageSizeOptions]="[5, 10, 25, 100]"
-        aria-label="Select page">
-</mat-paginator>
     </table>
 
 </section>

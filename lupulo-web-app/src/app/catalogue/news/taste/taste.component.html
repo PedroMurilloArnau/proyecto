@@ -1,6 +1,12 @@
 <section *ngFor="let tastes of taste">
-<h2 mat-dialog-title>Taste of {{tastes.beername}}</h2>
 <mat-dialog-content class="mat-typography">
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="taste.beername";
+      background-size: cover></div>
+      <mat-card-title>Taste of {{tastes.beername}}</mat-card-title>
+    </mat-card-header>
+  </mat-card>
 <p>Color: {{tastes.color}}</p>
 <p>Smell: {{tastes.smell}}</p>
 <p>Taste Moth: {{tastes.tasteMoth}}</p>

@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { TasteComponent } from './taste/taste.component'
 import { ɵparseCookieValue } from '@angular/common';
+import { GestBeerService } from '../../services/gest-beer.service';
+import Swal  from 'sweetalert2';
 
 
 
@@ -20,31 +22,53 @@ export class NewsComponent implements OnInit {
   tasteNote: any;
   beers: any;
   numero: number;
+  purchase: any;
+  puruchi: any;
 
   
 
 
 
-  constructor(private authService: UserService,private router: Router,public dialog: MatDialog) { }
+  constructor(private authService: UserService,private router: Router,public dialog: MatDialog, private gestbeerService: GestBeerService) { }
 
   ngOnInit(){
     this.user = this.authService.getUser()
     this.type = this.user.type
-    this.beers = this.authService.getBeer()
+    this.beers = this.gestbeerService.getBeer()
     .subscribe((res: any) => {
+      this.purchase = this.gestbeerService.getPurchase();
       this.beers = res;
+      for(let puri of this.purchase){
+        for(let beer of this.beers){
+          if(beer.name === puri.name){
+            beer.stock = beer.stock - puri.cantidad;
+          }
+        }
+      }
     });
     this.tasteNote =  this.beers.tasteNote
 }
+
+
 onAddBeer(form: NgForm){
-    this.authService.postAddPurchase({
+  this.puruchi = this.gestbeerService.getPurchase();
+  if(this.puruchi !== undefined){
+  for(let puri of this.puruchi){
+  if(puri.name === form.value.name){
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'You add the same beer! Remove an add more beer',
+      
+    })
+    return this.router.navigate(['/purchase']);
+  }
+}
+}
+   return this.gestbeerService.postAddPurchase({
       name: form.value.name,
       cantidad: form.value.number,
     })
-    .subscribe((res: any) =>{
-      console.log()});
-
-    this.router.navigate(['/purchase']);
 }
 openDialog(name){
   const dialogRef = this.dialog.open(TasteComponent,{

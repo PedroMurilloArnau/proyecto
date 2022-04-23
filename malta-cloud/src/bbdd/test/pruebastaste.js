@@ -4,7 +4,7 @@
 
     const tasteNote = new TasteNote();
 
-    tasteNote.beername = "Piña Colada";
+    tasteNote.beername = "Soda Bier";
     tasteNote.color = "dorado";
     tasteNote.smell = "afrutado";
     tasteNote.tasteMoth = "ligeramente afrutado"

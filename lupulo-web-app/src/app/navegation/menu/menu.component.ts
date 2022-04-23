@@ -11,6 +11,7 @@ export class MenuComponent implements OnInit, OnDestroy {
   @Output() sidenavToggle = new EventEmitter<void>();
   isAuth = false;
   authSubscription: Subscription | undefined;
+  hidden = false;
 
   constructor(private authService: UserService) { }
 
@@ -28,6 +29,9 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.authSubscription?.unsubscribe();
+  }
+  toggleBadgeVisibility() {
+    this.hidden = !this.hidden;
   }
 
 }

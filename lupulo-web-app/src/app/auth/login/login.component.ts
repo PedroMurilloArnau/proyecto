@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import Swal  from 'sweetalert2';
 import { HttpParams,HttpClient,HttpHeaders } from '@angular/common/http';
 import { enviroment } from '../../../../enviroment/enviroment';
+import { GestBeerService } from '../../services/gest-beer.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,7 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   GOOGLE_REDIRECT: string = '/signin-with-google';
 
-  constructor(private userService: UserService,private router: Router,@Inject(DOCUMENT) private document: any) { }
+  constructor(private userService: UserService,private router: Router,@Inject(DOCUMENT) private document: any, private gestbeerService: GestBeerService) { }
 
 
   ngOnInit(): void {
@@ -42,11 +43,13 @@ export class LoginComponent implements OnInit {
         type: res.type,
         email: res.email
       });
+      this.gestbeerService.borrarLista();
       localStorage.setItem('token',res.token);
       console.log(res)
       this.router.navigate(['/']);
       localStorage.clear
     }
+    
     else{
       this.router.navigate(['/login']);
     }  

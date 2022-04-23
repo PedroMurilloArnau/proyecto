@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UserService } from '../../services/user.service';
+import { GestBeerService } from '../../services/gest-beer.service';
+
 
 @Component({
   selector: 'app-new-tasting',
@@ -13,10 +15,10 @@ export class NewTastingComponent implements OnInit {
   biers: any;
   types: any;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private gestbeerService: GestBeerService) { }
 
   ngOnInit(){
-    this.biers = this.userService.getBeer().subscribe((res: any) => {
+    this.biers = this.gestbeerService.getBeer().subscribe((res: any) => {
       this.biers = res;
     
     });

@@ -8,6 +8,6 @@ const { validarCampos } = require('../../middlewares/validadr-campos');
 
 const router = Router();
 
-router.post('/add',validarCampos,addPurchase);
+router.post('/add/:tip',addPurchase);
 
 module.exports = router;
