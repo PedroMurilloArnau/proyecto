@@ -1,5 +1,45 @@
 const { $where } = require('../../bbdd/taste');
 const Taste = require('../../bbdd/taste');
+const  Users  = require('../../bbdd/users');
+const Docu = require('../../bbdd/documentation');
+
+const addDocumentation = async(req,res) =>{
+    const email = req.params.tip;
+    const docu = req.body;
+    try{
+        const user = await Users.findOne({email:email});
+        if(!user){
+        return res.status(400).json({
+            ok:false,
+            msg: 'User no exist.'
+        });
+        }
+        const docuadd = new Docu();
+        docuadd.id = (await Docu.find()).length + 1;
+        docuadd.title = docu.title;
+        docuadd.author = docu.author;
+        docuadd.anonimus = docu.anonimus;
+        docuadd.articleTitle = docu.articleTitle;
+        docuadd.articleImage = docu.articleImage;
+        docuadd.articleText = docu.articleText
+        docuadd.bibliography = docu.bibliography;
+        
+        await docuadd.save();
+
+        return res.status(201).json({
+            ok: true,
+            msg: `The documnetation has added. `,
+        });
+
+    }
+    catch (error){
+        return res.status(500).json({
+            ok:false,
+            msg: 'Ask for tecnical asistance.'
+        })
+
+    }
+}
 
 const findYourtasting = async(req,res)=>{
     const email = req.params.tip;
@@ -117,4 +157,5 @@ module.exports = {
     showtasting,
     addClient,
     findYourtasting,
+    addDocumentation
 }

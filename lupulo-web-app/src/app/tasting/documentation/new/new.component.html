@@ -1,1 +1,83 @@
-<p>new works!</p>
+<form (ngSubmit)="onAddBeer(f)" #f="ngForm">
+<mat-accordion class="example-headers-align">
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          New Documentation
+        </mat-panel-title>
+        <mat-panel-description>
+          Header information
+          <mat-icon>loyalty</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      
+      <mat-form-field appearance="fill">
+        <mat-label>Docu title</mat-label>
+        <input matInput ngModel name="title" required>
+      </mat-form-field>
+  
+        <mat-radio-group ngModel name="anonimus" aria-label="Select an option" required>
+            <mat-radio-button value="true">Anonymous document</mat-radio-button>
+            <mat-radio-button value="false">Non-anonymous document</mat-radio-button>
+        </mat-radio-group>
+      <mat-action-row>
+        <button mat-button color="primary" (click)="nextStep()">Next</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Article
+        </mat-panel-title>
+        <mat-panel-description>
+          Create new article
+          <mat-icon>line_weight</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Article title</mat-label>
+        <input matInput ngModel name="articleTitle" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Add image</mat-label>
+        <input matInput ngModel name="articleImage" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+          <mat-label>Text</mat-label>
+          <textarea matInput ngModel name="articleText" required>
+          </textarea>
+      </mat-form-field>
+  
+      <mat-action-row>
+        <button mat-button color="warn" (click)="prevStep()">Previous</button>
+        <button mat-button color="primary" (click)="nextStep()">Next</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Last steps
+        </mat-panel-title>
+        <mat-panel-description>
+            complete last information
+          <mat-icon>list_alt</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Bibliography</mat-label>
+        <textarea matInput ngModel name="bibliography" required>
+        </textarea>
+    </mat-form-field>
+    
+      <mat-action-row>
+        <button mat-button color="warn" (click)="prevStep()">Previous</button>
+        <button type="submit" mat-button color="primary" [disabled]="f.invalid" (click)="nextStep()">AddDocument</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+    
+  </mat-accordion>
+</form>

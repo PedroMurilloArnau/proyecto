@@ -26,6 +26,7 @@ import { AllTastingComponent } from './tasting/all-tasting/all-tasting.component
 import { YourTastingComponent } from './tasting/your-tasting/your-tasting.component';
 import { NewComponent } from './tasting/documentation/new/new.component';
 import { DocumentationComponent } from './tasting/documentation/documentation.component';
+import { AllDocumentationComponent } from './tasting/documentation/all-documentation/all-documentation.component';
 import { IgxCarouselModule,IgxListModule } from "igniteui-angular";
 
 
@@ -52,6 +53,7 @@ import { IgxCarouselModule,IgxListModule } from "igniteui-angular";
     YourTastingComponent,
     NewComponent,
     DocumentationComponent,
+    AllDocumentationComponent,
   ],
   imports: [
     BrowserModule,
