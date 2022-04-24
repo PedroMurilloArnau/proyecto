@@ -2,7 +2,7 @@ const express = require('express');
 require('./src/bbdd/dbConfig.js');
 require('dotenv').config();
 require('./src/bbdd/dbConfig')
-const Usuarios = require('./src/bbdd/users')
+
 const app = express();
 const cors = require('cors');
 const session = require('express-session');
