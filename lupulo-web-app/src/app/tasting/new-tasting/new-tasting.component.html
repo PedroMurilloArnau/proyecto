@@ -4,57 +4,74 @@
 <button mat-raised-button color="primary" class="cabecera" (click)="onTable()">Show your Tasting</button>
 </section>
 <section *ngIf="formul === true" class="add-tasting"  fxLayout fxLayoutAlign="center">
-    <form (ngSubmit)="onAddBeer(f)" #f="ngForm">
+    <form (ngSubmit)="onAddTasting(f)" #f="ngForm">
         <mat-card fxFlex.xs="100%" fxFlex="400px" >
-            <mat-card-title fxLayoutAlign="center">Add a new Beer!!!
+            <mat-card-title fxLayoutAlign="center">Add a new tasting!!! {{bien}}
                 <mat-icon>sports_bar</mat-icon> 
             </mat-card-title>
-            <img mat-card-image src="https://elements-cover-images-0.imgix.net/96431db6-9109-4d51-a38e-89c55c489b30?auto=compress&crop=edges&fit=crop&fm=jpeg&h=630&w=1200&s=abd1823486d1efb51f94687869602561" alt="cerveza_generica">
+            <img mat-card-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNcpzgyf_wm_4Qk1umFl8B08ETOxD9wX-SWg&usqp=CAU">
             <mat-card-content fxLayoutAlign="center">
-                Remember add the new beer and select all properties of this fantastic
-                beer.
+                Remember create a fantastic type of tasting.
             </mat-card-content>
             <mat-form-field appearance="fill">
                 <mat-label>Tasting type</mat-label>
-                <mat-select ngModel name="biertype" #pwInput="ngModel">
-                    <mat-option *ngFor="let type of types" [value]="type.type">initiation tasting of {{type.type}}</mat-option>
+                <mat-select ngModel name="biertype" #typeInput="ngModel" [(ngModel)]="selectedValue" >
+                    <mat-option *ngFor="let type of types" [value]="type.type" (click)="onSelect(typeInput)">initiation tasting of {{type.type}}</mat-option>
                 </mat-select>
-                <mat-hint *ngIf="(pwInput.value === 'dunkel')">dunkel</mat-hint>
-              </mat-form-field>
+                <mat-hint *ngIf="(typeInput.value === 'dunkel')">{{typeInput.value}}</mat-hint>
+            </mat-form-field>
             <mat-form-field class="field-name" appearance="fill" >
                 <input type="text" matInput  ngModel name="name" placeholder="Name of tasting" required
                 #nameInput="ngModel">
                 <mat-error *ngIf="nameInput.hasError('required')">Field must not empty</mat-error>
             </mat-form-field>
-            <mat-form-field class="field-stock" >
-                <input type="number" matInput  ngModel name="stock" placeholder="Stock" required
-                #nameInput="ngModel">
-                <mat-error *ngIf="nameInput.hasError('required')">Field must not empty</mat-error>
+            <mat-form-field appearance="fill"  class="bires">
+                <mat-label >Select 1 bier:</mat-label>
+                <mat-select ngModel name=" bier1Name" #pwInput1="ngModel" required>
+                    <mat-option *ngFor="let bier of bires" [value]="bier.name" (click)="onSelect1(pwInput1)">{{bier.name}}</mat-option>
+                </mat-select>
+                    <mat-hint *ngIf="(pwInput1.value === pwInput2.value )">{{pwInput1.value}}</mat-hint>
             </mat-form-field>
-            <mat-form-field class="field-name" appearance="fill">
-                <mat-label>Image</mat-label>
-                <input type="text" matInput  ngModel name="image" placeholder="Url Img" required
-                #nameInput="ngModel">
-                <mat-error *ngIf="nameInput.hasError('required')">Field must not empty</mat-error>
+            <mat-form-field appearance="fill" class="bires">
+                <mat-label>Select 2 bier:</mat-label>
+                <mat-select ngModel name="bier2Name" #pwInput2="ngModel" required>
+                    <mat-option *ngFor="let bier of bires1"  [value]="bier.name" (click)="onSelect2(pwInput2)">{{bier.name}}</mat-option>
+                </mat-select>
+                <mat-error *ngIf="(pwInput1.value === pwInput2.value )">Selecione distinta cerveza</mat-error>
             </mat-form-field>
-            <mat-form-field class="field-stock" *ngIf="(pwInput.value === 'dunkel')">
-                <mat-label>Select type:</mat-label>
-                <mat-select ngModel name="biertype" required *ngIf="(pwInput.value === '')">
-                    <mat-option *ngFor="let bier of biers" [value]="bier.name" >{{bier.name}}</mat-option>
+            <mat-form-field appearance="fill" class="bires">
+                <mat-label>Select 3 bier:</mat-label>
+                <mat-select ngModel name="bier3Name" #pwInput3="ngModel" required>
+                    <mat-option *ngFor="let bier of bires2" [value]="bier.name" (click)="onSelect3(pwInput3)">{{bier.name}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="bires">
+                <mat-label>Select 4 bier:</mat-label>
+                <mat-select ngModel name="bier4Name" #pwInput4="ngModel" required>
+                    <mat-option *ngFor="let bier of bires3" [value]="bier.name" (click)="onSelect4(pwInput4)">{{bier.name}}</mat-option>
                 </mat-select>
             </mat-form-field>
             <mat-form-field class="field-name" appearance="fill">
-                <mat-label>Price</mat-label>
-                <input type="number" matInput  ngModel name="priceUni" placeholder="Price uni" required
-                #priceInput="ngModel">
+                <mat-label>Price for tasting:</mat-label>
+                <input type="number" matInput  ngModel name="price" placeholder="price per student" required
+                #priceInput="ngModel" max="100" min="0">
                 <mat-error *ngIf="priceInput.hasError('required')">Field must not empty</mat-error>
             </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Your tasting day" [matDatepicker]="picker"
+                [min]="minDate" [max]="maxDate" ngModel name="date" required>
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+                
             <mat-card-actions fxLayoutAlign="center">
                 <button type="submit" mat-raised-button [disabled]="f.invalid" color="primary">AddBeer</button>
             </mat-card-actions>
         </mat-card>
         
     </form>
+    
 </section>
 <section>
 

@@ -3,9 +3,20 @@ const Taste = require('../../bbdd/taste');
 const  Users  = require('../../bbdd/users');
 const Docu = require('../../bbdd/documentation');
 
+const showAllDocumentation = async(req,res) =>{
+    try{
+        const docus = await Docu.find();
+        return res.json(docus);
+    }
+    catch (err) {
+        return res.json({ error: err.message})
+    }
+};
+
 const addDocumentation = async(req,res) =>{
-    const email = req.params.tip;
+    const email = req.body.email;
     const docu = req.body;
+    console.log(req.body.email)
     try{
         const user = await Users.findOne({email:email});
         if(!user){
@@ -17,7 +28,7 @@ const addDocumentation = async(req,res) =>{
         const docuadd = new Docu();
         docuadd.id = (await Docu.find()).length + 1;
         docuadd.title = docu.title;
-        docuadd.author = docu.author;
+        docuadd.author = user.name;
         docuadd.anonimus = docu.anonimus;
         docuadd.articleTitle = docu.articleTitle;
         docuadd.articleImage = docu.articleImage;
@@ -157,5 +168,6 @@ module.exports = {
     showtasting,
     addClient,
     findYourtasting,
-    addDocumentation
+    addDocumentation,
+    showAllDocumentation
 }

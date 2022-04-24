@@ -52,6 +52,7 @@ de sweetalert:
 
 -> Guardar información de la sesion eh el HttpHeaders:
 
-
+-> Date time:
+npm install --save  @angular-material-components/datetime-picker
 
 

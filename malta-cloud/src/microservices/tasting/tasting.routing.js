@@ -7,6 +7,7 @@ const {
     addClient,
     findYourtasting,
     addDocumentation,
+    showAllDocumentation
 } = require('./tasting.microservice');
 const { validarCampos } = require('../../middlewares/validadr-campos');
 
@@ -27,6 +28,8 @@ router.get('/all',showtasting);
 
 router.post('/addClient',addClient);
 
-router.post('/documentation/add/:tip',addDocumentation);
+router.post('/documentation/add',addDocumentation);
+
+router.get('/documentation/all',showAllDocumentation)
 
 module.exports = router;

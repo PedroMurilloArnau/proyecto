@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GestDocumentService } from '../../../services/gest.document.service'
 
 @Component({
   selector: 'app-all-documentation',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./all-documentation.component.css']
 })
 export class AllDocumentationComponent implements OnInit {
+  documents: any;
 
-  constructor() { }
+  constructor(private gestDocumentService: GestDocumentService) { }
 
   ngOnInit(): void {
+    this.documents = this.gestDocumentService.gestDocument()
+    .subscribe((res: any) =>{
+      this.documents = res;
+    })
   }
 
 }

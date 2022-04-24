@@ -31,6 +31,7 @@ import { IgxCarouselModule,IgxListModule } from "igniteui-angular";
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

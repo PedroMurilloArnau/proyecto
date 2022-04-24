@@ -58,9 +58,6 @@ deletePurchase(namer: string){
   
 }
 completePurchase(person: string){
-
-
-
     return this.http.post(`http://localhost:3000/beer/purchase/add/${person}`, this.list)
     .pipe(
       map((data: any) => {
