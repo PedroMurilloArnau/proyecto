@@ -34,7 +34,7 @@
             <mat-form-field class="field-name" appearance="fill">
                 <mat-label>Price</mat-label>
                 <input type="number" matInput  ngModel name="priceUni" placeholder="Price uni" required
-                #priceInput="ngModel">
+                #priceInput="ngModel"[min]="0">
                 <mat-error *ngIf="priceInput.hasError('required')">Field must not empty</mat-error>
             </mat-form-field>
             <mat-card-actions fxLayoutAlign="center">
