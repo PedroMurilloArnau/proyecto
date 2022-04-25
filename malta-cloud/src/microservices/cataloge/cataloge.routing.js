@@ -26,6 +26,6 @@ router.get('/all',allBeer);
 
 router.get('/type',allTypeBier);
 
-router.post('/taste',findTaste);
+router.get('/taste/:tip',findTaste)
 
 module.exports = router;

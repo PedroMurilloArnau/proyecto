@@ -20,6 +20,7 @@ import { MatTableModule } from "@angular/material/table";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import {MatExpansionModule} from '@angular/material/expansion';
 import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-material-components/datetime-picker';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 
 
@@ -48,7 +49,8 @@ import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-mat
         MatPaginatorModule,
         MatExpansionModule,
         NgxMatTimepickerModule,
-        NgxMatDatetimePickerModule
+        NgxMatDatetimePickerModule,
+        MatGridListModule
         
         
      ],
@@ -75,6 +77,7 @@ import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-mat
     MatExpansionModule,
     NgxMatDatetimePickerModule,
     NgxMatTimepickerModule,
+    MatGridListModule
  ],
 
 })

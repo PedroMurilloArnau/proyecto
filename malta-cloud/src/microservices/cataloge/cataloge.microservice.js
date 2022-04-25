@@ -27,7 +27,7 @@ const allBeer = async(req, res) => {
     };
 };
 const findTaste = async(req, res) =>{
-  const  beername  = req.body.beername
+  const beername = req.params.tip;
 
   try{
     const taste = await tasteNote.find({beername: beername})

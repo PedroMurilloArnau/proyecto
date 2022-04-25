@@ -4,6 +4,7 @@
 
     const tastesd = new Taste();
 
+    tastesd.id = 1;
     tastesd.name = "Cata Rompeolas";
     tastesd.type = "InicialIpa";
     tastesd.taster = "JuanDiego@gmail.com";

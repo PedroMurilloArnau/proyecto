@@ -11,8 +11,7 @@ const showAllDocumentation = async(req,res) =>{
     catch (err) {
         return res.json({ error: err.message})
     }
-};
-
+}
 const addDocumentation = async(req,res) =>{
     const email = req.body.email;
     const docu = req.body;
@@ -51,11 +50,27 @@ const addDocumentation = async(req,res) =>{
 
     }
 }
-
+const showThetasting = async(req,res) =>{
+    const id = req.params.tip;
+    const tasting = await Taste.findOne({id:id})
+    try{
+    if(!tasting){
+        return res.status(404).json({
+            ok:false,
+            msg: 'Tasting not found.'
+    })
+}
+return res.status(201).json(tasting);
+}
+catch (error){
+    return res.status(500).json({
+        ok:false,
+        msg: 'Ask for tecnical asistance.'
+    })
+}
+}
 const findYourtasting = async(req,res)=>{
     const email = req.params.tip;
-    console.log(req.params.tip);
-
 
     try{
          const tastes = await Taste.find({"studient.name":email});
@@ -169,5 +184,6 @@ module.exports = {
     addClient,
     findYourtasting,
     addDocumentation,
-    showAllDocumentation
+    showAllDocumentation,
+    showThetasting
 }

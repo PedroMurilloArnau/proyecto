@@ -1,0 +1,35 @@
+<mat-dialog-content class="mat-typography">
+<mat-card class="almacen" id="tipo1">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Cata de {{tate.name}}</mat-card-title>
+        <mat-card-subtitle>Creada por {{tester.user.name}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-progress-spinner mode="determinate" [value]="progress"></mat-progress-spinner>
+        <p>Status of tasting:{{progress}}%</p>
+        <button mat-raised-button color="accent" (click)="onStop()">Stop</button>
+    </mat-card-content>
+</mat-card>
+<mat-card class="almacen" id="tipo2">
+    <p>{{tate.bier1Name}}</p>
+    
+</mat-card>
+<mat-card class="almacen" id="tipo3">
+    <p>{{tate.bier2Name}}</p>
+    <p *ngIf="( progress > 25 )">Esto no se ve hasta el 25%</p>
+</mat-card>
+<mat-card class="almacen" id="tipo4">
+    <p>{{tate.bier3Name}}</p>
+    <p *ngIf="( progress > 50 )">Esto no se ve hasta el 50%</p>
+</mat-card>
+<mat-card class="almacen" id="tipo4">
+    <p>{{tate.bier4Name}}</p>
+    <p *ngIf="( progress > 75 )">Esto no se ve hasta el 75%</p>
+</mat-card>
+<mat-card class="almacen" id="tipo4">
+    <p>Formulario</p>
+    <p *ngIf="( progress > 75 )">Esto no se ve hasta el 50%</p>
+</mat-card>
+</mat-dialog-content>
+

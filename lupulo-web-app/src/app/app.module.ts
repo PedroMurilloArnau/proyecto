@@ -28,7 +28,8 @@ import { NewComponent } from './tasting/documentation/new/new.component';
 import { DocumentationComponent } from './tasting/documentation/documentation.component';
 import { AllDocumentationComponent } from './tasting/documentation/all-documentation/all-documentation.component';
 import { IgxCarouselModule,IgxListModule } from "igniteui-angular";
-
+import { CurrentTastingComponent } from "./tasting/current-tasting/current-tasting.component";
+import { StopTastingComponent } from "./tasting/current-tasting/sotop-tasting-component";
 
 
 
@@ -55,6 +56,9 @@ import { IgxCarouselModule,IgxListModule } from "igniteui-angular";
     NewComponent,
     DocumentationComponent,
     AllDocumentationComponent,
+    CurrentTastingComponent,
+    StopTastingComponent
+
   ],
   imports: [
     BrowserModule,
@@ -66,11 +70,13 @@ import { IgxCarouselModule,IgxListModule } from "igniteui-angular";
     ReactiveFormsModule,
     FormsModule,
     IgxCarouselModule,
-    IgxListModule
+    IgxListModule,
+    
 
     
   ],
   providers: [UserService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [StopTastingComponent]
 })
 export class AppModule { }

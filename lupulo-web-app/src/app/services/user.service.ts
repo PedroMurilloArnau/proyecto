@@ -11,13 +11,17 @@ import { Subject } from "rxjs";
 })
 export class UserService {
   authChange = new Subject<boolean>();
-  upa: [];
+  upa: {
+    email: string
+  };
   list: [{}];
   user: any;
   bier: any;
   person = "juanchPadilla@filo.com";
+  id: any;
   
 
+  
   endpointUser: string = 'http://localhost:3000/beer/users/new';
   endpointLogin: string = 'http://localhost:3000/beer/users/login';
   nedpointBeers: string = 'http://localhost:3000/beer/cataloge/all';
@@ -28,11 +32,20 @@ export class UserService {
   endpointTasteAdd: string = 'http://localhost:3000/beer/tasting/addClient';
   endpointTasteyour: string = `http://localhost:3000/beer/tasting/yourTasting/${this.person}`;
   endpointTypeBeers: string = 'http://localhost:3000/beer/cataloge/type';
+  endpointThistaste: string = 'http://localhost:3000/beer/tasting/yourTasting'
 
   constructor(private http: HttpClient,private router: Router,) { }
-  
+  getTheTaste(id) {
+    
+    return this.http.get(`http://localhost:3000/beer/tasting/theTasting/${id}`)
+    .pipe(
+      map((data: any) => {
+        return data;
+      })
+    )
+};
   getYourTaste() {
-    return this.http.get(`http://localhost:3000/beer/tasting/yourTasting/${this.person}`)
+    return this.http.get(`http://localhost:3000/beer/tasting/yourTasting/${this.upa.email}`)
       .pipe(
         map((data: any) => {
           return data;
@@ -65,13 +78,19 @@ export class UserService {
 }
 
 
-  postTaster(name){
-    return this.http.post(this.endpointTaste, name)
+  getTaster(name){
+    return this.http.get(`http://localhost:3000/beer/cataloge/taste/${name}`)
     .pipe(
       map((data: any) => {
+        console.log(data)
         return data;
+        
       })
     )
+  }
+  findCliente(email) {
+    console.log(email);
+    return this.http.get(`http://localhost:3000/beer/users/find/${email}`)
   }
 
   getClientes() {

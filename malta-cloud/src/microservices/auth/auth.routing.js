@@ -4,6 +4,8 @@ const{
     verUsuario,
     crearUsuario,
     loginUsuario,
+    findusUario
+    
 } = require('./auth.microservice');
 const { validarCampos } = require('../../middlewares/validadr-campos');
 
@@ -28,5 +30,7 @@ loginUsuario
 );
 
 router.get('/all',verUsuario);
+
+router.get('/find/:tip',findusUario)
 
 module.exports = router;

@@ -5,7 +5,26 @@ const { validationResult } = require('express-validator');
 const { generateJWT } = require('../../helpers/jwt.mudule');
 const  Users  = require('../../bbdd/users');
 
+const findusUario = async(req,res) => {
+  const email = req.params.tip;
+  try{
+    const user = await Users.findOne({email:email});
+    if(!user){
+      return res.status(400).json({
+        ok:false,
+        msg: 'User not found!'
+    });
+    }
+    return res.status(201).json({user});
+  }
+  catch (error){
+    return res.status(500).json({
+        ok:false,
+        msg: 'Ask for tecnical asistance.'
+    })
 
+}
+}
 
 const crearUsuario = async(req, res)=>{
   const { name,email, password} = req.body;
@@ -122,4 +141,5 @@ module.exports = {
     verUsuario,
     crearUsuario,
     loginUsuario,
+    findusUario
 };

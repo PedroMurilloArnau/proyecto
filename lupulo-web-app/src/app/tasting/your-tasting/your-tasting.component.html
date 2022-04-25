@@ -2,6 +2,7 @@
     <table border="2">
         <tr *ngFor="let tastesd of tates">
             <td>{{tastesd.name}}</td>
+            <td><button enable *ngIf="ongoingTasting" (tastingExit)="ongoingTasting = false" (click)="start(tastesd.id)"></button></td>
         </tr>
     </table>
 </section>

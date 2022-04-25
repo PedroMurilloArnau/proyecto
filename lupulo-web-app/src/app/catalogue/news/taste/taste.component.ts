@@ -15,9 +15,8 @@ export class TasteComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.data.namer)
 
-    this.taste = this.authService.postTaster({
-      beername: this.data.namer
-    }).subscribe((res: any) => {
+    this.taste = this.authService.getTaster(this.data.namer)
+    .subscribe((res: any) => {
       this.taste = res;
     });
   }

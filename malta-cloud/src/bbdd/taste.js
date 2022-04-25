@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const tasteSchema = new Schema({
+    id: Number,
     name: String,
     type: String,
     taster: String,

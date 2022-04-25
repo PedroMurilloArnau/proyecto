@@ -1,0 +1,21 @@
+mat-dialog-content{
+    display: flex;
+    flex-wrap: wrap;
+
+    
+}
+.almacen{
+    width: 300px; 
+    height: 300px;
+    margin:5px;
+}
+.example-header-image {
+    background-image: url('../../../content/img/persona.jpg'); 
+    background-size: cover;
+  }
+  mat-card-content{
+      display: flex;
+      align-content: center;
+      justify-content: center;
+  }
+
