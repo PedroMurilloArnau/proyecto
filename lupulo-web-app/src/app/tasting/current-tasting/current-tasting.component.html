@@ -11,25 +11,146 @@
         <button mat-raised-button color="accent" (click)="onStop()">Stop</button>
     </mat-card-content>
 </mat-card>
-<mat-card class="almacen" id="tipo2">
-    <p>{{tate.bier1Name}}</p>
+<mat-card class="almacen" id="tipo2" >
+    <mat-card-header>
+        <mat-card-title>  
+                {{tate.bier1Name}}
+        </mat-card-title>        
+    </mat-card-header>
+    <mat-card-content *ngIf="casilla1 === false" class="evalute">
+        <div class="evaluate1">
+        <mat-icon>done_outline</mat-icon>
+            <p>Beer {{tate.bier1Name}} has evaluate.</p>
+        </div>
+    </mat-card-content>
     
+    <mat-card-content *ngIf="casilla1 === true">
+        <form (ngSubmit)="onAddBeer(f, (casilla1=false))" #f="ngForm">
+            <mat-form-field class="color">
+                <input   matInput  ngModel name="color" placeholder="color" required>
+            </mat-form-field>
+            <mat-form-field class="smell">
+                <input   matInput  ngModel name="smell" placeholder="smell"  required>
+            </mat-form-field>
+            <mat-form-field class="tasteMoth">
+                <input  matInput  ngModel name="tasteMoth" placeholder="tasteMoth" required>
+            </mat-form-field>
+            <button type="submit" mat-raised-button [disabled]="f.invalid" color="primary" class="validate">AddBeer</button>
+            <mat-form-field class="bitterness">
+                <input  matInput  ngModel name="bitterness" placeholder="bitterness" required>
+            </mat-form-field>   
+            <mat-form-field class="aftertaste">
+                <input  matInput  ngModel name="aftertaste" placeholder="aftertaste" required>
+            </mat-form-field>
+                        
+        </form>
+    </mat-card-content>
 </mat-card>
 <mat-card class="almacen" id="tipo3">
-    <p>{{tate.bier2Name}}</p>
-    <p *ngIf="( progress > 25 )">Esto no se ve hasta el 25%</p>
+    <mat-card-header>
+        <mat-card-title>  
+                {{tate.bier2Name}}
+        </mat-card-title>        
+    </mat-card-header>
+    <mat-card-content *ngIf="casilla2 === false" class="evalute">
+        <mat-icon>done_outline</mat-icon>
+        <p>Beer {{tate.bier1Name}} has evaluate.</p>
+    </mat-card-content>
+
+    <mat-card-content *ngIf="casilla2 === true && progress > 25 " >
+        <form (ngSubmit)="onAddBeer(f, (casilla2=false))" #f="ngForm">
+            <mat-form-field class="color">
+                <input   matInput  ngModel name="color" placeholder="color" required>
+            </mat-form-field>
+            <mat-form-field class="smell">
+                <input   matInput  ngModel name="smell" placeholder="smell"  required>
+            </mat-form-field>
+            <mat-form-field class="tasteMoth">
+                <input  matInput  ngModel name="tasteMoth" placeholder="tasteMoth" required>
+            </mat-form-field>
+            <button type="submit" mat-raised-button [disabled]="f.invalid" color="primary" class="validate">AddBeer</button>
+            <mat-form-field class="bitterness">
+                <input  matInput  ngModel name="bitterness" placeholder="bitterness" required>
+            </mat-form-field>   
+            <mat-form-field class="aftertaste">
+                <input  matInput  ngModel name="aftertaste" placeholder="aftertaste" required>
+            </mat-form-field>
+                        
+        </form>
+    </mat-card-content>
 </mat-card>
 <mat-card class="almacen" id="tipo4">
-    <p>{{tate.bier3Name}}</p>
-    <p *ngIf="( progress > 50 )">Esto no se ve hasta el 50%</p>
+    <mat-card-header>
+        <mat-card-title>  
+            {{tate.bier3Name}}
+        </mat-card-title>        
+    </mat-card-header>
+    <mat-card-content *ngIf="casilla3 === false" class="evalute">
+        <mat-icon>done_outline</mat-icon>
+        <p>Beer {{tate.bier1Name}} has evaluate.</p>
+    </mat-card-content>
+
+    <mat-card-content *ngIf="casilla3 === true  && progress > 50 ">
+        <form (ngSubmit)="onAddBeer(f, (casilla3=false))" #f="ngForm">
+            <mat-form-field class="color">
+                <input   matInput  ngModel name="color" placeholder="color" required>
+            </mat-form-field>
+            <mat-form-field class="smell">
+                <input   matInput  ngModel name="smell" placeholder="smell"  required>
+            </mat-form-field>
+            <mat-form-field class="tasteMoth">
+                <input  matInput  ngModel name="tasteMoth" placeholder="tasteMoth" required>
+            </mat-form-field>
+            <button type="submit" mat-raised-button [disabled]="f.invalid" color="primary" class="validate">AddBeer</button>
+            <mat-form-field class="bitterness">
+                <input  matInput  ngModel name="bitterness" placeholder="bitterness" required>
+            </mat-form-field>   
+            <mat-form-field class="aftertaste">
+                <input  matInput  ngModel name="aftertaste" placeholder="aftertaste" required>
+            </mat-form-field>
+                        
+        </form>
+    </mat-card-content>
 </mat-card>
 <mat-card class="almacen" id="tipo4">
-    <p>{{tate.bier4Name}}</p>
-    <p *ngIf="( progress > 75 )">Esto no se ve hasta el 75%</p>
+    <mat-card-header>
+        <mat-card-title>  
+            {{tate.bier4Name}}
+        </mat-card-title>        
+    </mat-card-header>
+    <mat-card-content *ngIf="casilla4 === false" class="evalute">
+        <mat-icon>done_outline</mat-icon>
+        <div>
+        <p>Beer {{tate.bier1Name}} has evaluate.</p>
+        </div>
+    </mat-card-content>
+
+    <mat-card-content *ngIf="casilla4 === true && progress > 75 ">
+        <form (ngSubmit)="onAddBeer(f, (casilla4=false))" #f="ngForm">
+            <mat-form-field class="color">
+                <input   matInput  ngModel name="color" placeholder="color" required>
+            </mat-form-field>
+            <mat-form-field class="smell">
+                <input   matInput  ngModel name="smell" placeholder="smell"  required>
+            </mat-form-field>
+            <mat-form-field class="tasteMoth">
+                <input  matInput  ngModel name="tasteMoth" placeholder="tasteMoth" required>
+            </mat-form-field>
+            <button type="submit" mat-raised-button [disabled]="f.invalid" color="primary" class="validate">AddBeer</button>
+            <mat-form-field class="bitterness">
+                <input  matInput  ngModel name="bitterness" placeholder="bitterness" required>
+            </mat-form-field>   
+            <mat-form-field class="aftertaste">
+                <input  matInput  ngModel name="aftertaste" placeholder="aftertaste" required>
+            </mat-form-field>
+                        
+        </form>
+    </mat-card-content>
 </mat-card>
 <mat-card class="almacen" id="tipo4">
     <p>Formulario</p>
-    <p *ngIf="( progress > 75 )">Esto no se ve hasta el 50%</p>
+    <button mat-raised-button color="accent" (click)="onFinish()">Stop</button>
 </mat-card>
+
 </mat-dialog-content>
 

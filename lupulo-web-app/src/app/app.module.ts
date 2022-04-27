@@ -30,6 +30,7 @@ import { AllDocumentationComponent } from './tasting/documentation/all-documenta
 import { IgxCarouselModule,IgxListModule } from "igniteui-angular";
 import { CurrentTastingComponent } from "./tasting/current-tasting/current-tasting.component";
 import { StopTastingComponent } from "./tasting/current-tasting/sotop-tasting-component";
+import { FinishTastingComponent } from "./tasting/current-tasting/finish-tasting-component"
 
 
 
@@ -57,7 +58,8 @@ import { StopTastingComponent } from "./tasting/current-tasting/sotop-tasting-co
     DocumentationComponent,
     AllDocumentationComponent,
     CurrentTastingComponent,
-    StopTastingComponent
+    StopTastingComponent,
+    FinishTastingComponent
 
   ],
   imports: [
@@ -77,6 +79,6 @@ import { StopTastingComponent } from "./tasting/current-tasting/sotop-tasting-co
   ],
   providers: [UserService],
   bootstrap: [AppComponent],
-  entryComponents: [StopTastingComponent]
+  entryComponents: [StopTastingComponent,FinishTastingComponent]
 })
 export class AppModule { }

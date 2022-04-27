@@ -14,14 +14,7 @@ const { validarCampos } = require('../../middlewares/validadr-campos');
 
 const router = Router();
 
-router.post('/add',
-[
-    check('name','You must add name').not().isEmpty(),
-    check('taster','You must add a taster').not().isEmpty(),
-
-    validarCampos
-],
-addtasting);
+router.post('/add',addtasting);
 
 router.get('/yourTasting/:tip',findYourtasting);
 
@@ -34,6 +27,7 @@ router.post('/documentation/add',addDocumentation);
 router.get('/documentation/all',showAllDocumentation);
 
 router.get('/theTasting/:tip',showThetasting);
+
 
 
 

@@ -31,6 +31,7 @@ export class NewTastingComponent implements OnInit {
   maxDate;
   actual;
   date;
+  user: any;
 
 
   constructor(private userService: UserService, private gestbeerService: GestBeerService) { }
@@ -40,6 +41,7 @@ export class NewTastingComponent implements OnInit {
       this.biers = res;
     
     });
+    this.user = this.userService.getUser();
     this.types = this.userService.getTypeBeer().subscribe((res: any) => {
       this.types = res;
     });
@@ -49,10 +51,8 @@ export class NewTastingComponent implements OnInit {
     const minute = new Date().getMinutes();
     this.actual = new Date(+0,0,0,0,20);
     this.date = new Date();
-    //const siempre = (new Date() - new Date(+0,0,0,0,20));
-    
   }
-   // if((this.actual < this.actual)
+   
 
     
     
@@ -68,6 +68,20 @@ export class NewTastingComponent implements OnInit {
 
   }
   onAddTasting(form: NgForm){
+    this.userService.createTasting({
+      name: form.value.name,
+      type: form.value.type,
+      taster: this.user.email,
+      studients: form.value.studients,
+      bier1Name: form.value.bier1Name,
+      bier2Name: form.value.bier2Name,
+      bier3Name: form.value.bier3Name,
+      bier4Name: form.value.bier4Name,
+      date: form.value.date,
+      duration: form.value.duration,
+      price: form.value.price
+    })
+  
     
   }
   onSelect(si){

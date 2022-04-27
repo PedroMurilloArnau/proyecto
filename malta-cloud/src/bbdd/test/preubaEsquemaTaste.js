@@ -10,7 +10,7 @@
     tastesd.taster = "JuanDiego@gmail.com";
     tastesd.students = 20;
     tastesd.placesAvailable = 20;
-    tastesd.studient= [{name:"juanchPadilla@filo.com"},{name:"juanchPadilla@filo.com"}];
+    tastesd.studient= [{name:"peddrorsad@filo.com",status:false},{name:"sadsdas@dadsd.com",status:true}];
     tastesd.bier1Name = "Fresquta deliciosa";
     tastesd.bier2Name = "Fresquta gracios";
     tastesd.bier3Name = "Fresquta entrada";

@@ -73,7 +73,7 @@ const findYourtasting = async(req,res)=>{
     const email = req.params.tip;
 
     try{
-         const tastes = await Taste.find({"studient.name":email});
+         const tastes = await Taste.find({"studient.name":email,"studient.status":true});
         if(!tastes){
             return res.status(400).json({
                 ok:false,

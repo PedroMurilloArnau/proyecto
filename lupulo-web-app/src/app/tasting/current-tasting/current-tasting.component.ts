@@ -2,7 +2,10 @@ import { Component, OnInit, Inject, EventEmitter, Output } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { id } from 'date-fns/locale';
 import { UserService } from '../../services/user.service';
-import { StopTastingComponent } from './sotop-tasting-component'
+import { StopTastingComponent } from './sotop-tasting-component';
+import { NgForm } from '@angular/forms';
+import { BuiltinTypeName } from '@angular/compiler';
+import { FinishTastingComponent } from './finish-tasting-component'
 
 @Component({
   selector: 'app-current-tasting',
@@ -18,6 +21,10 @@ export class CurrentTastingComponent implements OnInit {
   tester: any;
   timer: any;
   progress = 0;
+  casilla1: boolean;
+  casilla2: boolean;
+  casilla3: boolean;
+  casilla4: boolean;
   
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: {ids: number, user: string},private authService: UserService,private dialog: MatDialog) { }
@@ -33,7 +40,10 @@ export class CurrentTastingComponent implements OnInit {
       
 
       this.user = this.authService.getUser()
-
+      this.casilla1 = true;
+      this.casilla2 = true;
+      this.casilla3 = true;
+      this.casilla4 = true;
       
   })
   
@@ -42,7 +52,7 @@ export class CurrentTastingComponent implements OnInit {
   }
   startOrResumeTimer(){
     this.timer =  setInterval(() => {
-      this.progress = this.progress + 20;
+      this.progress = this.progress + 15;
       if (this.progress >= 100){
         clearInterval(this.timer);
       }
@@ -52,6 +62,25 @@ export class CurrentTastingComponent implements OnInit {
   onStop(){
     clearInterval(this.timer);
     const dialogRef = this.dialog.open(StopTastingComponent, {data:{
+      progress: this.progress
+    }});
+     dialogRef.afterClosed().subscribe( result => {
+       if (result){
+         this.tastingExit.emit();
+       }
+       else{
+         this.startOrResumeTimer();
+       }
+    });
+  }
+  onAddBeer(form: NgForm,contenedor){
+
+
+     console.log(contenedor)
+  }
+  onFinish(){
+    clearInterval(this.timer);
+    const dialogRef = this.dialog.open(FinishTastingComponent, {data:{
       progress: this.progress
     }});
      dialogRef.afterClosed().subscribe( result => {

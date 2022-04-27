@@ -7,7 +7,7 @@ const tasteSchema = new Schema({
     type: String,
     taster: String,
     students: Number,
-    studient:[{name: String}],
+    studient:[{name: String,status:Boolean}],
     placesAvailable: Number,
     bier1Name: String,
     bier2Name: String,
@@ -16,6 +16,7 @@ const tasteSchema = new Schema({
     date: Date,
     duration: Number,
     state: Boolean,
+    price: Number
 })
 
 module.exports = mongoose.model('taste',tasteSchema);

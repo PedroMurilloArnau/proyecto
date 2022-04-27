@@ -2,7 +2,7 @@
     <mat-tab label="Tasting">
         <app-all-tasting></app-all-tasting>
     </mat-tab>
-    <mat-tab *ngIf="type === 'Prog'||type ==='Shop'||type ==='Test'" label="Your Tasting">
+    <mat-tab *ngIf="type ==='Test'" label="Your Tasting">
         <app-new-tasting></app-new-tasting>
     </mat-tab>
     <mat-tab *ngIf="type === 'Client'" label="Your Tasting">

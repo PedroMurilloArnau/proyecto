@@ -14,8 +14,21 @@ mat-dialog-content{
     background-size: cover;
   }
   mat-card-content{
+    
       display: flex;
-      align-content: center;
+      align-items: center;
       justify-content: center;
+      border-radius: 10px;
   }
-
+  .validate{
+      margin: 15px;
+  }
+  .evalute{
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    background-color: green;
+  }
+  

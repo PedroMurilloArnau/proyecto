@@ -1,12 +1,12 @@
 <section class="presnetation">
 <h1>Tasting </h1>
 <button mat-raised-button color="primary" class="cabecera" (click)="onForm()">Create a Tasting</button>
-<button mat-raised-button color="primary" class="cabecera" (click)="onTable()">Show your Tasting</button>
+<button  mat-raised-button color="primary" class="cabecera" (click)="onTable()">Show your Tasting</button>
 </section>
 <section *ngIf="formul === true" class="add-tasting"  fxLayout fxLayoutAlign="center">
     <form (ngSubmit)="onAddTasting(f)" #f="ngForm">
         <mat-card fxFlex.xs="100%" fxFlex="400px" >
-            <mat-card-title fxLayoutAlign="center">Add a new tasting!!! {{bien}}
+            <mat-card-title fxLayoutAlign="center">Add a new tasting!!! {{typeInput.value}}
                 <mat-icon>sports_bar</mat-icon> 
             </mat-card-title>
             <img mat-card-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNcpzgyf_wm_4Qk1umFl8B08ETOxD9wX-SWg&usqp=CAU">
@@ -15,7 +15,7 @@
             </mat-card-content>
             <mat-form-field appearance="fill">
                 <mat-label>Tasting type</mat-label>
-                <mat-select ngModel name="biertype" #typeInput="ngModel" [(ngModel)]="selectedValue" >
+                <mat-select ngModel name="type" #typeInput="ngModel" [(ngModel)]="selectedValue" >
                     <mat-option *ngFor="let type of types" [value]="type.type" (click)="onSelect(typeInput)">initiation tasting of {{type.type}}</mat-option>
                 </mat-select>
                 <mat-hint *ngIf="(typeInput.value === 'dunkel')">{{typeInput.value}}</mat-hint>
@@ -27,7 +27,7 @@
             </mat-form-field>
             <mat-form-field appearance="fill"  class="bires">
                 <mat-label >Select 1 bier:</mat-label>
-                <mat-select ngModel name=" bier1Name" #pwInput1="ngModel" required>
+                <mat-select ngModel name="bier1Name" #pwInput1="ngModel" required>
                     <mat-option *ngFor="let bier of bires" [value]="bier.name" (click)="onSelect1(pwInput1)">{{bier.name}}</mat-option>
                 </mat-select>
                     <mat-hint *ngIf="(pwInput1.value === pwInput2.value )">{{pwInput1.value}}</mat-hint>
@@ -57,14 +57,21 @@
                 #priceInput="ngModel" max="100" min="0">
                 <mat-error *ngIf="priceInput.hasError('required')">Field must not empty</mat-error>
             </mat-form-field>
-            <mat-form-field>
+            <mat-form-field class="field-name" appearance="fill">
+                <mat-label>Studients:</mat-label>
+                <input type="number" matInput  ngModel name="studients" placeholder="Students of tasting" required
+            #priceInput="ngModel" max="30" min="10">
+            </mat-form-field>
+            <mat-radio-group aria-label="Select-duration" matInput  ngModel name="duration" required>
+                <mat-radio-button value="1">1 hour!</mat-radio-button>
+                <mat-radio-button value="2">2 hour!</mat-radio-button>
+            </mat-radio-group>            
                 <input matInput placeholder="Your tasting day" [matDatepicker]="picker"
                 [min]="minDate" [max]="maxDate" ngModel name="date" required>
                 <mat-hint>MM/DD/YYYY</mat-hint>
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-                
+            
             <mat-card-actions fxLayoutAlign="center">
                 <button type="submit" mat-raised-button [disabled]="f.invalid" color="primary">AddBeer</button>
             </mat-card-actions>

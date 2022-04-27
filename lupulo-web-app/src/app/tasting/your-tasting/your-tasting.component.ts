@@ -20,7 +20,7 @@ export class YourTastingComponent implements OnInit {
   ngOnInit(){
     this.tates = this.authService.getYourTaste().subscribe((res: any) => {
       this.tates = res.tastes;
-      this.user = this.authService.getUser()
+      this.user = this.authService.getUser();
     });
   }
   start(id){
@@ -31,7 +31,15 @@ export class YourTastingComponent implements OnInit {
       },
       width: '850px',
     })  
-
   }
-
+  valid(name){
+    for(let tate of this.tates){
+      if(tate.name === name){
+        for(let studient of tate.studient){
+      if(studient.name === this.user.email && studient.status === true)
+      return true}
+      }
+    }
+    return false;
+    }
 }
