@@ -92,7 +92,34 @@ const findYourtasting = async(req,res)=>{
 
     }
 }
+const finshYourTasting = async(req,res)=>{
+    const name = req.body.name;
+    const email = req.body.email;
+    try{
+        const taste = await Taste.findOne({name: name});
 
+        if(!taste){
+            return res.status(400).json({
+                ok:false,
+                msg: 'Taste name no exist.'
+            });
+        }
+        await Taste.findOneAndUpdate({name:name,"studient.name":email},{$set:{ "studient.$.status" : false }});
+            
+            return res.status(201).json({
+                ok:true,
+                msg: 'Studiente of taste exist in this tasting.'
+            })
+           
+        }
+    catch (error){
+        return res.status(500).json({
+            ok:false,
+            msg: 'Ask for tecnical asistance.'
+        })
+
+    }
+}
 const addClient = async(req,res) => {
     const name = req.body.name;
     const email = req.body.email;
@@ -106,10 +133,19 @@ const addClient = async(req,res) => {
                 msg: 'Taste name no exist.'
             });
         }
+        for(let study of taste.studient){
+            if(study.name === email){
+            return res.status(400).json({
+                ok:false,
+                msg: 'Studiente of taste exist in this tasting.'
+            })
+        }
+    }
+ 
         let final = []
         if(taste.studient.length !== undefined){
             final = taste.studient;
-            final.push({name:email});
+            final.push({name:email,status:true});
 
         }
         else{
@@ -152,6 +188,8 @@ const addtasting = async(req,res) => {
             });
         }
         const newTaste = new Taste(req.body)
+        newTaste.state = false;
+        newTaste.placesAvailable= req.body.students;
 
         await newTaste.save();
 
@@ -177,6 +215,21 @@ const showtasting = async(req,res) => {
         return res.json({ error: err.message})
     }
 };
+const showTastingTaster = async(req,res) => {
+    const tasterparam = req.params.tip;
+    try{
+        const tastings = await Taste.find({taster:tasterparam})
+        return res.json(tastings);
+
+    }
+    catch (error){
+        return res.status(500).json({
+            ok:false,
+            msg: 'Ask for tecnical asistance.'
+        })
+
+    }
+}
 
 module.exports = {
     addtasting,
@@ -185,5 +238,7 @@ module.exports = {
     findYourtasting,
     addDocumentation,
     showAllDocumentation,
-    showThetasting
+    showThetasting,
+    finshYourTasting,
+    showTastingTaster
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
+import { GestBeerService } from 'src/app/services/gest-beer.service'
 
 @Component({
   selector: 'app-add-beer',
@@ -12,7 +13,7 @@ export class AddBeerComponent implements OnInit {
 
   types: any;
 
-  constructor(private authService: UserService,private router: Router) { }
+  constructor(private authService: UserService,private gestBeerService: GestBeerService,private router: Router) { }
 
   ngOnInit(){
 
@@ -23,7 +24,7 @@ export class AddBeerComponent implements OnInit {
    
   }
   onAddBeer(form: NgForm){
-    this.authService.postBeer({
+    this.gestBeerService.postBeer({
       name: form.value.name,
       stock: form.value.stock,
       image: form.value.image,

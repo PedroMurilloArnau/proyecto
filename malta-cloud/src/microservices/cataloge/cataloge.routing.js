@@ -4,7 +4,8 @@ const{
 allBeer,
 addBeer,
 findTaste,
-allTypeBier
+allTypeBier,
+addTasteNotes
 
 } = require('./cataloge.microservice');
 const { validarCampos } = require('../../middlewares/validadr-campos');
@@ -26,6 +27,8 @@ router.get('/all',allBeer);
 
 router.get('/type',allTypeBier);
 
-router.get('/taste/:tip',findTaste)
+router.get('/taste/:tip',findTaste);
+
+router.post('/tastingtNotes', addTasteNotes)
 
 module.exports = router;

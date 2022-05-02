@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-gane',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gane.component.css']
 })
 export class GaneComponent implements OnInit {
+  user: any;
+  type: any;
 
-  constructor() { }
+  constructor(private authService: UserService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.user = this.authService.getUser()
+    this.type = this.user.type
+
   }
 
 }

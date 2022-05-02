@@ -1,0 +1,42 @@
+
+<section class="add-beer"  fxLayout fxLayoutAlign="center">
+    <form (ngSubmit)="onAddQuestion(f)" #f="ngForm">
+        <mat-card fxFlex.xs="100%" fxFlex="400px" >
+            <mat-card-title fxLayoutAlign="center">Add a Question!!!
+                <mat-icon>question_answer</mat-icon> 
+            </mat-card-title>
+            <img mat-card-image src="../../../assets/img/games.jpg"alt="games">
+            <mat-card-content fxLayoutAlign="center">
+                Add a new question, it's very easy, but take your time, breath and take a drink.
+            </mat-card-content>
+            <mat-form-field class="field-name" appearance="fill" >
+                <input type="text" matInput  ngModel name="question" placeholder="The question" required
+                #nameInput="ngModel">
+                <mat-error *ngIf="nameInput.hasError('required')">Field must not empty</mat-error>
+            </mat-form-field>
+            <mat-form-field class="field-stock" >
+                <input type="text" matInput  ngModel name="CorrectAnswer" placeholder="Correct Answer" required
+                #nameInput="ngModel">
+                <mat-error *ngIf="nameInput.hasError('required')">Field must not empty</mat-error>
+            </mat-form-field>
+            <mat-form-field class="field-stock" >
+                <input type="text" matInput  ngModel name="AnswerSecond" placeholder="Correct Second" required
+                #nameInput="ngModel">
+                <mat-error *ngIf="nameInput.hasError('required')">Field must not empty</mat-error>
+            </mat-form-field>
+            <mat-form-field class="field-stock" >
+                <input type="text" matInput  ngModel name="AnswerThird" placeholder="Correct Third" required
+                #nameInput="ngModel">
+                <mat-error *ngIf="nameInput.hasError('required')">Field must not empty</mat-error>
+            </mat-form-field>
+            <mat-form-field class="field-stock" >
+                <input type="text" matInput  ngModel name="AnswerFourth" placeholder="Correct Fourth" required
+                #nameInput="ngModel">
+                <mat-error *ngIf="nameInput.hasError('required')">Field must not empty</mat-error>
+            </mat-form-field>
+            <mat-card-actions fxLayoutAlign="center">
+                <button type="submit" mat-raised-button [disabled]="f.invalid" color="primary">Add Question</button>
+            </mat-card-actions>
+        </mat-card>
+
+    </form>

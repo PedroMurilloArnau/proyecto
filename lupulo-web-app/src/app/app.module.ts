@@ -10,7 +10,7 @@ import { SignupComponent, DialogOverviewExampleDialog } from './auth/signup/sign
 import { LoginComponent } from './auth/login/login.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { TastingComponent } from './tasting/tasting.component';
-import { GaneComponent } from './gane/gane.component';
+import { GaneComponent } from './game/gane.component';
 import { PurchaseComponent } from './purchase/purchase.component';
 import { AddBeerComponent } from './catalogue/add-beer/add-beer.component';
 import { NewsComponent } from './catalogue/news/news.component';
@@ -30,7 +30,12 @@ import { AllDocumentationComponent } from './tasting/documentation/all-documenta
 import { IgxCarouselModule,IgxListModule } from "igniteui-angular";
 import { CurrentTastingComponent } from "./tasting/current-tasting/current-tasting.component";
 import { StopTastingComponent } from "./tasting/current-tasting/sotop-tasting-component";
-import { FinishTastingComponent } from "./tasting/current-tasting/finish-tasting-component"
+import { FinishTastingComponent } from "./tasting/current-tasting/finish-tasting-component";
+import { TastingTasterComponent } from "./tasting/tasting-taster/tasting-taster.component";
+import { YourGamesComponent } from "./game/your-games/your-games.component";
+import { NewQuestionComponent } from "./game/new-question/new-question.component";
+import { NewGameComponent } from "./game/new-game/new-game.component";
+import { InfoGameComponent } from "./game/info-game/info-game.component";
 
 
 
@@ -59,7 +64,12 @@ import { FinishTastingComponent } from "./tasting/current-tasting/finish-tasting
     AllDocumentationComponent,
     CurrentTastingComponent,
     StopTastingComponent,
-    FinishTastingComponent
+    FinishTastingComponent,
+    TastingTasterComponent,
+    InfoGameComponent,
+    NewGameComponent,
+    NewQuestionComponent,
+    YourGamesComponent
 
   ],
   imports: [

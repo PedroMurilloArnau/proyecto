@@ -5,7 +5,11 @@ import { UserService } from '../../services/user.service';
 import { StopTastingComponent } from './sotop-tasting-component';
 import { NgForm } from '@angular/forms';
 import { BuiltinTypeName } from '@angular/compiler';
-import { FinishTastingComponent } from './finish-tasting-component'
+import { FinishTastingComponent } from './finish-tasting-component';
+import { GestBeerService } from '../../services/gest-beer.service';
+import { TastingService } from '../../services/tasting.service';
+import { Router } from '@angular/router';
+import Swal  from 'sweetalert2';
 
 @Component({
   selector: 'app-current-tasting',
@@ -17,6 +21,7 @@ export class CurrentTastingComponent implements OnInit {
   @Output() tastingExit = new EventEmitter();
   tate: any;
   user: any;
+  userc: any;
   idt: any;
   tester: any;
   timer: any;
@@ -25,9 +30,12 @@ export class CurrentTastingComponent implements OnInit {
   casilla2: boolean;
   casilla3: boolean;
   casilla4: boolean;
+  casa: boolean;
   
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: {ids: number, user: string},private authService: UserService,private dialog: MatDialog) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: {ids: number, user: string},
+  private authService: UserService,private gestBeerService: GestBeerService,private dialog: MatDialog,
+  private tastingService: TastingService,private router: Router,) { }
 
   ngOnInit(){
       
@@ -39,11 +47,12 @@ export class CurrentTastingComponent implements OnInit {
       })
       
 
-      this.user = this.authService.getUser()
+      this.userc = this.authService.getUser()
       this.casilla1 = true;
       this.casilla2 = true;
       this.casilla3 = true;
       this.casilla4 = true;
+      this.casa = false;
       
   })
   
@@ -52,7 +61,7 @@ export class CurrentTastingComponent implements OnInit {
   }
   startOrResumeTimer(){
     this.timer =  setInterval(() => {
-      this.progress = this.progress + 15;
+      this.progress = this.progress + 50;
       if (this.progress >= 100){
         clearInterval(this.timer);
       }
@@ -73,10 +82,32 @@ export class CurrentTastingComponent implements OnInit {
        }
     });
   }
-  onAddBeer(form: NgForm,contenedor){
+  onAddBeer(form: NgForm,consol,tate){
 
-
-     console.log(contenedor)
+    this.gestBeerService.postTastingNotes({
+      beername: tate,
+      color: form.value.color,
+      smell: form.value.smell,
+      tasteMoth: form.value.tasteMoth,
+      bitterness: form.value.bitterness,
+      aftertaste: form.value.aftertaste
+    }).subscribe((res: any) =>{
+      if(res.ok = true){
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'You add a taste note.',
+          showConfirmButton: false,
+          timer: 1500
+        })}
+        else{
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+          })
+        }
+      })
   }
   onFinish(){
     clearInterval(this.timer);
@@ -85,11 +116,45 @@ export class CurrentTastingComponent implements OnInit {
     }});
      dialogRef.afterClosed().subscribe( result => {
        if (result){
-         this.tastingExit.emit();
+         
+        this.tastingService.endYourTasting({
+          email: this.userc.email,
+          name: this.tate.name
+        }).subscribe((res: any) =>{
+          if(res.ok = true){
+            Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: 'You are login',
+              showConfirmButton: false,
+              timer: 1500
+            })
+            this.router.navigate(['/catalogue']);
+          }
+          this.router.navigate(['/game']);
+        })
+        this.router.navigate(['/game']);
        }
        else{
          this.startOrResumeTimer();
        }
     });
+  }
+  clickevent(){
+    this.tastingService.endYourTasting({
+      email: this.userc.email,
+      name: this.tate.name
+    }).subscribe((res: any) =>{
+      if(res.ok = true){
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'You are login',
+      showConfirmButton: false,
+      timer: 1500
+    })
+    this.router.navigate(['/catalogue']);
+  }
+  })
   }
 }

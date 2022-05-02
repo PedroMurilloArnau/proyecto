@@ -26,6 +26,23 @@ const allBeer = async(req, res) => {
       return  res.json({ error: err.message})
     };
 };
+const addTasteNotes = async(req,res) =>{
+  try{
+    const tastingtNotesadd = new tasteNote(req.body)
+
+    await tastingtNotesadd.save();
+    return res.status(201).json({
+      ok:true,
+    })    
+
+  }
+  catch(error){
+    return res.status(500).json({
+      ok:false,
+      msg: 'Ask for tecnical asistance.'
+    });
+}
+}
 const findTaste = async(req, res) =>{
   const beername = req.params.tip;
 
@@ -93,5 +110,6 @@ module.exports = {
     allBeer,
     addBeer,
     findTaste,
-    allTypeBier
+    allTypeBier,
+    addTasteNotes
 }

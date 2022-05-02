@@ -21,6 +21,9 @@ export class GestBeerService {
   nedpointBeers: string = 'http://localhost:3000/beer/cataloge/all';
   endpointaddPurchase: string = 'http://localhost:3000/beer/purchase/add';
   endpointTypeBeers: string = 'http://localhost:3000/beer/cataloge/type';
+  endpointAddTasting: string = 'http://localhost:3000/beer/tasting/add';
+  endpointAddBeer: string = 'http://localhost:3000/beer/cataloge/new';
+  endpointPostTastingtNotes: string = 'http://localhost:3000/beer/cataloge/tastingtNotes';
 
   constructor(private http: HttpClient,private router: Router,private authService: UserService) { }
   borrarLista(){
@@ -28,7 +31,6 @@ export class GestBeerService {
   this.list.splice(0);
 }
 }  
-
 getBeer() {
   return this.http.get(this.nedpointBeers)
   .pipe(
@@ -64,5 +66,22 @@ completePurchase(person: string){
         return data;
       })
     );
+}
+postBeer(beer){
+  return this.http.post(this.endpointAddBeer, beer)
+  .pipe(
+    map((data: any) =>{
+      return data;
+    })
+  )
+}
+postTastingNotes(notes){
+  console.log(notes);
+  return this.http.post(this.endpointPostTastingtNotes,notes)
+  .pipe(
+    map((data: any) =>{
+      return data;
+    })
+  )
 }
 }

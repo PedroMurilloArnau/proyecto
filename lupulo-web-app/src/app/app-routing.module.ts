@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
-import { GaneComponent } from './gane/gane.component';
+import { GaneComponent } from './game/gane.component';
 import { PurchaseComponent } from './purchase/purchase.component';
 import { TastingComponent } from './tasting/tasting.component';
 import { TastingCalendarComponent } from './tasting/tasting-calendar/tasting-calendar.component';

@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm, NgSelectOption } from '@angular/forms';
 import { UserService } from '../../services/user.service';
 import { GestBeerService } from '../../services/gest-beer.service';
+import { TastingService } from '../../services/tasting.service';
 import { timestamp } from 'rxjs';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +14,7 @@ import { timestamp } from 'rxjs';
 })
 export class NewTastingComponent implements OnInit {
   formul = false;
-  tablel = true;
+  table = true;
   biers: any;
   types: any;
   selectedValue: any;
@@ -34,7 +36,8 @@ export class NewTastingComponent implements OnInit {
   user: any;
 
 
-  constructor(private userService: UserService, private gestbeerService: GestBeerService) { }
+  constructor(private userService: UserService, private gestbeerService: GestBeerService,
+    private tastingService: TastingService,private router: Router ) { }
 
   ngOnInit(){
     this.biers = this.gestbeerService.getBeer().subscribe((res: any) => {
@@ -60,19 +63,19 @@ export class NewTastingComponent implements OnInit {
 
   onForm(){
     this.formul = true;
-    this.tablel = false;
+    this.table = false;
   }
   onTable(){
     this.formul = false;
-    this.tablel = true;
+    this.table = true;
 
   }
   onAddTasting(form: NgForm){
-    this.userService.createTasting({
+    this.tastingService.createTasting({
       name: form.value.name,
       type: form.value.type,
       taster: this.user.email,
-      studients: form.value.studients,
+      students: form.value.students,
       bier1Name: form.value.bier1Name,
       bier2Name: form.value.bier2Name,
       bier3Name: form.value.bier3Name,
@@ -81,8 +84,10 @@ export class NewTastingComponent implements OnInit {
       duration: form.value.duration,
       price: form.value.price
     })
+    .subscribe((res: any) =>{
+      console.log(res)});
+      this.router.navigate(['/login']);
   
-    
   }
   onSelect(si){
     this.si = si;

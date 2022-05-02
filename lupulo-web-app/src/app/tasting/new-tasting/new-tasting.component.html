@@ -59,7 +59,7 @@
             </mat-form-field>
             <mat-form-field class="field-name" appearance="fill">
                 <mat-label>Studients:</mat-label>
-                <input type="number" matInput  ngModel name="studients" placeholder="Students of tasting" required
+                <input type="number" matInput  ngModel name="students" placeholder="Students of tasting" required
             #priceInput="ngModel" max="30" min="10">
             </mat-form-field>
             <mat-radio-group aria-label="Select-duration" matInput  ngModel name="duration" required>
@@ -80,6 +80,6 @@
     </form>
     
 </section>
-<section>
-
+<section *ngIf="table === true" >
+    <app-tasting-taster></app-tasting-taster>
 </section>

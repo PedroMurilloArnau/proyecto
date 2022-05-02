@@ -8,7 +8,9 @@ const {
     findYourtasting,
     addDocumentation,
     showAllDocumentation,
-    showThetasting
+    showThetasting,
+    finshYourTasting,
+    showTastingTaster
 } = require('./tasting.microservice');
 const { validarCampos } = require('../../middlewares/validadr-campos');
 
@@ -27,6 +29,12 @@ router.post('/documentation/add',addDocumentation);
 router.get('/documentation/all',showAllDocumentation);
 
 router.get('/theTasting/:tip',showThetasting);
+
+router.post('/finsh',finshYourTasting);
+
+router.get('/taster/:tip',showTastingTaster);
+
+
 
 
 

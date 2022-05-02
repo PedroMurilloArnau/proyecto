@@ -25,26 +25,17 @@ export class UserService {
   endpointUser: string = 'http://localhost:3000/beer/users/new';
   endpointLogin: string = 'http://localhost:3000/beer/users/login';
   nedpointBeers: string = 'http://localhost:3000/beer/cataloge/all';
-  endpointAddBeer: string = 'http://localhost:3000/beer/cataloge/new';
   endpointaddPurchase: string = 'http://localhost:3000/beer/purchase/add';
   endpointTaste: string = 'http://localhost:3000/beer/cataloge/taste';
   endpointTasteAll: string = 'http://localhost:3000/beer/tasting/all';
-  endpointTasteAdd: string = 'http://localhost:3000/beer/tasting/addClient';
   endpointTasteyour: string = `http://localhost:3000/beer/tasting/yourTasting/${this.person}`;
   endpointTypeBeers: string = 'http://localhost:3000/beer/cataloge/type';
   endpointThistaste: string = 'http://localhost:3000/beer/tasting/yourTasting';
-  endpointAddTasting: string = 'http://localhost:3000/beer/tasting/add';
+  
 
   constructor(private http: HttpClient,private router: Router,) { }
 
-  createTasting(tasting){
-    return this.http.post(this.endpointAddTasting,tasting)
-    .pipe(
-      map((data: any) =>{
-        return data;
-      })
-    )
-  }
+
 
   getTheTaste(id) {
     
@@ -79,21 +70,10 @@ export class UserService {
       })
     )
 };
-  postAddTaster(taste){
-  return this.http.post(this.endpointTasteAdd, taste)
-  .pipe(
-    map((data: any) =>{
-      return data;
-    })
-  )
-}
-
-
   getTaster(name){
     return this.http.get(`http://localhost:3000/beer/cataloge/taste/${name}`)
     .pipe(
       map((data: any) => {
-        console.log(data)
         return data;
         
       })
@@ -111,14 +91,6 @@ export class UserService {
           return data;
         })
       )
-  }
-  postBeer(beer){
-    return this.http.post(this.endpointAddBeer, beer)
-    .pipe(
-      map((data: any) =>{
-        return data;
-      })
-    )
   }
   postUsuarios(users){
   return this.http.post(this.endpointUser, users)

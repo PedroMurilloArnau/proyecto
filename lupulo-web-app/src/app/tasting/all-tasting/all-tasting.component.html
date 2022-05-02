@@ -2,15 +2,9 @@
     <table border="2">
         <tr *ngFor="let tastesd of tates">
             <td>{{tastesd.name}}</td>
-            <td *ngIf="type === 'Client'">
-                <form (ngSubmit)="onAddtastesd(f)" #f="ngForm">
-                    <mat-radio-group ngModel name="name" aria-label="Select an option" required>
-                        <mat-radio-button value="{{tastesd.name}}">Add</mat-radio-button>
-                    </mat-radio-group>
-                <button type="submit"  mat-raised-button color="primary">Añadir a la cata</button>
-                </form>
-            </td> 
-
+            <td *ngIf="type === 'Client' && valid(tastesd.name) === false">
+                <button type="submit" (click)="onAddtastesd(tastesd.name)" mat-raised-button color="primary">Añadir a la cata</button>
+            </td>
         </tr>
     </table>
 

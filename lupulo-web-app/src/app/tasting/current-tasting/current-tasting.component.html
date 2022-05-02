@@ -25,7 +25,7 @@
     </mat-card-content>
     
     <mat-card-content *ngIf="casilla1 === true">
-        <form (ngSubmit)="onAddBeer(f, (casilla1=false))" #f="ngForm">
+        <form (ngSubmit)="onAddBeer(f, (casilla1=false),tate.bier1Name)" #f="ngForm">
             <mat-form-field class="color">
                 <input   matInput  ngModel name="color" placeholder="color" required>
             </mat-form-field>
@@ -54,11 +54,11 @@
     </mat-card-header>
     <mat-card-content *ngIf="casilla2 === false" class="evalute">
         <mat-icon>done_outline</mat-icon>
-        <p>Beer {{tate.bier1Name}} has evaluate.</p>
+        <p>Beer {{tate.bier2Name}} has evaluate.</p>
     </mat-card-content>
 
     <mat-card-content *ngIf="casilla2 === true && progress > 25 " >
-        <form (ngSubmit)="onAddBeer(f, (casilla2=false))" #f="ngForm">
+        <form (ngSubmit)="onAddBeer(f, (casilla2=false),tate.bier2Name)" #f="ngForm">
             <mat-form-field class="color">
                 <input   matInput  ngModel name="color" placeholder="color" required>
             </mat-form-field>
@@ -87,11 +87,11 @@
     </mat-card-header>
     <mat-card-content *ngIf="casilla3 === false" class="evalute">
         <mat-icon>done_outline</mat-icon>
-        <p>Beer {{tate.bier1Name}} has evaluate.</p>
+        <p>Beer {{tate.bier3Name}} has evaluate.</p>
     </mat-card-content>
 
     <mat-card-content *ngIf="casilla3 === true  && progress > 50 ">
-        <form (ngSubmit)="onAddBeer(f, (casilla3=false))" #f="ngForm">
+        <form (ngSubmit)="onAddBeer(f, (casilla3=false),tate.bier3Name)" #f="ngForm">
             <mat-form-field class="color">
                 <input   matInput  ngModel name="color" placeholder="color" required>
             </mat-form-field>
@@ -121,12 +121,12 @@
     <mat-card-content *ngIf="casilla4 === false" class="evalute">
         <mat-icon>done_outline</mat-icon>
         <div>
-        <p>Beer {{tate.bier1Name}} has evaluate.</p>
+        <p>Beer {{tate.bier4Name}} has evaluate.</p>
         </div>
     </mat-card-content>
 
     <mat-card-content *ngIf="casilla4 === true && progress > 75 ">
-        <form (ngSubmit)="onAddBeer(f, (casilla4=false))" #f="ngForm">
+        <form (ngSubmit)="onAddBeer(f, (casilla4=false),tate.bier4Name)" #f="ngForm">
             <mat-form-field class="color">
                 <input   matInput  ngModel name="color" placeholder="color" required>
             </mat-form-field>
@@ -149,7 +149,8 @@
 </mat-card>
 <mat-card class="almacen" id="tipo4">
     <p>Formulario</p>
-    <button mat-raised-button color="accent" (click)="onFinish()">Stop</button>
+    <button mat-raised-button mat-dialog-close  (click)="clickevent()" *ngIf="progress>=100"  color="accent" >Finalizar cata</button>
+    <button mat-raised-button *ngIf="progress<100" (click)="onFinish()"  color="accent" >Finalizar cata</button>
 </mat-card>
 
 </mat-dialog-content>

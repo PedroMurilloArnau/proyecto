@@ -13,10 +13,10 @@ export class TasteComponent implements OnInit {
   constructor(@Inject(MAT_DIALOG_DATA) public data: {namer: string},private authService: UserService,) {}
 
   ngOnInit(): void {
-    console.log(this.data.namer)
 
     this.taste = this.authService.getTaster(this.data.namer)
     .subscribe((res: any) => {
+      console.log(res)
       this.taste = res;
     });
   }
