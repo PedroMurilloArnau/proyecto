@@ -1,0 +1,16 @@
+mat-grid-list{
+    
+}
+mat-grid-tile{
+    margin: 5px;
+}
+.quest{
+    display: flex;
+    flex-direction: column;
+     align-items: center;
+     width:400px; 
+}
+img{
+    width: 50%;
+    height: 50%;
+}

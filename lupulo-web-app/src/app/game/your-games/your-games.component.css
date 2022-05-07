@@ -1,0 +1,10 @@
+table{
+    width: 300px;
+}
+.mat-column-date {
+    border-right: 1px solid currentColor;
+    text-align: center;
+  }
+.mat-column-score {
+    text-align:center;
+}

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { CurrentGameComponent } from './current-game/current-game.component';
 
 @Component({
   selector: 'app-new-game',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewGameComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
-
+  openDialog(){
+    this.dialog.open(CurrentGameComponent,{
+      width: '850px'})
+  }
 }

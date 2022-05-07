@@ -1,17 +1,24 @@
 .add-beer{
+    display: grid;
+    grid-template-columns: 1;
     padding: 30px;
+    margin:10px;
+    align-items: center;
+    justify-items: center;
+}
+.container-type{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
 }
 img{
     
 }
-mat-card{
-    height: 950px;
+.menu-button {
+    margin: 10px;
 }
-.field-name{
-    width: 200px;
-    padding: 20px;
-}
-.field-stock{
-    width: 100px;
 
+.question{
+    width: 300px;
 }

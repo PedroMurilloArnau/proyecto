@@ -1,0 +1,32 @@
+
+<mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile  rowspan="2">
+        <mat-card class="quest">
+        <mat-card-header>
+            <mat-card-title>Answer the question!!!</mat-card-title>
+            <mat-card-subtitle>You need the complete the answer,Quickcly!</mat-card-subtitle>
+            <mat-card-subtitle>You have only 2 min.</mat-card-subtitle>
+        </mat-card-header>
+        <img fxHide.xs="" mat-card-image src="../../../../assets/img/reloj.cerveza.jpg" alt="reloj-cerveza">
+        
+            <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+        
+        <mat-card-footer>{{progress}}% -Correct = {{hits}}- Answer({{answer}}/4)</mat-card-footer>
+    
+    </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile  rowspan="2">
+        <mat-card *ngIf="activer===true">
+            <mat-card-title>{{questioner(answer)}}
+            </mat-card-title>
+            <mat-card-actions *ngFor="let ques of conclusion">
+                <button mat-button color="primary" (click)="sendAnswer(ques.value)">{{ques.name}}</button>    
+            </mat-card-actions>
+        </mat-card>
+        <mat-card *ngIf="activer===false">
+            <mat-card-title>Finsih!</mat-card-title>
+            <mat-card-subtitle>Correct answer {{hits}}</mat-card-subtitle>
+                <button mat-button mat-dialog-close (click)="sendGame()" color="primary">Send Game</button>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

@@ -36,6 +36,8 @@ import { YourGamesComponent } from "./game/your-games/your-games.component";
 import { NewQuestionComponent } from "./game/new-question/new-question.component";
 import { NewGameComponent } from "./game/new-game/new-game.component";
 import { InfoGameComponent } from "./game/info-game/info-game.component";
+import { CurrentGameComponent } from "./game/new-game/current-game/current-game.component";
+import { AnswersComponent } from './game/new-question/answers/answers.component';
 
 
 
@@ -69,7 +71,9 @@ import { InfoGameComponent } from "./game/info-game/info-game.component";
     InfoGameComponent,
     NewGameComponent,
     NewQuestionComponent,
-    YourGamesComponent
+    YourGamesComponent,
+    CurrentGameComponent,
+    AnswersComponent
 
   ],
   imports: [

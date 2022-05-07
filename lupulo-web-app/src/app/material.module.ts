@@ -21,6 +21,9 @@ import { MatPaginatorModule } from "@angular/material/paginator";
 import {MatExpansionModule} from '@angular/material/expansion';
 import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-material-components/datetime-picker';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 
 
@@ -50,7 +53,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
         MatExpansionModule,
         NgxMatTimepickerModule,
         NgxMatDatetimePickerModule,
-        MatGridListModule
+        MatGridListModule,
+        MatProgressBarModule,
+        MatButtonToggleModule,
+        MatAutocompleteModule
         
         
      ],
@@ -77,7 +83,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatExpansionModule,
     NgxMatDatetimePickerModule,
     NgxMatTimepickerModule,
-    MatGridListModule
+    MatGridListModule,
+    MatProgressBarModule,
+    MatButtonToggleModule,
+    MatAutocompleteModule
  ],
 
 })

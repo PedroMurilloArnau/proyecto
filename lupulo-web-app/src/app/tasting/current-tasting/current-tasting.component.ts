@@ -20,7 +20,6 @@ export class CurrentTastingComponent implements OnInit {
   
   @Output() tastingExit = new EventEmitter();
   tate: any;
-  user: any;
   userc: any;
   idt: any;
   tester: any;
@@ -43,7 +42,7 @@ export class CurrentTastingComponent implements OnInit {
       this.tate = res;
       this.tester = this.authService.findCliente(this.tate.taster).subscribe((res: any) => {
         this.tester = res;
-        console.log(this.tester.user.name);
+      
       })
       
 
@@ -61,7 +60,7 @@ export class CurrentTastingComponent implements OnInit {
   }
   startOrResumeTimer(){
     this.timer =  setInterval(() => {
-      this.progress = this.progress + 50;
+      this.progress = this.progress + 5;
       if (this.progress >= 100){
         clearInterval(this.timer);
       }

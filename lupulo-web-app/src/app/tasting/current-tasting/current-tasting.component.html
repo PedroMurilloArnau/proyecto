@@ -3,7 +3,7 @@
     <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>Cata de {{tate.name}}</mat-card-title>
-        <mat-card-subtitle>Creada por {{tester.user.name}}</mat-card-subtitle>
+        <mat-card-subtitle>Creada por </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
         <mat-progress-spinner mode="determinate" [value]="progress"></mat-progress-spinner>
@@ -150,7 +150,7 @@
 <mat-card class="almacen" id="tipo4">
     <p>Formulario</p>
     <button mat-raised-button mat-dialog-close  (click)="clickevent()" *ngIf="progress>=100"  color="accent" >Finalizar cata</button>
-    <button mat-raised-button *ngIf="progress<100" (click)="onFinish()"  color="accent" >Finalizar cata</button>
+    <button mat-raised-button mat-dialog-close *ngIf="progress<100"  color="accent" (click)="onFinish()">Finalizar cata</button>
 </mat-card>
 
 </mat-dialog-content>

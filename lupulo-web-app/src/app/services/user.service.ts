@@ -109,23 +109,30 @@ export class UserService {
   )}
   logout(){
     this.authChange.next(false);
+    localStorage.removeItem("email");
+    localStorage.removeItem("type");
+    localStorage.removeItem("token");
+    localStorage.removeItem("hash");
     this.router.navigate(['/login']);
   }
   isAuth(upa){
     if(upa != null){
       this.authChange.next(true);
       this.upa = upa;
-      
+      localStorage.setItem("email",upa.email);
+      localStorage.setItem("type",upa.type);
       return upa;
       
     }
   }
   Auth(){
+    
     return this.authChange;
   }
 
-    getUser(){
-      return this.upa;
-    }
+  getUser(){
+    this.user = {email:localStorage.getItem("email"),type:localStorage.getItem("type")}
+    return this.user;
+  }
 }
 
