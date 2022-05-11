@@ -42,13 +42,14 @@ const addPurchase = async (req,res) => {
         purchaseadd.date = new Date();
         purchaseadd.biling = Math.floor(Math.random() * (5000 - 100) + 100);;
         purchaseadd.id =  (await Purchase.find()).length + 1;
-        
+
         await purchaseadd.save();
 
         return res.status(201).json({
             ok:true,
             name: "Beer added in Purchase",
             cuenta: user.name,
+            purchase: purchaseadd
           })
         }
     }

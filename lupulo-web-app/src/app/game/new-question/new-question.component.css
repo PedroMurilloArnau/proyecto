@@ -22,3 +22,7 @@ img{
 .question{
     width: 300px;
 }
+
+.example-full-width{
+    width: 600px;
+}

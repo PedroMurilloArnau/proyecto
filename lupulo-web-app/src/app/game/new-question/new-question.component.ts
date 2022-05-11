@@ -23,12 +23,14 @@ export class NewQuestionComponent implements OnInit {
   formul = false;
   table = true;
   myControl = new FormControl();
-  options: Buser[] = [{name: 'Mary'}, {name: 'Shelley'}, {name: 'Igor'}];
+  options:  Buser[];
   filteredOptions: Observable<Buser[]>;
   user: any;
   type: any;
   questions: any;
   dataSource: any;
+  firts?: [{name: string}];
+  namer: string;
 
   constructor(private authService: UserService,private router: Router
     , private gameService: GameService, public dialog: MatDialog) { }
@@ -39,12 +41,21 @@ export class NewQuestionComponent implements OnInit {
     this.questions = this.gameService.getyourQuest()
     .subscribe((res:any) => {
       this.dataSource = res;
+    this.firts = [{name: ""}]
+      for(let quest of res){
+        this.namer = quest.question
+        this.firts.push({name:this.namer});
+
+      }
+      this.options = this.firts;
+
     })
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
       map(value => (typeof value === 'string' ? value : value.name)),
       map(name => (name ? this._filter(name) : this.options.slice())),
     );
+    this.options.push
   }
   displayFn(user: Buser): string {
     return user && user.name ? user.name : '';

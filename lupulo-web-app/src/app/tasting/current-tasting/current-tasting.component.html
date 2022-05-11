@@ -104,19 +104,18 @@
             <button type="submit" mat-raised-button [disabled]="f.invalid" color="primary" class="validate">AddBeer</button>
             <mat-form-field class="bitterness">
                 <input  matInput  ngModel name="bitterness" placeholder="bitterness" required>
-            </mat-form-field>   
+            </mat-form-field>
             <mat-form-field class="aftertaste">
                 <input  matInput  ngModel name="aftertaste" placeholder="aftertaste" required>
             </mat-form-field>
-                        
         </form>
     </mat-card-content>
 </mat-card>
 <mat-card class="almacen" id="tipo4">
     <mat-card-header>
-        <mat-card-title>  
+        <mat-card-title>
             {{tate.bier4Name}}
-        </mat-card-title>        
+        </mat-card-title>
     </mat-card-header>
     <mat-card-content *ngIf="casilla4 === false" class="evalute">
         <mat-icon>done_outline</mat-icon>
@@ -139,11 +138,10 @@
             <button type="submit" mat-raised-button [disabled]="f.invalid" color="primary" class="validate">AddBeer</button>
             <mat-form-field class="bitterness">
                 <input  matInput  ngModel name="bitterness" placeholder="bitterness" required>
-            </mat-form-field>   
+            </mat-form-field>
             <mat-form-field class="aftertaste">
                 <input  matInput  ngModel name="aftertaste" placeholder="aftertaste" required>
             </mat-form-field>
-                        
         </form>
     </mat-card-content>
 </mat-card>

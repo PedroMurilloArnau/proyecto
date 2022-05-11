@@ -1,9 +1,10 @@
 const bcrypt = require('bcryptjs');
-const { respones } = require('express');
+const { respones, response } = require('express');
 const session = require('express-session')
 const { validationResult } = require('express-validator');
 const { generateJWT } = require('../../helpers/jwt.mudule');
 const  Users  = require('../../bbdd/users');
+const superagent = require('superagent');
 
 const findusUario = async(req,res) => {
   const email = req.params.tip;
@@ -136,10 +137,15 @@ const verUsuario = async (req, res) => {
       return  res.json({ error: err.message})
     };
 };
+const destinoFinal = async (req,res,next) => {
+  
+  return ('https://www.google.com/');
+}
 
 module.exports = {
     verUsuario,
     crearUsuario,
     loginUsuario,
-    findusUario
+    findusUario,
+    destinoFinal
 };

@@ -16,7 +16,7 @@ export class CurrentGameComponent implements OnInit {
   timer: any;
   gameact: any;
   progress = 0;
-  answer = 1;
+  answer = 0;
   question: any;
   activer = true;
   conclusion: any;
@@ -99,7 +99,7 @@ export class CurrentGameComponent implements OnInit {
       }
       if(this.answer > 4){
         this.progress = 100;
-        this.answer = 4;
+        
         this.activer=false;
         
       }

@@ -37,7 +37,8 @@ export class LoginComponent implements OnInit {
         icon: 'success',
         title: 'You are login',
         showConfirmButton: false,
-        timer: 1500
+        timer: 1500,
+        width: 1
       })
       this.userService.isAuth({
         type: res.type,
