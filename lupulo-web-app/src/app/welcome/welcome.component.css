@@ -1,11 +1,4 @@
-@use '../../variables' as *;
 
-.carousel-wrapper {
-    width: 60%;
+mat-card{
+    text-align:center;
 }
-
-.carousel-animation-wrapper {
-    margin: 20px auto;
-    display: flex;
-}
-

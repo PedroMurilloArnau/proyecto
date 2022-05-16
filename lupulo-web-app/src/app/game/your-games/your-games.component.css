@@ -8,3 +8,6 @@ table{
 .mat-column-score {
     text-align:center;
 }
+mat-card{
+    width: 400px;
+}

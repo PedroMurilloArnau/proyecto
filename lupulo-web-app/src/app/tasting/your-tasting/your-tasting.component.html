@@ -1,8 +1,8 @@
-<section>
+<section class="docu">
     <table border="2">
         <tr *ngFor="let tastesd of tates">
             <td>{{tastesd.name}}</td>
-            <td><button enable *ngIf="valid(tastesd.name)" (click)="start(tastesd.id)"></button></td>
+            <td><button mat-raised-button color="primary" enable *ngIf="valid(tastesd.name)" (click)="start(tastesd.id)">Start tasting!</button></td>
         </tr>
     </table>
 </section>

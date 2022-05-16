@@ -27,7 +27,13 @@ import { YourTastingComponent } from './tasting/your-tasting/your-tasting.compon
 import { NewComponent } from './tasting/documentation/new/new.component';
 import { DocumentationComponent } from './tasting/documentation/documentation.component';
 import { AllDocumentationComponent } from './tasting/documentation/all-documentation/all-documentation.component';
-import { IgxCarouselModule,IgxListModule } from "igniteui-angular";
+import { IgxCarouselModule,
+	IgxIconModule,
+	IgxSelectModule,
+	IgxButtonModule,
+	IgxCardModule } from "igniteui-angular";
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { CurrentTastingComponent } from "./tasting/current-tasting/current-tasting.component";
 import { StopTastingComponent } from "./tasting/current-tasting/sotop-tasting-component";
 import { FinishTastingComponent } from "./tasting/current-tasting/finish-tasting-component";
@@ -86,8 +92,11 @@ import { AnswersComponent } from './game/new-question/answers/answers.component'
     ReactiveFormsModule,
     FormsModule,
     IgxCarouselModule,
-    IgxListModule,
-    
+    IgxIconModule,
+	  IgxSelectModule,
+	  IgxButtonModule,
+	  IgxCardModule,
+    NgbCarouselModule
 
     
   ],

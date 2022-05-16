@@ -16,12 +16,14 @@ export class AllTastingComponent implements OnInit {
   tates: any;
   user: any;
   type: any;
+  dataSource: any;
  
 
   constructor(private authService: UserService,private router: Router,private tastingService: TastingService) { }
 
   ngOnInit(){
     this.tates = this.authService.getTaste().subscribe((res: any) => {
+      this.dataSource = res;
       this.tates = res;
       this.user = this.authService.getUser()
       this.type = this.user.type
@@ -30,6 +32,7 @@ export class AllTastingComponent implements OnInit {
       
        
   };
+  displayedColumns: string[] = ['name', 'button'];
     onAddtastesd(namer){
       
       this.tastingService.postAddTaster({

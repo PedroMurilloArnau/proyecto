@@ -24,6 +24,7 @@ export class NewsComponent implements OnInit {
   numero: number;
   purchase: any;
   puruchi: any;
+  dataSource: any;
 
   
 
@@ -37,7 +38,7 @@ export class NewsComponent implements OnInit {
     this.beers = this.gestbeerService.getBeer()
     .subscribe((res: any) => {
       this.purchase = this.gestbeerService.getPurchase();
-      this.beers = res;
+      this.dataSource= this.beers = res;
       for(let puri of this.purchase){
         for(let beer of this.beers){
           if(beer.name === puri.name){
@@ -48,6 +49,7 @@ export class NewsComponent implements OnInit {
     });
     this.tasteNote =  this.beers.tasteNote
 }
+displayedColumns: string[] = ['name','imag','stock','priceUni','biertype','purchase','tastenote'];
 
 
 onAddBeer(form: NgForm){

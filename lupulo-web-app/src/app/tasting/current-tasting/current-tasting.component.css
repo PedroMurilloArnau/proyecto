@@ -1,18 +1,19 @@
 mat-dialog-content{
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
 
     
 }
 .almacen{
-    width: 300px; 
-    height: 300px;
+    width: 400px; 
+    height: 400px;
     margin:5px;
 }
 .example-header-image {
     background-image: url('../../../content/img/persona.jpg'); 
     background-size: cover;
   }
+
   mat-card-content{
     
       display: flex;
@@ -24,11 +25,13 @@ mat-dialog-content{
       margin: 15px;
   }
   .evalute{
-    height: 200px;
+    height: 300px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-items: center;
     background-color: green;
   }
-  
+mat-form-field{
+      width: 220px;
+  }

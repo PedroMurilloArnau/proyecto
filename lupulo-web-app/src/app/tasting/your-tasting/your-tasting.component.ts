@@ -13,23 +13,24 @@ export class YourTastingComponent implements OnInit {
   tates: any;
   user: any;
   ongoingTasting = true;
-  
+  dataSource: any; 
 
   constructor(private authService: UserService,public dialog: MatDialog) { }
 
   ngOnInit(){
     this.tates = this.authService.getYourTaste().subscribe((res: any) => {
+      this.dataSource = res.tates;
       this.tates = res.tastes;
       this.user = this.authService.getUser();
     });
   }
+  displayedColumns: string[] = ['name', 'button'];
   start(id){
-
     this.dialog.open(CurrentTastingComponent,{
       data:{ids: id,
       user: this.user.email
       },
-      width: '850px',
+      width: '900px',
     })  
   }
   valid(name){

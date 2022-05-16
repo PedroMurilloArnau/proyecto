@@ -37,7 +37,6 @@ export class CurrentTastingComponent implements OnInit {
   private tastingService: TastingService,private router: Router,) { }
 
   ngOnInit(){
-      
       this.tate = this.authService.getTheTaste(this.data.ids).subscribe((res: any) => {
       this.tate = res;
       this.tester = this.authService.findCliente(this.tate.taster).subscribe((res: any) => {

@@ -24,7 +24,7 @@
         </div>
     </mat-card-content>
     
-    <mat-card-content *ngIf="casilla1 === true">
+    <mat-card-content *ngIf="casilla1 === true" class="tasting">
         <form (ngSubmit)="onAddBeer(f, (casilla1=false),tate.bier1Name)" #f="ngForm">
             <mat-form-field class="color">
                 <input   matInput  ngModel name="color" placeholder="color" required>
@@ -57,7 +57,7 @@
         <p>Beer {{tate.bier2Name}} has evaluate.</p>
     </mat-card-content>
 
-    <mat-card-content *ngIf="casilla2 === true && progress > 25 " >
+    <mat-card-content *ngIf="casilla2 === true && progress > 25 " class="tasting">
         <form (ngSubmit)="onAddBeer(f, (casilla2=false),tate.bier2Name)" #f="ngForm">
             <mat-form-field class="color">
                 <input   matInput  ngModel name="color" placeholder="color" required>
@@ -90,7 +90,7 @@
         <p>Beer {{tate.bier3Name}} has evaluate.</p>
     </mat-card-content>
 
-    <mat-card-content *ngIf="casilla3 === true  && progress > 50 ">
+    <mat-card-content *ngIf="casilla3 === true  && progress > 50 " class="tasting">
         <form (ngSubmit)="onAddBeer(f, (casilla3=false),tate.bier3Name)" #f="ngForm">
             <mat-form-field class="color">
                 <input   matInput  ngModel name="color" placeholder="color" required>
@@ -124,7 +124,7 @@
         </div>
     </mat-card-content>
 
-    <mat-card-content *ngIf="casilla4 === true && progress > 75 ">
+    <mat-card-content *ngIf="casilla4 === true && progress > 75 " class="tasting">
         <form (ngSubmit)="onAddBeer(f, (casilla4=false),tate.bier4Name)" #f="ngForm">
             <mat-form-field class="color">
                 <input   matInput  ngModel name="color" placeholder="color" required>

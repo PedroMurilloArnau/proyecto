@@ -188,6 +188,7 @@ const addtasting = async(req,res) => {
             });
         }
         const newTaste = new Taste(req.body)
+        newTaste.id = (await Taste.find()).length + 1;
         newTaste.state = false;
         newTaste.placesAvailable= req.body.students;
 

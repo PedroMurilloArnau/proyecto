@@ -55,4 +55,10 @@ de sweetalert:
 -> Date time:
 npm install --save  @angular-material-components/datetime-picker
 
+-> carrusel:
+npm i igniteui-angular
+
+prueba
+
+
 

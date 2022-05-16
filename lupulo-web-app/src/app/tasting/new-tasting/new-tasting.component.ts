@@ -86,7 +86,7 @@ export class NewTastingComponent implements OnInit {
     })
     .subscribe((res: any) =>{
       console.log(res)});
-      this.router.navigate(['/login']);
+      this.router.navigate(['/game']);
   
   }
   onSelect(si){

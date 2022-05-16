@@ -38,10 +38,11 @@ export class UserService {
 
 
   getTheTaste(id) {
-    
+    console.log(id)
     return this.http.get(`http://localhost:3000/beer/tasting/theTasting/${id}`)
     .pipe(
       map((data: any) => {
+        console.log(data);
         return data;
       })
     )
