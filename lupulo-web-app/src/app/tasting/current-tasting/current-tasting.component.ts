@@ -30,7 +30,8 @@ export class CurrentTastingComponent implements OnInit {
   casilla3: boolean;
   casilla4: boolean;
   casa: boolean;
-  
+  count= 0;
+  frase: string;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: {ids: number, user: string},
   private authService: UserService,private gestBeerService: GestBeerService,private dialog: MatDialog,
@@ -81,6 +82,7 @@ export class CurrentTastingComponent implements OnInit {
     });
   }
   onAddBeer(form: NgForm,consol,tate){
+    this.count = this.count + 1
 
     this.gestBeerService.postTastingNotes({
       beername: tate,
@@ -107,6 +109,7 @@ export class CurrentTastingComponent implements OnInit {
         }
       })
   }
+
   onFinish(){
     clearInterval(this.timer);
     const dialogRef = this.dialog.open(FinishTastingComponent, {data:{
@@ -139,6 +142,8 @@ export class CurrentTastingComponent implements OnInit {
     });
   }
   clickevent(){
+    this.frase = "You finalice this game with "+ this.count;
+    
     this.tastingService.endYourTasting({
       email: this.userc.email,
       name: this.tate.name
@@ -147,7 +152,7 @@ export class CurrentTastingComponent implements OnInit {
     Swal.fire({
       position: 'top-end',
       icon: 'success',
-      title: 'You are login',
+      title: this.frase,
       showConfirmButton: false,
       timer: 1500
     })

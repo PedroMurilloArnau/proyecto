@@ -114,12 +114,15 @@ export class UserService {
     localStorage.removeItem("type");
     localStorage.removeItem("token");
     localStorage.removeItem("hash");
+    localStorage.removeItem("ok");
     this.router.navigate(['/login']);
   }
   isAuth(upa){
     if(upa != null){
       this.authChange.next(true);
+      console.log(this.authChange);
       this.upa = upa;
+      localStorage.setItem("ok", "true")
       localStorage.setItem("email",upa.email);
       localStorage.setItem("type",upa.type);
       return upa;
@@ -127,8 +130,12 @@ export class UserService {
     }
   }
   Auth(){
-    
-    return this.authChange;
+    if(localStorage.getItem("ok") == "true"){
+    return true;
+  }
+  else{
+    return false;
+  }
   }
 
   getUser(){
