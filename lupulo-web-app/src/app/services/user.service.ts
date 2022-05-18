@@ -38,11 +38,9 @@ export class UserService {
 
 
   getTheTaste(id) {
-    console.log(id)
     return this.http.get(`http://localhost:3000/beer/tasting/theTasting/${id}`)
     .pipe(
       map((data: any) => {
-        console.log(data);
         return data;
       })
     )
@@ -81,7 +79,6 @@ export class UserService {
     )
   }
   findCliente(email) {
-    console.log(email);
     return this.http.get(`http://localhost:3000/beer/users/find/${email}`)
   }
 
@@ -120,7 +117,6 @@ export class UserService {
   isAuth(upa){
     if(upa != null){
       this.authChange.next(true);
-      console.log(this.authChange);
       this.upa = upa;
       localStorage.setItem("ok", "true")
       localStorage.setItem("email",upa.email);
