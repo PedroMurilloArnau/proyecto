@@ -77,10 +77,8 @@ openDialog(name){
     data:{ namer: name},
     width: '400px',
   })
-  
 }
 number(algo){
-  console.log(Number(algo));
   return Number(algo);
 }
 }

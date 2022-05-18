@@ -15,7 +15,6 @@ export class GameService {
   constructor(private http: HttpClient,private router: Router) { }
 
   addQuestion(question){
-    console.log(question);
     return this.http.post(this.endpointAddQuestion,question)
     .pipe(
       map((data: any) => {
@@ -25,7 +24,6 @@ export class GameService {
   };
   
   finisgame(game){
-    console.log(game);
     return this.http.post(this.endpointFinishGame,game)
     .pipe(
       map((data: any) => {

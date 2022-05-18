@@ -85,14 +85,13 @@ export class NewTastingComponent implements OnInit {
       price: form.value.price
     })
     .subscribe((res: any) =>{
-      console.log(res)});
+      });
       this.router.navigate(['/game']);
   
   }
   onSelect(si){
     this.si = si;
     this.bires = [{name:"juan"}];
-    console.log(si.value);
     this.bires.splice(0);
      for(let beer of this.biers){
       if(beer.biertype === si.value){
@@ -109,14 +108,12 @@ export class NewTastingComponent implements OnInit {
           this.bires1.splice(0);
         }
       this.bires.push(beer);
-      console.log(this.bires);
       }
     }    
   }
   onSelect1(si1){
     this.si1 = si1;
     this.bires1 = [{name:"juan"}];
-    console.log(si1.value);
     this.bires1.splice(0);
      for(let beer of this.bires){
       if(beer.name !== si1.value){
@@ -128,14 +125,12 @@ export class NewTastingComponent implements OnInit {
           this.bires2.splice(0);
         }
       this.bires1.push(beer);
-      console.log(this.bires);
       }
     }
   }
   onSelect2(si2){
     this.si2 = si2;
     this.bires2 = [{name:"juan"}];
-    console.log(si2.value);
     this.bires2.splice(0);
      for(let beer of this.bires1){
       if(beer.name !== si2.value){
@@ -145,19 +140,16 @@ export class NewTastingComponent implements OnInit {
           }        
         }
       this.bires2.push(beer);
-      console.log(this.bires);
       }
     }
   }
   onSelect3(si3){
     this.si3 = si3;
     this.bires3 = [{name:"juan"}];
-    console.log(si3.value);
     this.bires3.splice(0);
      for(let beer of this.bires2){
       if(beer.name !== si3.value){
       this.bires3.push(beer);
-      console.log(this.bires);
       }
     }
   }

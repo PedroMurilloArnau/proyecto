@@ -19,7 +19,6 @@ export class TastingService {
 
 
 createTasting(tasting){
-  console.log(tasting)
   return this.http.post(this.endpointAddTasting,tasting)
   .pipe(
     map((data: any) =>{
@@ -28,7 +27,6 @@ createTasting(tasting){
   )
 }
 postAddTaster(taste){
-  console.log(taste)
   return this.http.post(this.endpointTasteAdd,taste)
   .pipe(
     map((data: any) =>{
@@ -37,7 +35,6 @@ postAddTaster(taste){
   )
 }
 endYourTasting(info){
-  console.log(info)
   return this.http.post(this.endpointTastingEnd, info)
   .pipe(
     map((data: any) =>{
@@ -46,7 +43,6 @@ endYourTasting(info){
   )
 }
 getTasterTasting(email){
-  console.log(email);
   return this.http.get(`http://localhost:3000/beer/tasting/taster/${email}`)
   .pipe(
     map((data: any) => {

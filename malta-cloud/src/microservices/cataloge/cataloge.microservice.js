@@ -80,7 +80,7 @@ const addBeer = async(req,res) => {
     const beeradd = new Beers(req.body)
 
     await beeradd.save();
-    //console.log(req.session.list.length);
+
     if(req.session.list === undefined){
     const final = [];
     final.push(beeradd)
@@ -90,7 +90,7 @@ const addBeer = async(req,res) => {
     this.final = req.session.list;
     this.final.push(beeradd);
     }
-    console.log(req.session);
+    
 
     return res.status(201).json({
       ok:true,

@@ -30,7 +30,6 @@ export class TastingTasterComponent implements OnInit {
     this.user = this.authService.getUser();
     this.tastings = this.tastingService.getTasterTasting(this.user.email)
     .subscribe((res:any) => {
-      console.log(res)
       this.tastings = res;
       this.dataSource = this.tastings
     })

@@ -3,51 +3,16 @@ const game = require('../../bbdd/game');
 const Questions = require('../../bbdd/quest');
 const Games = require('../../bbdd/game')
 
-// const createNewGame = async(req,res) => {
-//     try{
-//         var list=[];
-//         var listgo=[];
-//         const info = await Questions.find();
-//         const lung = info.length;
-//         console.log(lung);
-//         while(list.length < 4) {
-//         // var existe = false;
-//             const result = Math.ceil(Math.random() * (lung - 0));
-//             console.log(result);
-//         // for(var i=0;i<list.length;i++){
-//         //   if(list.length === 0 || list [i] === result){
-//         //       console.log(result);
-//         //       existe = true;
-//         //       break;
-//         //   }
-//         // }
-//         // const existe = list.some(iListElement => iListElement === result);
-//         // if(existe === false){
-//             if (!list.includes(result)) {
-//                 list.push(result);
-//             }
-//             console.log(list);
-//         }
-//         const listGoManu = list.map(iElement => info.find(iInfo => iInfo.id === iElement));
-//         // for(let ids of list){
-//         //     listgo.push(await Questions.findOne({id:ids}));
-//         // }
-//         // console.log(listgo);
-
-
 const createNewGame = async(req,res) => {
     try{
     var list=[];
     var listgo=[];
     const lung = await (await Questions.find()).length
-    console.log(lung);
      while(list.length < 4){
     var existe = false;
     const result = Math.ceil(Math.random() * (lung - 0));
-    console.log(result);
     for(var i=0;i<list.length;i++){
       if(list.length === 0 || list [i] === result){
-          console.log(result);
           existe = true;
           break;
       }
@@ -55,13 +20,10 @@ const createNewGame = async(req,res) => {
     if(existe === false){
         list[list.length] = result;
     }
-    console.log(list);
 }
     for(let ids of list){
         listgo.push(await Questions.findOne({id:ids}));
     }
-    console.log(listgo);
-
     return res.status(201).json({
         ok: true,
         game:listgo,
@@ -142,6 +104,7 @@ const addQuestion = async(req,res) => {
         return res.json({error: err.message});
     }
 }
+
 const yourQuest = async(req,res) => {
     const creator = req.params.tip;
     try{
@@ -166,7 +129,6 @@ const yourGame = async(req,res) => {
 
 const yourAnswers = async(req,res) => {
     const id = req.params.tip;
-    console.log(id);
     try{
         const answers = await Questions.findOne({id:id});
         return  res.json(answers.questions);

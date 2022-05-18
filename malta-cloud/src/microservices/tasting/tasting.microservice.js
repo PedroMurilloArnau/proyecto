@@ -15,7 +15,6 @@ const showAllDocumentation = async(req,res) =>{
 const addDocumentation = async(req,res) =>{
     const email = req.body.email;
     const docu = req.body;
-    console.log(req.body.email)
     try{
         const user = await Users.findOne({email:email});
         if(!user){
@@ -155,7 +154,6 @@ const addClient = async(req,res) => {
         const total = final.length;
        
         await Taste.findOneAndUpdate({name: name},{studient:final});
-        console.log(taste);
         return res.status(201).json({
             ok: true,
             name: name,

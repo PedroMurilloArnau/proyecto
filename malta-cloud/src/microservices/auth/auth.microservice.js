@@ -101,18 +101,15 @@ const loginUsuario = async (req, res) => {
     }
     const token = await generateJWT(user.name, user.email);
     
-    //Create a session parameter y las características.
+
     req.session.regenerate
-    // 1 Día ya que esta en milisegundos
       
       req.session.user = user.email;
       req.session.date = new Date();
       req.session.token = token;
       req.session.cookie.expires = new Date(Date.now() + 86400000);
     
-    /**else{
-    req.session.destroy
-    }*/
+
     return res.status(201).json({
       ok:true,
       type: user.type,

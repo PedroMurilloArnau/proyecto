@@ -46,7 +46,6 @@ export class LoginComponent implements OnInit {
       });
       this.gestbeerService.borrarLista();
       localStorage.setItem('token',res.token);
-      console.log(res)
       this.router.navigate(['/']);
       localStorage.clear
     }

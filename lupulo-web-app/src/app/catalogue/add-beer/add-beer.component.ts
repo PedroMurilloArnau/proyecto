@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
-import { GestBeerService } from 'src/app/services/gest-beer.service'
+import { GestBeerService } from 'src/app/services/gest-beer.service';
+import Swal  from 'sweetalert2';
 
 @Component({
   selector: 'app-add-beer',
@@ -19,7 +20,6 @@ export class AddBeerComponent implements OnInit {
 
     this.types = this.authService.getTypeBeer().subscribe((res: any) => {
       this.types = res;
-      console.log(this.types);
     });
    
   }
@@ -32,7 +32,37 @@ export class AddBeerComponent implements OnInit {
       priceUni: form.value.priceUni,
     })
     .subscribe((res: any) =>{
-      console.log(res)});
+      if(res.ok == true){
+      Swal.fire({
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        },
+        position: 'bottom',
+        icon: 'success',
+        title: 'beer added!',
+        showConfirmButton: false,
+        timer: 1000
+      })
+      }
+      else{
+        Swal.fire({
+          showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+          },
+          hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+          },
+          position: 'bottom',
+          icon: 'error',
+          title: 'ups... beer not added!',
+          showConfirmButton: false,
+          timer: 1000
+        })
+      }
+      });
       this.router.navigate(['/catalogue']);
   }
 }

@@ -10,7 +10,6 @@ const validateJWT = (req, res = response, next) => {
             msg: 'Error in the Token',
         })
     }
-
     try{
         const { name, email } = jwt.verify(token, process.env.SECRET_JWT_SEED);
         req.name = name;

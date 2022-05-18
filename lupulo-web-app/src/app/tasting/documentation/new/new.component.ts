@@ -32,7 +32,6 @@ export class NewComponent implements OnInit {
     this.step--;
   }
   onAddDocument(form: NgForm) {
-    console.log(this.user.email)
     return this.gestDocumentService.addDocument({
       email: this.user.email,
       bibliography: form.value.bibliography,

@@ -16,7 +16,6 @@ export class AnswersComponent implements OnInit {
     
     this.anwsers = this.gameService.getyourAnwsers(this.data.id)
     .subscribe((res: any) => {
-      console.log(res)
       this.anwsers = res;
     })
     

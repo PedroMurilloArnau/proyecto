@@ -30,7 +30,7 @@ export class SignupComponent implements OnInit {
       password: form.value.password
     })
     .subscribe((res: any) =>{
-      console.log(res)});
+});
       this.router.navigate(['/login']);
   }
   openDialog(){

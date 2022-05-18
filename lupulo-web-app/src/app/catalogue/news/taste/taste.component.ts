@@ -16,7 +16,6 @@ export class TasteComponent implements OnInit {
 
     this.taste = this.authService.getTaster(this.data.namer)
     .subscribe((res: any) => {
-      console.log(res)
       this.taste = res;
     });
   }

@@ -49,15 +49,12 @@ else{
 }
 this.router.navigate(['/purchase']);
 }
-getPurchase(){  
-  return this.list;
+getPurchase(){
+    return this.list;
 }
 deletePurchase(namer: string){
  const indice =  this.list.findIndex(param => param.name === namer);
- console.log(indice);
   this.list.splice(indice,1);
-  console.log(this.list.length);
-  
 }
 completePurchase(person: string){
     return this.http.post(`http://localhost:3000/beer/purchase/add/${person}`, this.list)
@@ -76,7 +73,6 @@ postBeer(beer){
   )
 }
 postTastingNotes(notes){
-  console.log(notes);
   return this.http.post(this.endpointPostTastingtNotes,notes)
   .pipe(
     map((data: any) =>{
