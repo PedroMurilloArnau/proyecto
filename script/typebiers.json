@@ -1,0 +1,73 @@
+[{
+  "_id": {
+    "$oid": "625f1092ab9cb625a33c438d"
+  },
+  "type": "lager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625f11899d67618ffbdef220"
+  },
+  "type": "porter",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625f11a028c4af936e6643ae"
+  },
+  "type": "stout",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625f11af22f745ae888cc7a0"
+  },
+  "type": "dunkel",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625f11e9e48edcea19b20d7b"
+  },
+  "type": "dark lager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625f120c14f05dbcde092475"
+  },
+  "type": "pale ale",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625f12337d501021214507eb"
+  },
+  "type": "brown ale",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625f12531734d0c004370d99"
+  },
+  "type": "marzen",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625f127378b3fb2c8d9e9647"
+  },
+  "type": "bock",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625f1285f828ec92ec2f4d9f"
+  },
+  "type": "cider",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625f12a22a715766258dccf5"
+  },
+  "type": "pilsener",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625f12bbb96aed37cd58b4b9"
+  },
+  "type": "wheat",
+  "__v": 0
+}]

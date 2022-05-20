@@ -1,0 +1,66 @@
+[{
+  "_id": {
+    "$oid": "6263ebc95f6e404e968dc262"
+  },
+  "id": 1,
+  "title": "Colores",
+  "author": "Pedro",
+  "anonimus": false,
+  "articleTitle": "Primicia del color",
+  "articleImage": "https://cervezaartesana.com/wp-content/uploads/2020/04/color-cerveza-2.png",
+  "articleText": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has\n     been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley\n    of type and scrambled it to make a type specimen book. It has survived not only five centuries, but\n     also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in \n     the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently \n     with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  "bibliography": "https://cervezaartesana.com/",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6263f2509c05325276663dbe"
+  },
+  "id": 2,
+  "title": "Colores",
+  "author": "Pedro",
+  "anonimus": false,
+  "articleTitle": "Primicia del color",
+  "articleImage": "https://cervezaartesana.com/wp-content/uploads/2020/04/color-cerveza-2.png",
+  "articleText": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has",
+  "bibliography": "https://cervezaartesana.com/",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626429db99c6bfe2ce4cf3b1"
+  },
+  "id": 3,
+  "title": "dsdaadas",
+  "author": "Pedro",
+  "anonimus": false,
+  "articleTitle": "dsadsa",
+  "articleImage": "https://cervezaartesana.com/wp-content/uploads/2020/04/color-cerveza-2.png",
+  "articleText": "dsadasd",
+  "bibliography": "dasdasdas",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6281f91d3a0f2d865ea0772c"
+  },
+  "id": 4,
+  "title": "wewqeqw",
+  "author": "Juan Diego",
+  "anonimus": true,
+  "articleTitle": "",
+  "articleImage": "",
+  "articleText": "",
+  "bibliography": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6281f9553a0f2d865ea07744"
+  },
+  "id": 5,
+  "title": "1321312",
+  "author": "Juan Diego",
+  "anonimus": false,
+  "articleTitle": "31231",
+  "articleImage": "3312312",
+  "articleText": "https://upload.wikimedia.org/wikipedia/commons/6/63/Helles_im_Glas-Helles_%28pale_beer%29.jpg",
+  "bibliography": "wdasdas",
+  "__v": 0
+}]

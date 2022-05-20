@@ -1,0 +1,199 @@
+[{
+  "_id": {
+    "$oid": "625af1c2f75fe4cf4a96b329"
+  },
+  "beername": "Piña Colada",
+  "color": "dorado",
+  "smell": "afrutado",
+  "tasteMoth": "ligeramente afrutado",
+  "bitterness": "poco amargo",
+  "aftertaste": "sueve",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625ee6f9fb421d04f0f375c1"
+  },
+  "beername": "Piña Colada",
+  "color": "dorado",
+  "smell": "afrutado",
+  "tasteMoth": "ligeramente afrutado",
+  "bitterness": "poco amargo",
+  "aftertaste": "sueve",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62632c0098ad63d96ca80895"
+  },
+  "beername": "Soda Bier",
+  "color": "dorado",
+  "smell": "afrutado",
+  "tasteMoth": "ligeramente afrutado",
+  "bitterness": "poco amargo",
+  "aftertaste": "sueve",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62632ddc0480edb5918417cf"
+  },
+  "beername": "Soda Bier",
+  "color": "dorado",
+  "smell": "afrutado",
+  "tasteMoth": "ligeramente afrutado",
+  "bitterness": "poco amargo",
+  "aftertaste": "sueve",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6266e7add21399b7a8e282ee"
+  },
+  "beername": "Pilsner Urquell",
+  "color": "dorado",
+  "smell": "afrutado",
+  "tasteMoth": "ligeramente afrutado",
+  "bitterness": "poco amargo",
+  "aftertaste": "sueve",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6266e7bbc7c38f203b0dc00b"
+  },
+  "beername": "Pilsner Urquell",
+  "color": "dorado",
+  "smell": "afrutado",
+  "tasteMoth": "ligeramente afrutado",
+  "bitterness": "poco amargo",
+  "aftertaste": "sueve",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6269159d9d7e2d2df571da6d"
+  },
+  "beername": "Heineken",
+  "color": "dorado",
+  "smell": "afrutado",
+  "tasteMoth": "ligeramente afrutado",
+  "bitterness": "poco amargo",
+  "aftertaste": "sueve",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626915afb3116255f87bb070"
+  },
+  "beername": "Heineken",
+  "color": "dorado",
+  "smell": "afrutado",
+  "tasteMoth": "ligeramente afrutado",
+  "bitterness": "poco amargo",
+  "aftertaste": "sueve",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626915d87ced965e112a62ad"
+  },
+  "beername": "Heineken",
+  "color": "dorado",
+  "smell": "afrutado",
+  "tasteMoth": "ligeramente afrutado",
+  "bitterness": "poco amargo",
+  "aftertaste": "sueve",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626915e278aed685e380734f"
+  },
+  "beername": "Heineken",
+  "color": "dorado",
+  "smell": "afrutado",
+  "tasteMoth": "ligeramente afrutado",
+  "bitterness": "poco amargo",
+  "aftertaste": "sueve",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62691603774075ffcc477cb5"
+  },
+  "beername": "Heineken",
+  "color": "dorado",
+  "smell": "afrutado",
+  "tasteMoth": "ligeramente afrutado",
+  "bitterness": "poco amargo",
+  "aftertaste": "sueve",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "627e01184a69a3e70ef2c78a"
+  },
+  "beername": " Eliot Ness ",
+  "color": "plateada",
+  "smell": "oleosa",
+  "tasteMoth": "Fermentosa",
+  "bitterness": "Siniosa",
+  "aftertaste": "Casitostada",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "627e013e4a69a3e70ef2c78c"
+  },
+  "beername": "Augustiner Bräu Lagerbier Hell",
+  "color": "Castaña",
+  "smell": "Afrutada",
+  "tasteMoth": "dulce",
+  "bitterness": "semiamarga",
+  "aftertaste": "coloreada",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "627e01564a69a3e70ef2c78e"
+  },
+  "beername": "Bohemian Pilsner",
+  "color": "Fituosa",
+  "smell": "dulzon",
+  "tasteMoth": "castañas",
+  "bitterness": "sincotronica",
+  "aftertaste": "calurosa",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6281f79d3a0f2d865ea076e4"
+  },
+  "beername": "Pilsner Urquell ",
+  "color": "colorida",
+  "smell": "olorosa",
+  "tasteMoth": "sabrosa",
+  "bitterness": "algo amarga",
+  "aftertaste": "amargo",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6284092f7539a47f2cee0a2b"
+  },
+  "beername": "Augustiner Bräu Lagerbier Hell",
+  "color": "azulado",
+  "smell": "dulzon",
+  "tasteMoth": "agradable",
+  "bitterness": "muy amargo",
+  "aftertaste": "fresco",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6284bc1d005444109e9769be"
+  },
+  "beername": "Augustiner Bräu Lagerbier Hell",
+  "color": "ewqewq",
+  "smell": "eewqe",
+  "tasteMoth": "eweq",
+  "bitterness": "eqweqw",
+  "aftertaste": "ewqew",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6284bc27005444109e9769c0"
+  },
+  "beername": "Heater Allen Pils",
+  "color": "eqwewqe",
+  "smell": "ewqew",
+  "tasteMoth": "eqwe",
+  "bitterness": "eqweqwe",
+  "aftertaste": "ewqew",
+  "__v": 0
+}]

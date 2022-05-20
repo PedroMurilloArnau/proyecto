@@ -1,0 +1,105 @@
+[{
+  "_id": {
+    "$oid": "627129e0f79a7f8e48bdae56"
+  },
+  "id": 1,
+  "date": {
+    "$date": {
+      "$numberLong": "1651583456687"
+    }
+  },
+  "gamer": "PedroElGrande",
+  "puntuation": 100,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6274e7eb193eb82c9a3c6aa2"
+  },
+  "id": 2,
+  "date": {
+    "$date": {
+      "$numberLong": "1651828715815"
+    }
+  },
+  "gamer": "juanchPadilla@filo.com",
+  "puntuation": 50,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6274eb43193eb82c9a3c6ad0"
+  },
+  "id": 3,
+  "date": {
+    "$date": {
+      "$numberLong": "1651829571528"
+    }
+  },
+  "gamer": "juanchPadilla@filo.com",
+  "puntuation": 75,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "627fb8ac622e14c9087186a1"
+  },
+  "id": 4,
+  "date": {
+    "$date": {
+      "$numberLong": "1652537516503"
+    }
+  },
+  "gamer": "juanchPadilla@filo.com",
+  "puntuation": 75,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "627fb8c5622e14c9087186a9"
+  },
+  "id": 5,
+  "date": {
+    "$date": {
+      "$numberLong": "1652537541878"
+    }
+  },
+  "gamer": "juanchPadilla@filo.com",
+  "puntuation": 50,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "627fc482622e14c9087186e2"
+  },
+  "id": 6,
+  "date": {
+    "$date": {
+      "$numberLong": "1652540546338"
+    }
+  },
+  "gamer": "juanchPadilla@filo.com",
+  "puntuation": 0,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "627fefb03a0f2d865ea076ba"
+  },
+  "id": 7,
+  "date": {
+    "$date": {
+      "$numberLong": "1652551600103"
+    }
+  },
+  "gamer": "juanchPadilla@filo.com",
+  "puntuation": 75,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6281f7f83a0f2d865ea076f8"
+  },
+  "id": 8,
+  "date": {
+    "$date": {
+      "$numberLong": "1652684792992"
+    }
+  },
+  "gamer": "juanchPadilla@filo.com",
+  "puntuation": 25,
+  "__v": 0
+}]

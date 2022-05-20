@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "6253627458a26ebbff8b2d45"
+  },
+  "autic": true,
+  "name": "Pedro",
+  "surname": "Murillo",
+  "email": "pedro.todo@comotodo.com",
+  "password": "$2a$10$.dBW045.FUMD/J3aP2RIj.XD72FfY2gjdbeXnX1RGC83/Xqxvo5De",
+  "code": 37161,
+  "type": "Prog",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62541d2563c24f454fe728ee"
+  },
+  "autic": true,
+  "name": "sadsad",
+  "surname": "sdafdadf",
+  "email": "sadsdas@dadsd.com",
+  "password": "$2a$10$pWU61huWOFG2rJJ1SQIrnubOAw86qJ/PlDunFjQ.UixhKMB/3O7Dq",
+  "code": null,
+  "birthdate": {
+    "$date": {
+      "$numberLong": "546472800000"
+    }
+  },
+  "type": "Client",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6254a2d346253c0dd6e77d16"
+  },
+  "autic": true,
+  "name": "Juan",
+  "surname": "Murillo",
+  "email": "juanchPadilla@filo.com",
+  "password": "$2a$10$t1kGnXyWw.BtGTS4LMnw3.xAOjb/onErNW9fpGgkwa4VG235.zWmm",
+  "code": null,
+  "birthdate": {
+    "$date": {
+      "$numberLong": "363996000000"
+    }
+  },
+  "type": "Client",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625527ec8f5ec0ecc7c2e74c"
+  },
+  "autic": true,
+  "name": "Pepa",
+  "surname": "Melero",
+  "email": "pepamelero@gmail.com",
+  "password": "$2a$10$/SbVsKcxLiwp260SJoBfJeUF2oqP4GE..bg1S.p0wag0xe3VVHCSu",
+  "code": 92524,
+  "birthdate": {
+    "$date": {
+      "$numberLong": "351212400000"
+    }
+  },
+  "type": "Shop",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625c56e1a11430d1ea0f2867"
+  },
+  "autic": true,
+  "name": "Juan Diego",
+  "surname": "Delgado",
+  "email": "JuanDiego@gmail.com",
+  "password": "$2a$10$bgTaRnpMSC8slmaobrM0te4qFbefwawyS6X34HAv2ThcEkolLd.l6",
+  "code": 84131,
+  "birthdate": {
+    "$date": {
+      "$numberLong": "1081202400000"
+    }
+  },
+  "type": "Test",
+  "__v": 0
+}]

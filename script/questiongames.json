@@ -1,0 +1,330 @@
+[{
+  "_id": {
+    "$oid": "6270386223d3658ae9ed8325"
+  },
+  "questions": [
+    {
+      "name": "Cerveza Galicia",
+      "value": false,
+      "_id": {
+        "$oid": "6270386223d3658ae9ed8326"
+      }
+    },
+    {
+      "name": "Coronita",
+      "value": true,
+      "_id": {
+        "$oid": "6270386223d3658ae9ed8327"
+      }
+    },
+    {
+      "name": "Mahou",
+      "value": false,
+      "_id": {
+        "$oid": "6270386223d3658ae9ed8328"
+      }
+    },
+    {
+      "name": "Ambar",
+      "value": false,
+      "_id": {
+        "$oid": "6270386223d3658ae9ed8329"
+      }
+    }
+  ],
+  "topic": [
+    {
+      "name": "Spain",
+      "_id": {
+        "$oid": "6270386223d3658ae9ed832a"
+      }
+    }
+  ],
+  "id": 1,
+  "date": {
+    "$date": {
+      "$numberLong": "1651521634273"
+    }
+  },
+  "creator": "pepamelero@gmail.com",
+  "question": "¿ Cual de las sigueintes marcas de cerveza no es española?",
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62703a35727f71345a50c970"
+  },
+  "questions": [
+    {
+      "name": "Si, indistintamente del tipo y de sus cualidades.",
+      "value": false,
+      "_id": {
+        "$oid": "62703a35727f71345a50c971"
+      }
+    },
+    {
+      "name": "No, cada tipo de cerveza requiere una manera distinta de servirla",
+      "value": true,
+      "_id": {
+        "$oid": "62703a35727f71345a50c972"
+      }
+    }
+  ],
+  "topic": [
+    {
+      "name": "serve",
+      "_id": {
+        "$oid": "62703a35727f71345a50c973"
+      }
+    }
+  ],
+  "id": 2,
+  "date": {
+    "$date": {
+      "$numberLong": "1651522101424"
+    }
+  },
+  "creator": "pepamelero@gmail.com",
+  "question": "¿ Se sirve de igual manera todas las cervezas?",
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62703c09bea676ac0cf76b93"
+  },
+  "questions": [
+    {
+      "name": "Siglo XV",
+      "value": false,
+      "_id": {
+        "$oid": "62703c09bea676ac0cf76b94"
+      }
+    },
+    {
+      "name": "Siglo XVI",
+      "value": true,
+      "_id": {
+        "$oid": "62703c09bea676ac0cf76b95"
+      }
+    },
+    {
+      "name": "Siglo XVII",
+      "value": false,
+      "_id": {
+        "$oid": "62703c09bea676ac0cf76b96"
+      }
+    },
+    {
+      "name": "Siglo XVIII",
+      "value": false,
+      "_id": {
+        "$oid": "62703c09bea676ac0cf76b97"
+      }
+    }
+  ],
+  "topic": [
+    {
+      "name": "history",
+      "_id": {
+        "$oid": "62703c09bea676ac0cf76b98"
+      }
+    }
+  ],
+  "id": 3,
+  "date": {
+    "$date": {
+      "$numberLong": "1651522569457"
+    }
+  },
+  "creator": "pepamelero@gmail.com",
+  "question": "¿ En que siglo se instaura la ley de la pureza Alemana?",
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62703db15fed2556c229e900"
+  },
+  "questions": [
+    {
+      "name": "Lupulo",
+      "value": true,
+      "_id": {
+        "$oid": "62703db15fed2556c229e901"
+      }
+    },
+    {
+      "name": "Gervera",
+      "value": false,
+      "_id": {
+        "$oid": "62703db15fed2556c229e902"
+      }
+    },
+    {
+      "name": "Trigo",
+      "value": false,
+      "_id": {
+        "$oid": "62703db15fed2556c229e903"
+      }
+    },
+    {
+      "name": "Calendula",
+      "value": false,
+      "_id": {
+        "$oid": "62703db15fed2556c229e904"
+      }
+    }
+  ],
+  "topic": [
+    {
+      "name": "basic",
+      "_id": {
+        "$oid": "62703db15fed2556c229e905"
+      }
+    }
+  ],
+  "id": 4,
+  "date": {
+    "$date": {
+      "$numberLong": "1651522993054"
+    }
+  },
+  "creator": "pepamelero@gmail.com",
+  "question": "¿ Cual es el aditivo principal de la cerveza?",
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "627685e4e1cf3681b7e5882a"
+  },
+  "questions": [
+    {
+      "name": "Cruzcampo",
+      "value": true,
+      "_id": {
+        "$oid": "627685e4e1cf3681b7e5882c"
+      }
+    },
+    {
+      "name": "Coronita",
+      "value": false,
+      "_id": {
+        "$oid": "627685e4e1cf3681b7e5882d"
+      }
+    },
+    {
+      "name": "La robledana",
+      "value": false,
+      "_id": {
+        "$oid": "627685e4e1cf3681b7e5882e"
+      }
+    },
+    {
+      "name": "La escipiona",
+      "value": false,
+      "_id": {
+        "$oid": "627685e4e1cf3681b7e5882f"
+      }
+    }
+  ],
+  "topic": [],
+  "date": {
+    "$date": {
+      "$numberLong": "1651934692186"
+    }
+  },
+  "creator": "pepamelero@gmail.com",
+  "status": true,
+  "question": "Cual es la peor cerveza",
+  "id": 5,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62768721e1cf3681b7e58850"
+  },
+  "questions": [
+    {
+      "name": "Mahou",
+      "value": true,
+      "_id": {
+        "$oid": "62768721e1cf3681b7e58852"
+      }
+    },
+    {
+      "name": "Coronita",
+      "value": false,
+      "_id": {
+        "$oid": "62768721e1cf3681b7e58853"
+      }
+    },
+    {
+      "name": "Guines",
+      "value": false,
+      "_id": {
+        "$oid": "62768721e1cf3681b7e58854"
+      }
+    },
+    {
+      "name": "CruzCampo",
+      "value": false,
+      "_id": {
+        "$oid": "62768721e1cf3681b7e58855"
+      }
+    }
+  ],
+  "topic": [],
+  "date": {
+    "$date": {
+      "$numberLong": "1651935009791"
+    }
+  },
+  "creator": "pepamelero@gmail.com",
+  "status": true,
+  "question": "Cual es la mejor cerveza?",
+  "id": 6,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62777eefe1cf3681b7e588b7"
+  },
+  "questions": [
+    {
+      "name": "España",
+      "value": true,
+      "_id": {
+        "$oid": "62777eefe1cf3681b7e588b9"
+      }
+    },
+    {
+      "name": "Francia",
+      "value": false,
+      "_id": {
+        "$oid": "62777eefe1cf3681b7e588ba"
+      }
+    },
+    {
+      "name": "Italia",
+      "value": false,
+      "_id": {
+        "$oid": "62777eefe1cf3681b7e588bb"
+      }
+    },
+    {
+      "name": "Malta",
+      "value": false,
+      "_id": {
+        "$oid": "62777eefe1cf3681b7e588bc"
+      }
+    }
+  ],
+  "topic": [],
+  "date": {
+    "$date": {
+      "$numberLong": "1651998447965"
+    }
+  },
+  "creator": "pepamelero@gmail.com",
+  "status": true,
+  "question": "¿ La mejor malta de trigo donde se cosecha?",
+  "id": 7,
+  "__v": 0
+}]

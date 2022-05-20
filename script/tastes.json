@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "627e00af4a69a3e70ef2c772"
+  },
+  "name": "New pils",
+  "type": "pilsener",
+  "taster": "JuanDiego@gmail.com",
+  "students": 16,
+  "bier1Name": "Pilsner Urquell ",
+  "bier2Name": " Eliot Ness ",
+  "bier3Name": "Augustiner Bräu Lagerbier Hell",
+  "bier4Name": "Bohemian Pilsner",
+  "date": {
+    "$date": {
+      "$numberLong": "1653429600000"
+    }
+  },
+  "duration": 2,
+  "price": 29,
+  "studient": [],
+  "id": 1,
+  "state": false,
+  "placesAvailable": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "627e339b4a69a3e70ef2c839"
+  },
+  "name": "Best taste",
+  "type": "pilsener",
+  "taster": "JuanDiego@gmail.com",
+  "students": 22,
+  "bier1Name": "Augustiner Bräu Lagerbier Hell",
+  "bier2Name": "Heater Allen Pils",
+  "bier3Name": "Bohemian Pilsner",
+  "bier4Name": "Pilsner Urquell ",
+  "date": {
+    "$date": {
+      "$numberLong": "1653343200000"
+    }
+  },
+  "duration": 2,
+  "price": 24,
+  "id": 2,
+  "state": false,
+  "placesAvailable": 22,
+  "__v": 0
+}]

@@ -1,0 +1,1013 @@
+[{
+  "_id": {
+    "$oid": "6262a2f31e0ebf3ebdd4df6d"
+  },
+  "biers": [
+    {
+      "name": "carolina bien",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262a2f31e0ebf3ebdd4df6e"
+      }
+    },
+    {
+      "name": "Fortaleza rica",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262a2f31e0ebf3ebdd4df6f"
+      }
+    }
+  ],
+  "id": 1,
+  "date": {
+    "$date": {
+      "$numberLong": "1650631411643"
+    }
+  },
+  "biling": 32131,
+  "price": 45.5,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6262de0d3d69953e4f792c35"
+  },
+  "biers": [],
+  "user": "pedro.todo@comotodo.com",
+  "price": 1323.34,
+  "date": {
+    "$date": {
+      "$numberLong": "1650646541760"
+    }
+  },
+  "biling": 213123123,
+  "id": 4,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6262de90aabae3b08effc122"
+  },
+  "biers": [],
+  "user": "juanchPadilla@filo.com",
+  "price": 1323.34,
+  "date": {
+    "$date": {
+      "$numberLong": "1650646672273"
+    }
+  },
+  "biling": 213123123,
+  "id": 4,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6262e377d7d97fa036ada6c8"
+  },
+  "biers": [
+    {
+      "_id": {
+        "$oid": "6262e377d7d97fa036ada6c9"
+      }
+    }
+  ],
+  "user": "pedro.todo@comotodo.com",
+  "date": {
+    "$date": {
+      "$numberLong": "1650647927188"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6262e3c88b28f15bb9f9ca02"
+  },
+  "biers": [
+    {
+      "_id": {
+        "$oid": "6262e3c88b28f15bb9f9ca03"
+      }
+    },
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e3c88b28f15bb9f9ca04"
+      }
+    },
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e3c88b28f15bb9f9ca05"
+      }
+    }
+  ],
+  "user": "pedro.todo@comotodo.com",
+  "date": {
+    "$date": {
+      "$numberLong": "1650648008468"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6262e42c0dc61ab4c5e580d3"
+  },
+  "biers": [
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e42c0dc61ab4c5e580d4"
+      }
+    },
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e42c0dc61ab4c5e580d5"
+      }
+    }
+  ],
+  "user": "pedro.todo@comotodo.com",
+  "date": {
+    "$date": {
+      "$numberLong": "1650648108693"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6262e453a58ac3f0db598bbb"
+  },
+  "biers": [
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e453a58ac3f0db598bbc"
+      }
+    },
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e453a58ac3f0db598bbd"
+      }
+    }
+  ],
+  "user": "pedro.todo@comotodo.com",
+  "price": 62.7,
+  "date": {
+    "$date": {
+      "$numberLong": "1650648147971"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6262e4755439ad190fbba311"
+  },
+  "biers": [
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e4755439ad190fbba312"
+      }
+    },
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e4755439ad190fbba313"
+      }
+    }
+  ],
+  "user": "pedro.todo@comotodo.com",
+  "price": 62.7,
+  "date": {
+    "$date": {
+      "$numberLong": "1650648181218"
+    }
+  },
+  "biling": 3165,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6262e4aa4ec9b0faa07a7389"
+  },
+  "biers": [
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e4aa4ec9b0faa07a738a"
+      }
+    },
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e4aa4ec9b0faa07a738b"
+      }
+    }
+  ],
+  "user": "pedro.todo@comotodo.com",
+  "price": 62.7,
+  "date": {
+    "$date": {
+      "$numberLong": "1650648234616"
+    }
+  },
+  "biling": 4048,
+  "id": 4,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6262e4e9a090d6e1e435165c"
+  },
+  "biers": [
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e4e9a090d6e1e435165d"
+      }
+    },
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e4e9a090d6e1e435165e"
+      }
+    }
+  ],
+  "user": "pedro.todo@comotodo.com",
+  "price": 62.7,
+  "date": {
+    "$date": {
+      "$numberLong": "1650648297656"
+    }
+  },
+  "biling": 2891,
+  "id": 10,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6262e686d3f264912688b9f0"
+  },
+  "biers": [
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e686d3f264912688b9f1"
+      }
+    },
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e686d3f264912688b9f2"
+      }
+    }
+  ],
+  "user": "pedro.todo@comotodo.com",
+  "price": 62.7,
+  "date": {
+    "$date": {
+      "$numberLong": "1650648710079"
+    }
+  },
+  "biling": 3880,
+  "id": 11,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6262e6b1fd9a717883922989"
+  },
+  "biers": [
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e6b1fd9a71788392298a"
+      }
+    },
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e6b1fd9a71788392298b"
+      }
+    }
+  ],
+  "user": "pedro.todo@comotodo.com",
+  "price": 62.7,
+  "date": {
+    "$date": {
+      "$numberLong": "1650648753641"
+    }
+  },
+  "biling": 1472,
+  "id": 12,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6262e6d46b9b1e71a0a97d55"
+  },
+  "biers": [
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e6d46b9b1e71a0a97d56"
+      }
+    },
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e6d46b9b1e71a0a97d57"
+      }
+    }
+  ],
+  "user": "pedro.todo@comotodo.com",
+  "price": 62.7,
+  "date": {
+    "$date": {
+      "$numberLong": "1650648788382"
+    }
+  },
+  "biling": 2959,
+  "id": 13,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6262e6f4d313246ee37cab46"
+  },
+  "biers": [
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e6f4d313246ee37cab47"
+      }
+    },
+    {
+      "name": "Piña Colada",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e6f4d313246ee37cab48"
+      }
+    }
+  ],
+  "user": "pedro.todo@comotodo.com",
+  "price": 62.7,
+  "date": {
+    "$date": {
+      "$numberLong": "1650648820212"
+    }
+  },
+  "biling": 1724,
+  "id": 14,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6262e76f15e030dbd58c5ab8"
+  },
+  "biers": [
+    {
+      "name": "Soda Bier",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e76f15e030dbd58c5ab9"
+      }
+    },
+    {
+      "name": "Soda Bier",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e76f15e030dbd58c5aba"
+      }
+    }
+  ],
+  "user": "pedro.todo@comotodo.com",
+  "price": 62.7,
+  "date": {
+    "$date": {
+      "$numberLong": "1650648943452"
+    }
+  },
+  "biling": 4884,
+  "id": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6262e7853a50cf372d432c5a"
+  },
+  "biers": [
+    {
+      "name": "Soda Bier",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e7853a50cf372d432c5b"
+      }
+    },
+    {
+      "name": "Soda Bier",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e7853a50cf372d432c5c"
+      }
+    }
+  ],
+  "user": "pedro.todo@comotodo.com",
+  "price": 62.7,
+  "date": {
+    "$date": {
+      "$numberLong": "1650648965189"
+    }
+  },
+  "biling": 2249,
+  "id": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6262e87e7383200d0221ea7b"
+  },
+  "biers": [
+    {
+      "name": "Soda Bier",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e87e7383200d0221ea7c"
+      }
+    },
+    {
+      "name": "Soda Bier",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e87e7383200d0221ea7d"
+      }
+    }
+  ],
+  "user": "pedro.todo@comotodo.com",
+  "price": 62.7,
+  "date": {
+    "$date": {
+      "$numberLong": "1650649214207"
+    }
+  },
+  "biling": 2173,
+  "id": 17,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6262e8fef27665477a2b7a11"
+  },
+  "biers": [
+    {
+      "name": "Pilsner Urquell ",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e8fef27665477a2b7a12"
+      }
+    },
+    {
+      "name": "Pilsner Urquell ",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e8fef27665477a2b7a13"
+      }
+    },
+    {
+      "name": "Pilsner Urquell ",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262e8fef27665477a2b7a14"
+      }
+    }
+  ],
+  "user": "juanchPadilla@filo.com",
+  "price": 24.380000000000003,
+  "date": {
+    "$date": {
+      "$numberLong": "1650649342604"
+    }
+  },
+  "biling": 1847,
+  "id": 18,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6262ea2e71fa6b68ab9e6509"
+  },
+  "biers": [
+    {
+      "name": "Pilsner Urquell ",
+      "amount": 1,
+      "_id": {
+        "$oid": "6262ea2e71fa6b68ab9e650a"
+      }
+    },
+    {
+      "name": "Pilsner Urquell ",
+      "amount": 1,
+      "_id": {
+        "$oid": "6262ea2e71fa6b68ab9e650b"
+      }
+    }
+  ],
+  "user": "juanchPadilla@filo.com",
+  "price": 7.51,
+  "date": {
+    "$date": {
+      "$numberLong": "1650649646091"
+    }
+  },
+  "biling": 774,
+  "id": 19,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6262ec0371fa6b68ab9e6520"
+  },
+  "biers": [
+    {
+      "name": "Pilsner Urquell ",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262ec0371fa6b68ab9e6521"
+      }
+    },
+    {
+      "name": "Pilsner Urquell ",
+      "amount": 2,
+      "_id": {
+        "$oid": "6262ec0371fa6b68ab9e6522"
+      }
+    }
+  ],
+  "user": "juanchPadilla@filo.com",
+  "price": 25,
+  "date": {
+    "$date": {
+      "$numberLong": "1650650115584"
+    }
+  },
+  "biling": 3047,
+  "id": 20,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6263078871fa6b68ab9e653b"
+  },
+  "biers": [
+    {
+      "name": "Soda Bier",
+      "amount": 1,
+      "_id": {
+        "$oid": "6263078871fa6b68ab9e653c"
+      }
+    }
+  ],
+  "user": "juanchPadilla@filo.com",
+  "price": 3.13,
+  "date": {
+    "$date": {
+      "$numberLong": "1650657160486"
+    }
+  },
+  "biling": 4137,
+  "id": 21,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626307f871fa6b68ab9e6545"
+  },
+  "biers": [
+    {
+      "name": "Pilsner Urquell ",
+      "amount": 1,
+      "_id": {
+        "$oid": "626307f871fa6b68ab9e6546"
+      }
+    }
+  ],
+  "user": "juanchPadilla@filo.com",
+  "price": 3.13,
+  "date": {
+    "$date": {
+      "$numberLong": "1650657272611"
+    }
+  },
+  "biling": 210,
+  "id": 22,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626307fe71fa6b68ab9e654b"
+  },
+  "biers": [],
+  "user": "juanchPadilla@filo.com",
+  "price": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1650657278418"
+    }
+  },
+  "biling": 3472,
+  "id": 23,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6263080971fa6b68ab9e6550"
+  },
+  "biers": [],
+  "user": "juanchPadilla@filo.com",
+  "price": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1650657289217"
+    }
+  },
+  "biling": 1883,
+  "id": 24,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62631e9871fa6b68ab9e65f3"
+  },
+  "biers": [
+    {
+      "name": "Heater Allen Pils",
+      "amount": 3,
+      "_id": {
+        "$oid": "62631e9871fa6b68ab9e65f4"
+      }
+    },
+    {
+      "name": "Heater Allen Pils",
+      "amount": 3,
+      "_id": {
+        "$oid": "62631e9871fa6b68ab9e65f5"
+      }
+    },
+    {
+      "name": "Heater Allen Pils",
+      "amount": 3,
+      "_id": {
+        "$oid": "62631e9871fa6b68ab9e65f6"
+      }
+    }
+  ],
+  "user": "juanchPadilla@filo.com",
+  "price": 28.760000000000005,
+  "date": {
+    "$date": {
+      "$numberLong": "1650663064024"
+    }
+  },
+  "biling": 1738,
+  "id": 25,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6263c1472e51023897d73e69"
+  },
+  "biers": [
+    {
+      "name": "Augustiner Bräu Lagerbier Hell",
+      "amount": 1,
+      "_id": {
+        "$oid": "6263c1472e51023897d73e6a"
+      }
+    },
+    {
+      "name": "Augustiner Bräu Lagerbier Hell",
+      "amount": 1,
+      "_id": {
+        "$oid": "6263c1472e51023897d73e6b"
+      }
+    },
+    {
+      "name": "Augustiner Bräu Lagerbier Hell",
+      "amount": 1,
+      "_id": {
+        "$oid": "6263c1472e51023897d73e6c"
+      }
+    }
+  ],
+  "user": "juanchPadilla@filo.com",
+  "price": 36.88,
+  "date": {
+    "$date": {
+      "$numberLong": "1650704711826"
+    }
+  },
+  "biling": 262,
+  "id": 26,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6263c2f42e51023897d73e81"
+  },
+  "biers": [
+    {
+      "name": "Soda Bier",
+      "amount": 10,
+      "_id": {
+        "$oid": "6263c2f42e51023897d73e82"
+      }
+    }
+  ],
+  "user": "juanchPadilla@filo.com",
+  "price": 31.25,
+  "date": {
+    "$date": {
+      "$numberLong": "1650705140611"
+    }
+  },
+  "biling": 665,
+  "id": 27,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62641b410c582b48e6a36abf"
+  },
+  "biers": [
+    {
+      "name": "Heater Allen Pils",
+      "amount": 4,
+      "_id": {
+        "$oid": "62641b410c582b48e6a36ac0"
+      }
+    },
+    {
+      "name": "Heater Allen Pils",
+      "amount": 4,
+      "_id": {
+        "$oid": "62641b410c582b48e6a36ac1"
+      }
+    },
+    {
+      "name": "Heater Allen Pils",
+      "amount": 4,
+      "_id": {
+        "$oid": "62641b410c582b48e6a36ac2"
+      }
+    }
+  ],
+  "user": "juanchPadilla@filo.com",
+  "price": 36.25,
+  "date": {
+    "$date": {
+      "$numberLong": "1650727745713"
+    }
+  },
+  "biling": 1495,
+  "id": 28,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6267be013931b18cd365a575"
+  },
+  "biers": [
+    {
+      "name": "Soda Bier",
+      "amount": 3,
+      "_id": {
+        "$oid": "6267be013931b18cd365a576"
+      }
+    }
+  ],
+  "user": "juanchPadilla@filo.com",
+  "price": 9.38,
+  "date": {
+    "$date": {
+      "$numberLong": "1650966017136"
+    }
+  },
+  "biling": 2455,
+  "id": 29,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626929e670906978a6f6d61c"
+  },
+  "biers": [
+    {
+      "name": "Soda Bier",
+      "amount": 2,
+      "_id": {
+        "$oid": "626929e670906978a6f6d61d"
+      }
+    }
+  ],
+  "user": "juanchPadilla@filo.com",
+  "price": 6.25,
+  "date": {
+    "$date": {
+      "$numberLong": "1651059174451"
+    }
+  },
+  "biling": 3131,
+  "id": 30,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626a64b7b032e0740c47fd07"
+  },
+  "biers": [
+    {
+      "name": " Eliot Ness ",
+      "amount": 3,
+      "_id": {
+        "$oid": "626a64b7b032e0740c47fd08"
+      }
+    },
+    {
+      "name": " Eliot Ness ",
+      "amount": 3,
+      "_id": {
+        "$oid": "626a64b7b032e0740c47fd09"
+      }
+    }
+  ],
+  "user": "juanchPadilla@filo.com",
+  "price": 28.76,
+  "date": {
+    "$date": {
+      "$numberLong": "1651139767580"
+    }
+  },
+  "biling": 4358,
+  "id": 31,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62714ffcf5aff3a32629f453"
+  },
+  "biers": [
+    {
+      "name": " Eliot Ness ",
+      "amount": 3,
+      "_id": {
+        "$oid": "62714ffcf5aff3a32629f454"
+      }
+    },
+    {
+      "name": " Eliot Ness ",
+      "amount": 3,
+      "_id": {
+        "$oid": "62714ffcf5aff3a32629f455"
+      }
+    },
+    {
+      "name": " Eliot Ness ",
+      "amount": 3,
+      "_id": {
+        "$oid": "62714ffcf5aff3a32629f456"
+      }
+    }
+  ],
+  "user": "juanchPadilla@filo.com",
+  "price": 35.010000000000005,
+  "date": {
+    "$date": {
+      "$numberLong": "1651593212506"
+    }
+  },
+  "biling": 4159,
+  "id": 32,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6277817f3699ce964c87abb5"
+  },
+  "biers": [
+    {
+      "name": "Soda Bier",
+      "amount": 3,
+      "_id": {
+        "$oid": "6277817f3699ce964c87abb6"
+      }
+    }
+  ],
+  "user": "juanchPadilla@filo.com",
+  "price": 9.38,
+  "date": {
+    "$date": {
+      "$numberLong": "1651999103163"
+    }
+  },
+  "biling": 1728,
+  "id": 33,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "627781d63699ce964c87abbf"
+  },
+  "biers": [
+    {
+      "name": "Soda Bier",
+      "amount": 1,
+      "_id": {
+        "$oid": "627781d63699ce964c87abc0"
+      }
+    }
+  ],
+  "user": "juanchPadilla@filo.com",
+  "price": 3.13,
+  "date": {
+    "$date": {
+      "$numberLong": "1651999190899"
+    }
+  },
+  "biling": 1091,
+  "id": 34,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "627782f54da15936b3fa3743"
+  },
+  "biers": [
+    {
+      "name": "Soda Bier",
+      "amount": 2,
+      "_id": {
+        "$oid": "627782f54da15936b3fa3744"
+      }
+    }
+  ],
+  "user": "juanchPadilla@filo.com",
+  "price": 6.25,
+  "date": {
+    "$date": {
+      "$numberLong": "1651999477487"
+    }
+  },
+  "biling": 1297,
+  "id": 35,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "627fef4d3a0f2d865ea076a2"
+  },
+  "biers": [
+    {
+      "name": "Pilsner Urquell ",
+      "amount": 3,
+      "_id": {
+        "$oid": "627fef4d3a0f2d865ea076a3"
+      }
+    },
+    {
+      "name": "Pilsner Urquell ",
+      "amount": 3,
+      "_id": {
+        "$oid": "627fef4d3a0f2d865ea076a4"
+      }
+    }
+  ],
+  "user": "juanchPadilla@filo.com",
+  "price": 21.880000000000003,
+  "date": {
+    "$date": {
+      "$numberLong": "1652551501058"
+    }
+  },
+  "biling": 3735,
+  "id": 36,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6281f83c3a0f2d865ea0770c"
+  },
+  "biers": [
+    {
+      "name": "Soda Bier",
+      "amount": 5,
+      "_id": {
+        "$oid": "6281f83c3a0f2d865ea0770d"
+      }
+    },
+    {
+      "name": "Soda Bier",
+      "amount": 5,
+      "_id": {
+        "$oid": "6281f83c3a0f2d865ea0770e"
+      }
+    }
+  ],
+  "user": "juanchPadilla@filo.com",
+  "price": 30.630000000000003,
+  "date": {
+    "$date": {
+      "$numberLong": "1652684860841"
+    }
+  },
+  "biling": 4867,
+  "id": 37,
+  "__v": 0
+}]

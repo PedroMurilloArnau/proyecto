@@ -110,7 +110,7 @@ const loginUsuario = async (req, res) => {
       req.session.cookie.expires = new Date(Date.now() + 86400000);
     
 
-    return res.status(201).json({
+    return res.status(200).json({
       ok:true,
       type: user.type,
       email: user.email,
